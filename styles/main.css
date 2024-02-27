@@ -167,12 +167,14 @@ main {
 .heroSection .heroSectionBlock .btn-info .info-block .title {
   font-size: var(--fz32);
   color: #FFFFFF;
+  font-weight: 600;
   max-width: 50%;
   width: 100%;
 }
 .heroSection .heroSectionBlock .btn-info .info-block .sub-title {
   font-size: var(--fz24);
   color: #FFFFFF;
+  font-weight: 400;
   max-width: 50%;
   width: 100%;
 }
@@ -185,6 +187,12 @@ main {
   gap: 2.5rem;
   align-items: flex-end;
   justify-content: flex-start;
+  max-width: 40%;
+  width: 100%;
+}
+.heroSection .heroSectionBlock .btn-info .btns .btn {
+  max-width: 100%;
+  width: 100%;
 }
 
 .createSection {
@@ -203,7 +211,7 @@ main {
   font-size: var(--fz96);
   line-height: 100%;
   font-weight: 500;
-  max-width: 90%;
+  max-width: 80%;
 }
 .createSection .createBlock .cards-and-oth {
   display: flex;
@@ -221,15 +229,17 @@ main {
 .createSection .createBlock .cards-and-oth .tandlogo .sub-title p {
   font-size: var(--fz24);
   font-weight: 400;
-  max-width: 50%;
+  max-width: 60%;
   width: 100%;
 }
 .createSection .createBlock .cards-and-oth .tandlogo .sub-title p span {
   font-weight: bold;
 }
 .createSection .createBlock .cards-and-oth .tandlogo .logot img {
-  width: 6.25rem;
-  height: 6.563rem;
+  max-width: 11.813rem;
+  max-height: 6.563rem;
+  width: 100%;
+  height: 100%;
 }
 .createSection .createBlock .cards-and-oth .cards {
   display: grid;
@@ -244,17 +254,17 @@ main {
   gap: 40px;
 }
 .createSection .createBlock .cards-and-oth .cards .card .title {
-  font-size: var(--fz24);
+  font-size: var(--fz32);
   font-weight: 600;
 }
 .createSection .createBlock .cards-and-oth .cards .card .sub-title {
-  font-size: var(--fz16);
+  font-size: var(--fz24);
   font-weight: 400;
-  max-width: 70%;
+  max-width: 85%;
 }
 .createSection .createBlock .cards-and-oth .cards .card .icon img {
   padding: 0.75rem;
-  border: 0.063rem dashed #BFBFBF;
+  border: 2px dashed #99A8BF;
   border-radius: 0.375rem 0.375rem 1.125rem 0.375rem;
 }
 
@@ -282,9 +292,10 @@ main {
   font-size: var(--fz16);
   font-weight: 400;
   color: #FFFFFF;
+  text-transform: uppercase;
 }
 .advantagesSection .advantagesBlock .consultBlock .ltandt .title p {
-  font-size: var(--fz64);
+  font-size: var(--fz96);
   color: #FFFFFF;
   line-height: 125%;
   font-weight: 500;
@@ -299,11 +310,12 @@ main {
   font-size: var(--fz24);
   color: #FFFFFF;
   font-weight: 400;
+  max-width: 65%;
 }
 .advantagesSection .advantagesBlock .balBlock {
   grid-column: 2;
   grid-row: 2;
-  padding: 2.5rem;
+  padding: 3.75rem;
   display: flex;
   flex-direction: column;
   gap: 4.688rem;
@@ -312,17 +324,20 @@ main {
   max-height: 100%;
 }
 .advantagesSection .advantagesBlock .balBlock .title {
-  font-size: var(--fz32);
+  font-size: var(--fz48);
   font-weight: 600;
+  max-width: 90%;
   color: #2a1a80;
 }
 .advantagesSection .advantagesBlock .balBlock .sub-titles ul {
   display: grid;
+  justify-content: center;
   gap: 3.75rem;
   grid-template-columns: repeat(2, 1fr);
-  list-style: inside;
+  font-weight: 400;
 }
 .advantagesSection .advantagesBlock .balBlock .sub-titles ul li {
+  list-style: disc;
   font-size: var(--fz24);
   font-weight: 400;
 }
@@ -457,10 +472,12 @@ main {
 .serviceSection .serviceBlock .blocks .first-block .mech-moy .mech .title {
   font-size: var(--fz24);
   font-weight: 400;
+  color: #0D0D0D;
 }
 .serviceSection .serviceBlock .blocks .first-block .mech-moy .mech .sub-title {
   font-size: var(--fz20);
   font-weight: 400;
+  max-width: 70%;
 }
 .serviceSection .serviceBlock .blocks .first-block .mech-moy .moy {
   display: flex;
@@ -475,6 +492,7 @@ main {
 .serviceSection .serviceBlock .blocks .first-block .mech-moy .moy .sub-title {
   font-size: var(--fz20);
   font-weight: 400;
+  max-width: 80%;
 }
 .serviceSection .serviceBlock .blocks .serv-gua {
   display: flex;
@@ -1610,6 +1628,7 @@ footer .footerBlock .auth-block .icons .logo img {
 .welcome .title {
   font-size: var(--fz16);
   color: #FFFFFF;
+  font-weight: 500;
 }
 .welcome .ofbut {
   font-size: var(--fz18);
@@ -1642,6 +1661,8 @@ header .header .headerBlock .nav-sec nav ul {
   align-items: center;
   justify-content: center;
   gap: 3.75rem;
+  font-weight: 600;
+  font-size: var(--fz18);
 }
 header .header .headerBlock .nav-sec nav ul a {
   text-transform: uppercase;
@@ -1651,7 +1672,7 @@ header .header .headerBlock .btn-nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
+  gap: 1.25rem;
 }
 header .header .headerBlock .btn-nav .quest {
   display: flex;

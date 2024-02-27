@@ -9,6 +9,7 @@
     .title {
         font-size: var(--fz16);
         color: $white;
+        font-weight: 500;
     }
     .ofbut {
         font-size: var(--fz18);
@@ -37,6 +38,8 @@ header {
                     ul {
                         @include df_ac_jcc;
                         gap: 3.75rem;
+                        font-weight: 600;
+                        font-size: var(--fz18);
                         a {
                             text-transform: uppercase;
                             color: $black
@@ -46,7 +49,7 @@ header {
             }
             .btn-nav {
                 @include df_ac_jcc;
-                gap: 0.625rem;
+                gap: 1.25rem;
                 .quest {
                     @include df_ac_jcc;
                 }
