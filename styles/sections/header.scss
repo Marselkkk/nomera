@@ -33,6 +33,14 @@ header {
             @include df_ac;
             justify-content: space-between;
             margin: 1.563rem 0;
+            .logo {
+                display: flex;
+                align-items: center;
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+            }
             .nav-sec {
                 nav {
                     ul {

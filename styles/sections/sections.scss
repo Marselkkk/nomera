@@ -58,7 +58,7 @@ main {
                     font-size: var(--fz24);
                     color: $white;
                     font-weight: 400;
-                    max-width: 50%;
+                    max-width: 40%;
                     width: 100%;
                     .border-blink {
                         animation: blink .5s step-end infinite alternate;
@@ -106,11 +106,18 @@ main {
                 .sub-title {
                     @include df_fdc;
                     gap: 1.25rem;
-                    p {
+                    .firp {
                         font-size: var(--fz24);
                         font-weight: 400;
-                        max-width: 60%;
-                        width: 100%;
+                        max-width: 75%;
+                        span {
+                            font-weight: bold;
+                        }
+                    }
+                    .secp {
+                        font-size: var(--fz24);
+                        font-weight: 400;
+                        max-width: 80%;
                         span {
                             font-weight: bold;
                         }
@@ -360,6 +367,8 @@ main {
                     color: $gray;
                     font-weight: 600;
                     text-transform: uppercase;
+                    max-width: 17%;
+                    width: 100%;
                 }
                 .mech-moy {
                     display: flex;
@@ -490,6 +499,7 @@ main {
     }
     .title-form {
         display: flex;
+        gap: 4rem;
         .title-icon-block {
             display: flex;
             gap: 1.25rem;
@@ -560,6 +570,8 @@ main {
         .videoBlock {
             display: flex;
             justify-content: center;
+            max-width: 100%;
+            width: 100%;
             video {
                 max-width: 100%;
                 width: 100%;
@@ -570,6 +582,8 @@ main {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                max-width: 100%;
+                width: 100%;
                 .title-block {
                     display: flex;
                     flex-direction: column;
@@ -637,6 +651,7 @@ main {
                     }
                     .sub-title {
                         font-size: var(--fz24);
+                        font-weight: 600;
                         color: $white;
                     }
                 }
@@ -666,7 +681,7 @@ main {
             flex-direction: column;
             gap: 2.5rem;
             .title {
-                max-width: 70%;
+                max-width: 65%;
                 p {
                     font-size: var(--fz64);
                     font-weight: 600;
@@ -970,7 +985,6 @@ main {
                         grid-row-gap: 3.75rem;
                         .card {
                             .icon {
-                                padding: 1rem;
                                 img {
                                     max-width: 5rem;
                                     max-height: 5rem;
@@ -1416,13 +1430,6 @@ main {
         .createBlock {
             .cards-and-oth {
                 gap: 2rem;
-                .cards {
-                    .card {
-                        .icon {
-                            display: none;
-                        }
-                    }
-                }
             }
         }
     }
@@ -1500,6 +1507,7 @@ main {
     }
     .frameInstSection {
         .frameInstBlock {
+            padding: 0 2rem;
             .title-sub-title {
                 .title {
                     max-width: 100%;
@@ -1541,6 +1549,7 @@ main {
         .optionalBlock {
             .cardsBlock {
                 .card {
+                    gap: 6rem;
                     .btn {
                         text-align: center;
                     }
@@ -1574,6 +1583,58 @@ main {
                     }
                     .transparent {
                         max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .feedbackSection {
+        padding: 0 2rem;
+    }
+    .advantagesSection {
+        .advantagesBlock {
+            .balBlock {
+                .sub-titles {
+                    ul {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+                }
+            }
+            .consultBlock {
+                padding: 1.5rem;
+                .ltandt {
+                    gap: 2.5rem;
+                }
+                .sub-and-btn {
+                    .btn {
+                        width: 100%;
+                    }
+                    .sub-title {
+                        p {
+                            max-width: 85%;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sliderSection {
+        .sliderBlock {
+            .swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        .img {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            img {
+                                max-width: 295px;
+                                max-height: 260px;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
                     }
                 }
             }
