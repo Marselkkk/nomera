@@ -738,6 +738,8 @@ main {
   gap: 12.5rem;
   padding: 5rem;
   max-width: 70rem;
+  max-height: 530px;
+  height: 100%;
   width: 100%;
 }
 .optionalSection .optionalBlock .cardsBlock .card .btn {
@@ -752,6 +754,7 @@ main {
   font-size: var(--fz24);
   font-weight: 600;
   color: #FFFFFF;
+  max-width: 70%;
 }
 .optionalSection .optionalBlock .cardsBlock .card.one {
   background-image: url(../images/sections/cardBlock/gelik.png);
@@ -764,6 +767,9 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.optionalSection .optionalBlock .cardsBlock .card.two .sub-title {
+  max-width: 95%;
 }
 
 .frameInstSection {
@@ -1428,6 +1434,9 @@ main {
   .heroSection .heroSectionBlock .btn-info .btns .transparent {
     max-width: 100%;
   }
+  .faqSection .faqBlock {
+    padding: 0 2rem;
+  }
   .feedbackSection {
     padding: 0 2rem;
   }
@@ -1613,7 +1622,8 @@ footer .footerBlock .auth-block .form .inp {
   gap: 10px;
 }
 footer .footerBlock .auth-block .form .inp .txt {
-  color: #FFFFFF;
+  color: #404040;
+  font-weight: 400;
 }
 footer .footerBlock .auth-block .form .inp input {
   color: #FFFFFF;

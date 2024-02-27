@@ -639,6 +639,8 @@ main {
                 gap: 12.5rem;
                 padding: 5rem;
                 max-width: 70rem;
+                max-height: 530px;
+                height: 100%;
                 width: 100%;
                 .btn {
                     width: fit-content;
@@ -653,6 +655,7 @@ main {
                         font-size: var(--fz24);
                         font-weight: 600;
                         color: $white;
+                        max-width: 70%;
                     }
                 }
                 &.one {
@@ -662,6 +665,9 @@ main {
                 &.two {
                     background-image: url(../images/sections/cardBlock/motosikl.png);
                     @include bg_s;
+                    .sub-title {
+                        max-width: 95%;
+                    }
                 }
             }
         }
@@ -1586,6 +1592,11 @@ main {
                     }
                 }
             }
+        }
+    }
+    .faqSection {
+        .faqBlock {
+            padding: 0 2rem;
         }
     }
     .feedbackSection {

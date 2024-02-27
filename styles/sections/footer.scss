@@ -78,7 +78,8 @@ footer {
                     align-items: flex-start;
                     gap: 10px;
                     .txt {
-                        color: $white;
+                        color: $dark;
+                        font-weight: 400;
                     }
                     input {
                         color: $white;
