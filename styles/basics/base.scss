@@ -1,0 +1,157 @@
+@import '../containers/media.scss';
+
+// Руты для единых размеров
+
+:root {
+    --fz128: 8rem;
+    --fz96: 6rem;
+    --fz64: 4rem;
+    --fz48: 3rem;
+    --fz32: 2rem;
+    --fz24: 1.5rem;
+    --fz20: 1.25rem;
+    --fz18: 1.125rem;
+    --fz16: 1rem;
+    --fz12: 0.75rem;
+    @include mobile {
+        --fz96: 4rem;
+        --fz64: 2rem;
+        --fz48: 1.5rem;
+        --fz32: 1.25rem;
+        --fz24: 1.125rem;
+        --fz20: 1rem;       
+    }
+    @include mobile-lite {
+        --fz96: 3rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+// Базовые миксины для комфорта
+
+@mixin df_ac {
+    display: flex;
+    align-items: center;
+}
+
+@mixin df_fdc {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin df_fdc_ac {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin df_fdc_jcc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin df_ac_jcc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin bg_s {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+// Цвета на сайте
+$black: #0D0D0D;
+$dark: #404040;
+$gray: #8C8C8C;
+$grey: #BFBFBF;
+$nepal: #99A8BF;
+$greyBgc: #F2F2F2;
+$white: #FFFFFF;
+$teal: #025951;
+
+
+// Базовые настройки
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+    // Здесь ваш шрифт
+    // font-family: 'Your font-family name', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1760px;
+    width: 100%;
+}
+
+hr {
+    margin: 0;
+}
+h1, h2, h3, h4 {
+    margin: 0;
+}
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+}
+input, textarea {
+    outline: none;
+    &:hover {
+        outline: none;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+.border-blink {
+    animation: blink .5s step-end infinite alternate;
+    border-right: 3px solid;
+}
+
+//////////////////////////////////////
+@media (min-width: 1656px) {
+    .container {
+        max-width: 1600px;
+    }
+}
+@media (max-width: 1366px) {
+    .container {
+        max-width: 1300px;
+    }
+}

@@ -1,0 +1,40 @@
+.accordion-item {
+    cursor: pointer;
+    .accordion-header {
+        pointer-events: none;
+        .title {
+            color: $grey;
+            &:hover {
+                scale: (0.9);
+            }
+        }
+        .plus-btn {
+            svg {
+                transition: all .3s ease-in-out;
+                transform: rotate(0);
+            }
+        }
+        &.show {
+            .plus-btn {
+                &:hover {
+                    scale: (0.9);
+                    transition: all .3s;
+                }
+                svg {
+                    transform: rotate(135deg);
+                    fill: $black;
+                }
+            }
+        }
+    }
+    .accordion-body {
+        max-height: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: max-height 0.3s ease-out;
+        &.hover {
+            scale: (0.9);
+            transition: all .3s;
+        }
+    }
+}

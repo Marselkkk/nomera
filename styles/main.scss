@@ -1,0 +1,19 @@
+@import './containers/media.scss';
+@import './basics/base.scss';
+@import './sections/sections.scss';
+@import './components/ui/buttons.scss';
+@import './components/ui/accordion.scss';
+@import './sections/footer.scss';
+@import './sections/header.scss';
+
+@font-face {
+    font-family: "Hauora";
+    src:local("Hauora"),
+    /* Если не получилось, загрузит woff2 */
+    url("../fonts/HauoraGX.ttf");
+}
+
+body {
+  font-family: "Hauora";
+  font-weight: 800!important;
+}

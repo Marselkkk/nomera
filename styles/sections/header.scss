@@ -1,0 +1,165 @@
+.welcome {
+    background-image: url(../images/header/welcome-gradient.png);
+    @include bg_s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.938rem 0;
+    gap: 2.5rem;
+    .title {
+        font-size: var(--fz16);
+        color: $white;
+    }
+    .ofbut {
+        font-size: var(--fz18);
+        text-transform: uppercase;
+        color: $grey;
+    }
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background-color: rgba($color: $white, $alpha: .6);
+    backdrop-filter: blur(5px);
+    .header {
+        display: flex;
+        justify-content: center;
+        .headerBlock {
+            @include df_ac;
+            justify-content: space-between;
+            margin: 1.563rem 0;
+            .nav-sec {
+                nav {
+                    ul {
+                        @include df_ac_jcc;
+                        gap: 3.75rem;
+                        a {
+                            text-transform: uppercase;
+                            color: $black
+                        }
+                    }
+                }
+            }
+            .btn-nav {
+                @include df_ac_jcc;
+                gap: 0.625rem;
+                .quest {
+                    @include df_ac_jcc;
+                }
+                .burger-menu {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@include mobile{
+    
+}
+
+@media (max-width: 1180px) {
+    .menu-open {
+        display: none;
+    }
+}
+
+@media (max-width: 1180px) {
+    header {
+        .header {
+            .headerBlock {
+                justify-content: space-around;
+                position: relative;
+                .nav-sec {
+                    nav {
+                        ul {
+                            a {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .btn-nav {
+                    .tel {
+                        display: none;
+
+                    }
+                    .btn {
+                        display: none;
+                    }
+                    .burger-menu {
+                        display: block;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+.menu-open {
+    display: none;
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 3.3rem;
+    right: 5rem;
+    background-color: #fff;
+    padding: 20px;
+    .info-block {
+        .list {
+            .close {
+                display: flex;
+                justify-content: flex-end;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                li {
+                    border-bottom: 0.5px solid $grey;
+                    &:nth-last-child(1) {
+                        border: none;
+                    }
+                    &:nth-last-child(2) {
+                        border: none;
+                    }
+                    a {
+                        display: block;
+                        font-weight: 400;
+                        color: $black;
+                        margin-bottom: 1rem;
+                    }
+                }
+                
+                .telephone {
+                    display: flex;
+                    align-items: center;
+                    svg {
+                        width: 1rem;
+                        height: 1rem;
+                        path {
+                            fill: #2A1A80;
+                        }
+                    }
+                }
+                .btn {
+                    font-size: var(--fz12);
+                    font-weight: 400;
+                    padding: 1rem 2rem;
+                    color: $white;
+                }
+            }
+        }
+        .close {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,139 @@
+footer {
+    .footerBlock {
+        display: flex;
+        padding: 120px 40px;
+        background-color: #000;
+        justify-content: center;
+        .title-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .title-phone {
+                display: flex;
+                flex-direction: column;
+                gap: 80px;
+                .title {
+                    color: $white;
+                    font-size: var(--fz32);
+                    max-width: 70%;
+                }
+                .phone-mail {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    a {
+                        color: $white;
+                        font-size: var(--fz20);
+                    }
+                    .phone, 
+                    .mail {
+                        display: flex;
+                        gap: 20px;
+                        font-weight: 400;
+                    }
+                }
+            }
+            .privacyPol {
+                font-size: var(--fz12);
+                font-weight: 400;
+                p {
+                    color: $dark;
+                    max-width: 45%;
+                    width: 100%;
+                }
+            }
+        }
+        .auth-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 100px;
+            .form {
+                display: flex;
+                flex-direction: column;
+                gap: 60px;
+                max-width: 642px;
+                width: 100%;
+                input {
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid $grey;
+                    transition: all .3s;
+                    font-size: var(--fz16);
+                    font-weight: 400;
+                    background-color: transparent;
+                    width: 100%;
+                    &:focus {
+                        border-bottom: 1px solid $black;
+                        transition: all .3s;
+                    }
+                }
+                .btn {
+                    width: 50%;
+                }
+                .inp {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 10px;
+                    .txt {
+                        color: $white;
+                    }
+                    input {
+                        color: $white;
+                        border-bottom: 1px solid $dark;
+                        &:focus {
+                            border-bottom: 1px solid $white;
+                        }
+                    }
+                }
+            }
+            .icons {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 2rem;
+                .socials {
+                    display: flex;
+                    gap: 20px;
+                    img {
+                        width: 65px;
+                        height: 65px;
+                    }
+                }
+                .logo {
+                    img {
+                        width: 70px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/////////////////////////////////////////
+
+@media (max-width: 760px) {
+    .footerBlock {
+        flex-direction: column-reverse;
+        gap: 3rem;
+        .title-block {
+            gap: 2rem;
+        }
+        .auth-block {
+            gap: 3rem;
+            .icons {
+                gap: 2rem;
+            }
+            .form {
+                .btn {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

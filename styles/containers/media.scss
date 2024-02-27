@@ -1,0 +1,22 @@
+@import './variables.scss';
+
+@mixin extra_large() {
+    @media (max-width: $breakpoint_extra_large){
+        @content
+    }
+};
+@mixin desktop() {
+    @media (max-width: $breakpoint_desktop){
+        @content
+    }
+};
+@mixin mobile() {
+    @media (max-width: $breakpoint_mobile){
+        @content
+    }
+};
+@mixin mobile-lite() {
+    @media (max-width: $breakpoint_mobile-lite){
+        @content
+    }
+}

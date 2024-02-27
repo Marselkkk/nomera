@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0396950dcd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="welcome" >
+        <div class="title">Оформите заявку прямо сейчас, и получите скидку 10% на первый заказ!</div>
+        <button class="ofbut">
+            Оформить
+        </button>
+    </div>
+    <header>
+        <div class="header">
+            <div class="headerBlock container">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./images/header/logo.svg" alt="icon">
+                    </a>
+                </div>
+                <div class="nav-sec">
+                    <nav>
+                        <ul>
+                            <a href="#advantages" class="advantages">Преимущества</a>
+                            <a href="#cards" class="cards">Товары</a>
+                            <a href="#process" class="process">Процесс</a>
+                            <a href="#portfolio" class="portfolio">Портфолио</a>
+                            <a href="#delivery" class="delivery">Доставка</a>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="btn-nav">
+                    <div class="tel">
+                        <img src="./images/header/trubka.svg" alt="icon">
+                    </div>
+                    <div class="quest">
+                        <img src="./images/header/quest.svg" alt="icon">
+                    </div>
+                    <a href="#feedback">
+                        <button class="btn blue">
+                            Оформить заказ
+                        </button>
+                    </a>
+                    <div class="burger-menu">
+                        <img src="./images/header/burger.svg" alt="icon">
+                    </div>
+                </div>
+                <div class="menu-open">
+                    <div class="info-block">
+                        <div class="item list">
+                            <div class="close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                            <ul>
+                                <li><a href="#advantages">Преимущества</a></li>
+                                <li><a href="#cards">Товары</a></li>
+                                <li><a href="#process">Процесс</a></li>
+                                <li><a href="#portfolio">Портфолио</a></li>
+                                <li><a href="#delivery">Доставка</a></li>
+                                <li class="telephone">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.488 10.2427C9.73911 12.4406 11.5594 14.2609 13.7573 15.512L14.936 13.8613C15.1255 13.5959 15.4058 13.4092 15.7237 13.3364C16.0417 13.2637 16.3752 13.31 16.6613 13.4667C18.5471 14.4972 20.6296 15.117 22.772 15.2853C23.1064 15.3118 23.4185 15.4634 23.6461 15.7098C23.8737 15.9561 24 16.2793 24 16.6147V22.564C24.0001 22.8941 23.8777 23.2125 23.6565 23.4576C23.4353 23.7027 23.1311 23.857 22.8027 23.8907C22.096 23.964 21.384 24 20.6667 24C9.25333 24 0 14.7467 0 3.33333C0 2.616 0.036 1.904 0.109333 1.19733C0.143006 0.86893 0.297312 0.564694 0.542386 0.343512C0.78746 0.12233 1.10587 -7.11437e-05 1.436 3.1023e-08H7.38533C7.72075 -4.20247e-05 8.04386 0.126335 8.29024 0.353934C8.53662 0.581533 8.68817 0.893631 8.71467 1.228C8.88297 3.37039 9.50277 5.45291 10.5333 7.33867C10.69 7.62475 10.7363 7.95832 10.6636 8.27626C10.5908 8.5942 10.4041 8.87446 10.1387 9.064L8.488 10.2427ZM5.12533 9.36667L7.65867 7.55733C6.93971 6.00546 6.44714 4.35845 6.196 2.66667H2.68C2.672 2.888 2.668 3.11067 2.668 3.33333C2.66667 13.2747 10.7253 21.3333 20.6667 21.3333C20.8893 21.3333 21.112 21.3293 21.3333 21.32V17.804C19.6415 17.5529 17.9945 17.0603 16.4427 16.3413L14.6333 18.8747C13.9049 18.5916 13.1973 18.2575 12.516 17.8747L12.4387 17.8307C9.82344 16.3423 7.65771 14.1766 6.16933 11.5613L6.12533 11.484C5.74254 10.8027 5.40838 10.0951 5.12533 9.36667Z" fill="white"/>
+                                    </svg>
+                                    <a href="tel:+ 7 (932) 832 03 28">+ 7 (932) 832 03 28</a>
+                                </li>
+                                <li><a href="#" class="btn blue" data-bs-toggle="modal" data-bs-target="#newOrderModal">Оформить заказ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="heroSection" id="hero">
+            <div class="heroSectionBlock container">
+                <div class="btn-tit">
+                    <div class="big-title">
+                        Откидные рамки и номера
+                    </div>
+                </div>
+                <div class="btn-info">
+                    <div class="btns">
+                        <button class="btn white">
+                            Оформить заказ
+                        </button>
+                        <button class="btn transparent">
+                            Бесплатная консультация
+                        </button>
+                    </div>
+                    <div class="info-block">
+                        <div class="title">Установка номеров под ключ в Москве - от 60 000 ₽</div>
+                        <div class="sub-title">Безотказная работа на скорости до 324 км/ч в любую погоду с гарантией <span class="border-blink">от 365 дней</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="createSection">
+            <div class="createBlock container">
+                <div class="title">
+                    Производим откидные рамки с 2015 года
+                </div>
+                <div class="cards-and-oth">
+                    <div class="tandlogo">
+                        <div class="sub-title">
+                            <p>Вы получаете <span>надежную, безотказную</span> систему продуманную до мелочей на долгие года.</p>
+                            <p>Наши клиенты <span>меняют не рамки</span>, а приезжают к нам на переустановку когда покупают новое авто.</p>
+                        </div>
+                        <div class="logot">
+                            <img src="./images/sections/logot.svg" alt="icon">
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="icon">
+                                <img src="./images/sections/card/speed.svg" alt="icon">
+                            </div>
+                            <div class="title">Безупречная работа на любой скорости</div>
+                            <div class="sub-title">Быстрое и безопасное открытие и закрытие рамки на скорости до 324 км/ч.</div>
+                        </div>
+                        <div class="card">
+                            <div class="icon">
+                                <img src="./images/sections/card/settings.svg" alt="icon">
+                            </div>
+                            <div class="title">Уникальная технология «Stealth Race»</div>
+                            <div class="sub-title">Уникальная технология скрытых петель в паре с мощным редуктором исключает обнаружение механизма даже при самом тщательном осмотре.</div>
+                        </div>
+                        <div class="card">
+                            <div class="icon">
+                                <img src="./images/sections/card/lock.svg" alt="icon">
+                            </div>
+                            <div class="title">Универсальный механизм</div>
+                            <div class="sub-title">Позволяет установить рамки на любой автомобиль, в том числе грузовики, автобусы, минивэны, и т.д.</div>
+                        </div>
+                        <div class="card">
+                            <div class="icon">
+                                <img src="./images/sections/card/shield.svg" alt="icon">
+                            </div>
+                            <div class="title">Надежная защита от воды, снега и грязи</div>
+                            <div class="sub-title">Наши рамки оснащены мощными водо-влагозащитными моторами, которые приспособлены к любым погодным условиям.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="advantagesSection" id="advantages">
+            <div class="advantagesBlock">
+                <div class="consultBlock one">
+                    <div class="ltandt">
+                        <div class="lil-title">
+                            <p>Почему наши <span class="border-blink">рамки?</span></p>
+                        </div>
+                        <div class="title">
+                            <p>Преимущества наших рамок</p>
+                        </div>
+                    </div>
+                    <div class="sub-and-btn">
+                        <div class="sub-title">
+                            <p>В системе нет ни одной не нужной детали, все продумано для максимально комфортного использования</p>
+                        </div>
+                        <button class="btn transparent btnka">
+                            Бесплатная консультация
+                        </button>
+                    </div>
+                </div>
+                <div class="videoBlock three">
+                    <video controls width="960" height="497">
+                        <source  src="/advan.MOV"></source>
+                    </video>
+                </div>
+                <div class="balBlock two">
+                    <div class="title">Разрабатываем и производим откидные рамки с 2015 года!</div>
+                    <div class="sub-titles">
+                        <ul>
+                            <li>Время откидывания рамок всего 0,2 секунды!</li>
+                            <li>Самый малоразмерный механизм</li>
+                            <li>Высокий запас прочности конструкции</li>
+                            <li>Минимальный уход за считанные минуты</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="serviceSection">
+            <div class="serviceBlock container">
+                <div class="title-and-logo">
+                    <div class="title">
+                        <p>На все откидные рамки предоставляем гарантию <span>{365 дней}</span>, а также поддержку по любым вопросам.</p>
+                    </div>
+                    <div class="logo">
+                        <img src="./images/sections/logot.svg" alt="icon">
+                    </div>
+                </div>
+                <div class="blocks">
+                    <div class="first-block">
+                        <div class="lil-title">Рекомендации<br> по использованию</div>
+                        <div class="mech-moy">
+                            <div class="mech cal">
+                                <hr>
+                                <div class="title">Механизм</div>
+                                <div class="sub-title">Не зажимайте кнопку управления рамками больше 3-5 секунд</div>
+                            </div>
+                            <div class="moy cal">
+                                <hr>
+                                <div class="title">Мойка</div>
+                                <div class="sub-title">При мойке автомобиля убедитесь, что рамки подняты в исходное положение</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="serv-gua">
+                        <div class="serv cal">
+                            <hr>
+                            <div class="title">Обслуживание</div>
+                            <div class="sub-title">Периодически смазывайте подвижные соединения водоотталкивающей смазкой</div>
+                        </div>
+                        <div class="gua">
+                            <hr>
+                            <div class="title">Во избежание потери гарантии, рекомендуем устанавливать рамки у проверенных партнеров</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="sliderSection">
+            <div class="sliderBlock container">
+                <div class="swiper mainSlider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="./images/sections/slider/sharnir.png" alt="icon">
+                            </div>
+                            <div class="other">
+                                <div class="sub-and-title">
+                                    <div class="title">
+                                        Откидная рамка на жесткой тяге с 2 шарнирами
+                                    </div>
+                                    <div class="sub-title">
+                                        Работает на основании прямого соединения откидной пластины и стержня диаметром 9 мм, с помощью которого рамка откидывается на 90 градусов.
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    Если пластина находится в начальном положении, невозможно определить наличие специального оборудования на автомобиле.
+                                </div>
+                                <div class="cost-and-arr">
+                                    <div class="cost">от 6 500 ₽</div>
+                                    <div class="arr">
+                                        <div class="prev">
+                                            <img src="./images/sections/slider/left.svg" alt="icon">
+                                        </div>
+                                        <div class="next">
+                                            <img src="./images/sections/slider/right.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="./images/sections/slider/sharnir.png" alt="icon">
+                            </div>
+                            <div class="other">
+                                <div class="sub-and-title">
+                                    <div class="title">
+                                        Откидная рамка на жесткой тяге с 2 шарнирами
+                                    </div>
+                                    <div class="sub-title">
+                                        Работает на основании прямого соединения откидной пластины и стержня диаметром 9 мм, с помощью которого рамка откидывается на 90 градусов.
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    Если пластина находится в начальном положении, невозможно определить наличие специального оборудования на автомобиле.
+                                </div>
+                                <div class="cost-and-arr">
+                                    <div class="cost">от 6 500 ₽</div>
+                                    <div class="arr">
+                                        <div class="prev">
+                                            <img src="./images/sections/slider/left.svg" alt="icon">
+                                        </div>
+                                        <div class="next">
+                                            <img src="./images/sections/slider/right.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="./images/sections/slider/sharnir.png" alt="icon">
+                            </div>
+                            <div class="other">
+                                <div class="sub-and-title">
+                                    <div class="title">
+                                        Откидная рамка на жесткой тяге с 2 шарнирами
+                                    </div>
+                                    <div class="sub-title">
+                                        Работает на основании прямого соединения откидной пластины и стержня диаметром 9 мм, с помощью которого рамка откидывается на 90 градусов.
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    Если пластина находится в начальном положении, невозможно определить наличие специального оборудования на автомобиле.
+                                </div>
+                                <div class="cost-and-arr">
+                                    <div class="cost">от 6 500 ₽</div>
+                                    <div class="arr">
+                                        <div class="prev">
+                                            <img src="./images/sections/slider/left.svg" alt="icon">
+                                        </div>
+                                        <div class="next">
+                                            <img src="./images/sections/slider/right.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="cardsSection" id="cards">
+            <div class="cardsBlock container">
+                <div class="card-one" style="background-image: url(./images/sections/cardssec/second.png); background-size: cover; background-repeat: no-repeat; background-position: center">
+                    <div class="title-sub">
+                        <div class="title">
+                            Механизм с<br> откидывающейся рамкой
+                        </div>
+                        <div class="sub-title">
+                            В этом варианте откидывается рамка вместе с номером
+                        </div>
+                    </div>
+                    <div class="but-cost">
+                        <button class="btn white-blue">
+                            Заказать установку
+                        </button>
+                        <div class="cost">60 000 ₽</div>
+                    </div>
+                </div>
+                <div class="card-two" style="background-image: url(./images/sections/cardssec/second.png); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+                    <div class="title-sub">
+                        <div class="title">
+                            Механизм с<br> откидывающемся номером
+                        </div>
+                        <div class="sub-title">
+                            Это новейший вариант установки при котором откидывается только номер, рамка остается на месте.
+                        </div>
+                    </div>
+                    <div class="but-cost">
+                        <button class="btn white-blue">
+                            Заказать установку
+                        </button>
+                        <div class="cost">85 000 ₽</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="feedbackSection" id="feedback">
+            <div class="feedbackBlock container">
+                <div class="lil-title">Будем на связи</div>
+                <div class="title-form">
+                    <div class="title-icon-block">
+                        <div class="titleBlock">
+                            <div class="title">Оставьте заявку на обратный звонок, и наш менеджер свяжется с Вами в ближайшее время</div>
+                            <div class="sub-title">Или напишите нам в соц.сетях</div>
+                        </div>
+                        <div class="iconBlock">
+                            <div class="telegram icon">
+                                <img src="./images/sections/feedback/telegram.svg" alt="icon">
+                            </div>
+                            <div class="whatsapp icon">
+                                <img src="./images/sections/feedback/whatsapp.svg" alt="icon">
+                            </div>
+                            <div class="viber icon">
+                                <img src="./images/sections/feedback/viber.svg" alt="icon">
+                            </div>
+                        </div>
+                    </div>
+                    <form class="form">
+                        <div class="inp-one inp">
+                            <label for="">Имя и фамилия</label>
+                            <input type="text">
+                        </div>
+                        <div class="inp-two inp">
+                            <label for="">Номер телефона</label>
+                            <input type="text">
+                        </div>
+                        <div class="inp-three inp">
+                            <label for="">Вопрос (кратко)</label>
+                            <input type="text">
+                        </div>
+                        <button class="btn blue">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="optionalSection">
+            <div class="optionalBlock">
+                <div class="videoBlock">
+                    <video controls="" class=" w-full aspect-video " width="900px" height="950px" style="transform: translateX(0%);">
+                        <source type="video/mp4" src="https://dev.nomer-msk.ru/media/services/videos/%D0%BF%D1%83%D0%BB%D1%8C%D1%82_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F.MOV">
+                    </video>
+                    <div class="info-block">
+                        <div class="title-block">
+                            <div class="lil-title">Дополнительное оборудование</div>
+                            <div class="title">Пульт с блоком управления</div>
+                            <div class="sub-title">4 канала. Может применяться как к одной рамке, так и к паре.</div>
+                            <div class="info">
+                                <ul>
+                                    <li>Лучшая альтернатива кнопки управления в салоне</li>
+                                    <li>Качественная и бесперебойная работа</li>
+                                    <li>Подходит на любой автомобиль</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cost">
+                            от 4 500 ₽
+                        </div>
+                    </div>
+                </div>
+                <div class="cardsBlock container">
+                    <div class="card one">
+                        <div class="titles">
+                            <div class="title">Автомобили</div>
+                            <div class="sub-title">Стандартный метод установки рамок и номеров.</div>
+                        </div>
+                        <div class="btn white-blue">
+                            Заказать установку
+                        </div>
+                    </div>
+                    <div class="card two">
+                        <div class="titles">
+                            <div class="title">Мотоциклы</div>
+                            <div class="sub-title">Тот же метод установки номеров что и на автомобили, но с небольшими изменениями</div>
+                        </div>
+                        <div class="btn white-blue">
+                            Заказать установку
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="frameInstSection" id="process">
+            <div class="frameInstBlock container">
+                <div class="title-sub-title">
+                    <div class="title">
+                        <p>На установку одной откидной рамки нужно <span>{от 3 до 8 часов}</span> в зависимости от конкретных особенностей автомобиля</p>
+                    </div>
+                    <div class="sub-title">
+                        <p>За дополнительную плату возможна установка день в день – без очередей.</p>
+                    </div>
+                </div>
+                <div class="blocks">
+                    <div class="first-top">
+                        <p>Вы получаете <span>надежную, безотказную</span> систему продуманную до мелочей на долгие года.</p>
+                        <p>Наши клиенты <span>меняют не рамки</span>, а приезжают к нам на переустановку когда покупают новое авто.</p>
+                    </div>
+                    <div class="second-top ben">
+                        <hr>
+                        <div class="numb-title">
+                            <div class="numb">01</div>
+                            <div class="sub-and-title">
+                                <div class="title">Запись на консультацию и оценка стоимости</div>
+                                <div class="sub-title beb">
+                                    <p>Получите бесплатную консультацию для оценки стоимости работ. Расчёт стоимости индивидуален, зависит от особенностей авто и работ по установке.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-middle ben">
+                        <hr>
+                        <div class="numb-title">
+                            <div class="numb">02</div>
+                            <div class="sub-and-title">
+                                <div class="title">Подготовка авто</div>
+                                <div class="sub-title beb">
+                                    <p>Важным условием является чистая машина. Пожалуйста, позаботьтесь об этом заранее.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="third-middle ben">
+                        <hr>
+                        <div class="numb-title">
+                            <div class="numb">03</div>
+                            <div class="sub-and-title">
+                                <div class="title">Прием автомобиля</div>
+                                <div class="sub-title beb">
+                                    <p>Все важные технические детали по установке обговариваются с клиентом при приемке и в ходе работы.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="first-bottom ben">
+                        <hr>
+                        <div class="numb-title">
+                            <div class="numb">04</div>
+                            <div class="sub-and-title">
+                                <div class="title">Установка системы откидных рамок «REDLIGHTS»</div>
+                                <div class="sub-title beb">
+                                    <p>На установку откидной рамки на 1 машину необходимо от 3 до 8 часов в зависимости от особенностей авто.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="third-bottom ben">
+                        <hr>
+                        <div class="numb-title">
+                            <div class="numb">05</div>
+                            <div class="sub-and-title">
+                                <div class="title">Оповещение о готовности и передача автомобиля</div>
+                                <div class="sub-title beb">
+                                    <p>Оповещаем вас о готовности автомобиля и приглашаем забрать в удобное время.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sled"></div>
+        </section>
+        <section class="feedbackSection container">
+            <div class="lil-title">Будем на связи</div>
+            <div class="title-form">
+                <div class="title-icon-block">
+                    <div class="titleBlock">
+                        <div class="title">Оставьте заявку на обратный звонок, и наш менеджер свяжется с Вами в ближайшее время</div>
+                        <div class="sub-title">Или напишите нам в соц.сетях</div>
+                    </div>
+                    <div class="iconBlock">
+                        <div class="telegram icon">
+                            <img src="./images/sections/feedback/telegram.svg" alt="icon">
+                        </div>
+                        <div class="whatsapp icon">
+                            <img src="./images/sections/feedback/whatsapp.svg" alt="icon">
+                        </div>
+                        <div class="viber icon">
+                            <img src="./images/sections/feedback/viber.svg" alt="icon">
+                        </div>
+                    </div>
+                </div>
+                <form class="form">
+                    <div class="inp-one inp">
+                        <label for="">Имя и фамилия</label>
+                        <input type="text">
+                    </div>
+                    <div class="inp-two inp">
+                        <label for="">Номер телефона</label>
+                        <input type="text">
+                    </div>
+                    <div class="inp-three inp">
+                        <label for="">Вопрос (кратко)</label>
+                        <input type="text">
+                    </div>
+                    <button class="btn blue">Отправить</button>
+                </form>
+            </div>
+        </section>
+        <section class="portfolioSection" id="portfolio">
+            <video controls="" autoplay="" name="media">
+                <source src="https://dev.nomer-msk.ru/media/services/video_setup/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE_%D1%82%D0%B5%D1%81%D0%BB%D0%B02_7evUGfv.mp4" type="video/mp4">
+            </video>
+            <video controls="" autoplay="" name="media">
+                <source src="https://dev.nomer-msk.ru/media/services/video_setup/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE_%D1%82%D0%B5%D1%81%D0%BB%D0%B02_7evUGfv.mp4" type="video/mp4">
+            </video>
+            <video controls="" autoplay="" name="media">
+                <source src="https://dev.nomer-msk.ru/media/services/video_setup/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE_%D1%82%D0%B5%D1%81%D0%BB%D0%B02_7evUGfv.mp4" type="video/mp4">
+            </video>
+            <video controls="" autoplay="" name="media">
+                <source src="https://dev.nomer-msk.ru/media/services/video_setup/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE_%D1%82%D0%B5%D1%81%D0%BB%D0%B02_7evUGfv.mp4" type="video/mp4">
+            </video>
+        </section>
+        <section class="faqSection">
+            <div class="faqBlock container">
+                <div class="titleBlock">
+                    <div class="lil-title">
+                        Вопрос-ответ
+                    </div>
+                    <div class="title">
+                        Отвечаем на частозадаваемые вопросы от клиентов
+                    </div>
+                    <div class="logo">
+                        <img src="./images/sections/logot.svg" alt="icon">
+                    </div>
+                </div>
+                <div class="questionMenu">
+                    <div class="first-que que accordion-item">
+                        <hr>
+                        <div class="question accordion-header">
+                            <div class="title">Какие примерные сроки реализации работ?</div>
+                            <div class="plus-btn">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.4" clip-path="url(#clip0_283_1161)">
+                                    <path d="M17.3331 14.6669L26.6669 14.6669L26.6669 17.3332L17.3331 17.3332V26.667H14.6669V17.3332L5.33306 17.3332L5.33306 14.6669L14.6669 14.6669L14.6669 5.33313H17.3331L17.3331 14.6669Z" fill="black"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_283_1161">
+                                    <rect width="32" height="32" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="content accordion-body">
+                            Все важные технические детали по установке обговариваются с клиентом при приемке и в ходе работы.
+                        </div>
+                    </div>
+                    <div class="second-que que accordion-item">
+                        <hr>
+                        <div class="question accordion-header">
+                            <div class="title">Сколько стоит полный пакет услуг?</div>
+                            <div class="plus-btn">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.4" clip-path="url(#clip0_283_1161)">
+                                    <path d="M17.3331 14.6669L26.6669 14.6669L26.6669 17.3332L17.3331 17.3332V26.667H14.6669V17.3332L5.33306 17.3332L5.33306 14.6669L14.6669 14.6669L14.6669 5.33313H17.3331L17.3331 14.6669Z" fill="black"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_283_1161">
+                                    <rect width="32" height="32" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="content accordion-body">
+                            Все важные технические детали по установке обговариваются с клиентом при приемке и в ходе работы.
+                        </div>
+                    </div>
+                    <div class="third-que que accordion-item">
+                        <hr>
+                        <div class="question accordion-header">
+                            <div class="title">Какие типы автомобилей подходят?</div>
+                            <div class="plus-btn">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.4" clip-path="url(#clip0_283_1161)">
+                                    <path d="M17.3331 14.6669L26.6669 14.6669L26.6669 17.3332L17.3331 17.3332V26.667H14.6669V17.3332L5.33306 17.3332L5.33306 14.6669L14.6669 14.6669L14.6669 5.33313H17.3331L17.3331 14.6669Z" fill="black"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_283_1161">
+                                    <rect width="32" height="32" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="content accordion-body">
+                            Все важные технические детали по установке обговариваются с клиентом при приемке и в ходе работы.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="deliverySection" id="delivery">
+            <div class="deliveryBlock container">
+                <div class="delivery">
+                    <div class="title">Доставка удобной транспортной компанией</div>
+                    <div class="sub-title">По РФ, СНГ и Европе от 2 дней</div>
+                    <img src="./images/sections/delivery/bmw.png" alt="icon">
+                </div>
+                <div class="deliverySteps">
+                    <div class="first-step step">
+                        <div class="title">Оформление заказа</div>
+                        <div class="sub-title">Чаще всего для отправки необходимы: ФИО, контактный телефон, адрес ближайшего к вам офиса транспортной компании.</div>
+                    </div>
+                    <div class="second-step step">
+                        <div class="title">Оплата</div>
+                        <div class="sub-title">После оплаты заказ упаковывается и передается на ПВЗ выбранной транспортной компании.</div>
+                    </div>
+                    <div class="third-step step">
+                        <div class="title">Доставка</div>
+                        <div class="sub-title">Контролируем отправку и доставку, пока вы не получите посылку в руки.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footerBlock">
+            <div class="title-block">
+                <div class="title-phone">
+                    <div class="title">Москва, 1-й Магистральный пр-д, 9 строение 26</div>
+                    <div class="phone-mail">
+                        <div class="phone">
+                            <div class="icon">
+                                <img src="./images/footer/phone.svg" alt="icon">
+                            </div>
+                            <a href="tel:+7 (924) 647-12-13">+7 (924) 647-12-13</a>
+                        </div>
+                        <div class="mail">
+                            <div class="icon">
+                                <img src="./images/footer/mail.svg" alt="icon">
+                            </div>
+                            <a href="mailto:hello@redlights.com">hello@redlights.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="privacyPol">
+                    <p>Сайт носит исключительно информационный характер и не является публичной офертой, определяемой положениями Статьи 437 ГК РФ.</p>
+                </div>
+            </div>
+            <div class="auth-block">
+                <form class="form">
+                    <div class="inp-one inp">
+                        <label for="" class="txt">Имя и фамилия</label>
+                        <input type="text">
+                    </div>
+                    <div class="inp-two inp" >
+                        <label for="" class="txt">Номер телефона</label>
+                        <input type="text">
+                    </div>
+                    <div class="inp-three inp">
+                        <label for="" class="txt">Вопрос (кратко)</label>
+                        <input type="text">
+                    </div>
+                    <button class="btn white">Отправить</button>
+                </form>
+                <div class="icons">
+                    <div class="socials">
+                        <img src="./images/footer/telegram.svg" alt="icon">
+                        <img src="./images/footer/whatsapp.svg" alt="icon">
+                        <img src="./images/footer/viber.svg" alt="icon">
+                    </div>
+                    <div class="logo">
+                        <img src="./images/sections/logot.svg" alt="icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
