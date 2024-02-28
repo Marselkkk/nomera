@@ -158,26 +158,26 @@ main {
 .heroSection .heroSectionBlock .btn-info {
   display: flex;
   justify-content: space-between;
+  gap: 21.875rem;
 }
 .heroSection .heroSectionBlock .btn-info .info-block {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-end;
   gap: 3.75rem;
 }
 .heroSection .heroSectionBlock .btn-info .info-block .title {
   font-size: var(--fz32);
   color: #FFFFFF;
   font-weight: 600;
-  max-width: 50%;
+  max-width: 100%;
   width: 100%;
 }
 .heroSection .heroSectionBlock .btn-info .info-block .sub-title {
   font-size: var(--fz24);
   color: #FFFFFF;
   font-weight: 400;
-  max-width: 40%;
+  max-width: 65%;
   width: 100%;
 }
 .heroSection .heroSectionBlock .btn-info .info-block .sub-title .border-blink {
@@ -469,6 +469,10 @@ main {
   max-width: 17%;
   width: 100%;
 }
+.serviceSection .serviceBlock .blocks .first-block .lil-title span {
+  animation: blink 0.5s step-end infinite alternate;
+  border-right: 3px solid;
+}
 .serviceSection .serviceBlock .blocks .first-block .mech-moy {
   display: flex;
   gap: 2rem;
@@ -599,6 +603,10 @@ main {
   color: #BFBFBF;
   font-size: var(--fz18);
 }
+.feedbackSection .lil-title span {
+  animation: blink 0.5s step-end infinite alternate;
+  border-right: 3px solid;
+}
 .feedbackSection .title-form {
   display: flex;
   gap: 4rem;
@@ -697,6 +705,11 @@ main {
   font-size: var(--fz16);
   text-transform: uppercase;
   color: #FFFFFF;
+  font-weight: 600;
+}
+.optionalSection .optionalBlock .videoBlock .info-block .title-block .lil-title span {
+  animation: blink 0.5s step-end infinite alternate;
+  border-right: 3px solid;
 }
 .optionalSection .optionalBlock .videoBlock .info-block .title-block .title {
   font-size: var(--fz64);
@@ -1117,6 +1130,10 @@ main {
   }
   main .feedbackSection .lil-title {
     font-size: var(--fz12);
+  }
+  main .feedbackSection .lil-title span {
+    animation: blink 0.5s step-end infinite alternate;
+    border-right: 3px solid;
   }
   main .feedbackSection .title-form .title-icon-block .titleBlock .title {
     font-size: var(--fz24);
@@ -1718,6 +1735,11 @@ footer .footerBlock .auth-block .icons .logo img {
   font-size: var(--fz18);
   text-transform: uppercase;
   color: #BFBFBF;
+  transition: all 0.3s;
+}
+.welcome .ofbut:hover {
+  transition: all 0.3s;
+  scale: 0.9;
 }
 
 header {
@@ -1759,6 +1781,11 @@ header .header .headerBlock .nav-sec nav ul {
 header .header .headerBlock .nav-sec nav ul a {
   text-transform: uppercase;
   color: #0D0D0D;
+  transition: all 0.3s;
+}
+header .header .headerBlock .nav-sec nav ul a:hover {
+  scale: 0.9;
+  transition: all 0.3s;
 }
 header .header .headerBlock .btn-nav {
   display: flex;
@@ -1770,6 +1797,18 @@ header .header .headerBlock .btn-nav .quest {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s;
+}
+header .header .headerBlock .btn-nav .quest:hover {
+  scale: 0.9;
+  transition: all 0.3s;
+}
+header .header .headerBlock .btn-nav .tel {
+  transition: all 0.3s;
+}
+header .header .headerBlock .btn-nav .tel:hover {
+  scale: 0.9;
+  transition: all 0.3s;
 }
 header .header .headerBlock .btn-nav .burger-menu {
   display: none;

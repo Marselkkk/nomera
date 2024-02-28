@@ -41,24 +41,24 @@ main {
         .btn-info {
             display: flex;
             justify-content: space-between;
+            gap: 21.875rem;
             .info-block {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                align-items: flex-end;
                 gap: 3.75rem;
                 .title {
                     font-size: var(--fz32);
                     color: $white;
                     font-weight: 600;
-                    max-width: 50%;
+                    max-width: 100%;
                     width: 100%;
                 }
                 .sub-title {
                     font-size: var(--fz24);
                     color: $white;
                     font-weight: 400;
-                    max-width: 40%;
+                    max-width: 65%;
                     width: 100%;
                     .border-blink {
                         animation: blink .5s step-end infinite alternate;
@@ -369,6 +369,10 @@ main {
                     text-transform: uppercase;
                     max-width: 17%;
                     width: 100%;
+                    span {
+                        animation: blink 0.5s step-end infinite alternate;
+                        border-right: 3px solid;
+                    }
                 }
                 .mech-moy {
                     display: flex;
@@ -497,6 +501,10 @@ main {
         text-transform: uppercase;
         color: $grey;
         font-size: var(--fz18);
+        span {
+            animation: blink 0.5s step-end infinite alternate;
+            border-right: 3px solid;
+        }
     }
     .title-form {
         display: flex;
@@ -593,6 +601,11 @@ main {
                         font-size: var(--fz16);
                         text-transform: uppercase;
                         color: $white;
+                        font-weight: 600;
+                        span {
+                            animation: blink 0.5s step-end infinite alternate;
+                            border-right: 3px solid;
+                        }
                     }
                     .title {
                         font-size: var(--fz64);
@@ -1083,6 +1096,10 @@ main {
         .feedbackSection {
             .lil-title {
                 font-size: var(--fz12);
+                span {
+                    animation: blink 0.5s step-end infinite alternate;
+                    border-right: 3px solid;
+                }
             }
             .title-form {
                 .title-icon-block {
