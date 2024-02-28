@@ -37,7 +37,7 @@ header {
         .headerBlock {
             @include df_ac;
             justify-content: space-between;
-            margin: 1.563rem 0;
+            margin: 1.563rem 2rem;
             .logo {
                 display: flex;
                 align-items: center;
@@ -86,6 +86,16 @@ header {
                 .burger-menu {
                     display: none;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 1620px) {
+    header {
+        .header {
+            .headerBlock {
+                margin: 1.563rem 10rem;
             }
         }
     }

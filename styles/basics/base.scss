@@ -3,7 +3,7 @@
 // Руты для единых размеров
 
 :root {
-    --fz128: 8rem;
+    --fz128: 144px;
     --fz96: 6rem;
     --fz64: 4rem;
     --fz48: 3rem;
@@ -147,11 +147,17 @@ input, textarea {
 }
 
 //////////////////////////////////////
-@media (min-width: 1656px) {
+/// 
+@media (min-width: 1920px) {
     .container {
-        max-width: 1600px;
+        max-width: 1760px;
     }
 }
+// @media (min-width: 1656px) {
+//     .container {
+//         max-width: 1600px;
+//     }
+// }
 @media (max-width: 1366px) {
     .container {
         max-width: 1300px;
