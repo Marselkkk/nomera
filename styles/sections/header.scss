@@ -69,10 +69,6 @@ header {
     }
 }
 
-@include mobile{
-    
-}
-
 @media (max-width: 1180px) {
     .menu-open {
         display: none;

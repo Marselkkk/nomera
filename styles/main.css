@@ -24,6 +24,7 @@
   :root {
     --fz96: 3rem;
     --fz18: 1rem;
+    --fz16: 0.75rem;
   }
 }
 
@@ -591,6 +592,7 @@ main {
   justify-content: center;
   flex-direction: column;
   padding: 0 5rem;
+  gap: 3rem;
 }
 .feedbackSection .lil-title {
   text-transform: uppercase;
@@ -603,7 +605,7 @@ main {
 }
 .feedbackSection .title-form .title-icon-block {
   display: flex;
-  gap: 1.25rem;
+  justify-content: space-between;
   flex-direction: column;
 }
 .feedbackSection .title-form .title-icon-block .titleBlock {
@@ -1031,6 +1033,11 @@ main {
   font-weight: 400;
 }
 
+@media (max-width: 1620px) {
+  .advantagesSection .advantagesBlock .consultBlock .ltandt .title p {
+    font-size: var(--fz64);
+  }
+}
 @media (max-width: 1366px) {
   header .header .headerBlock {
     display: flex;
@@ -1141,15 +1148,22 @@ main {
   main .optionalSection .optionalBlock .videoBlock .info-block .title-block .info ul li {
     font-size: var(--fz12);
   }
-  main .optionalSection .optionalBlock .cardsBlock {
-    flex-direction: column;
-  }
   main .optionalSection .optionalBlock .cardsBlock .card {
     padding: 2.5rem;
     justify-content: center;
     flex-grow: 1;
     max-width: 600px;
     width: 100%;
+    max-height: 460px;
+    height: 100%;
+  }
+  main .optionalSection .optionalBlock .cardsBlock .card.one .sub-title {
+    max-width: 80%;
+    font-size: var(--fz18);
+  }
+  main .optionalSection .optionalBlock .cardsBlock .card.two .sub-title {
+    max-width: 94%;
+    font-size: var(--fz18);
   }
   main .frameInstSection .frameInstBlock .blocks {
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -1274,6 +1288,9 @@ main {
   .optionalSection .optionalBlock .videoBlock {
     flex-direction: column;
   }
+  .optionalSection .optionalBlock .cardsBlock {
+    flex-direction: column;
+  }
   .frameInstSection {
     gap: 2rem;
   }
@@ -1347,6 +1364,7 @@ main {
   .heroSection .heroSectionBlock .btn-info .btns {
     flex-direction: column;
     align-items: start;
+    max-width: 100%;
   }
   .heroSection .heroSectionBlock .btn-info .btns .white {
     max-width: 50%;
@@ -1428,6 +1446,16 @@ main {
   }
 }
 @media (max-width: 400px) {
+  .welcome {
+    padding: 0 2rem;
+  }
+  .welcome .title {
+    max-width: 100%;
+    width: 100%;
+  }
+  .heroSection {
+    padding: 5rem 3rem;
+  }
   .heroSection .heroSectionBlock .btn-info .btns .white {
     max-width: 100%;
   }

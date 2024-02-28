@@ -492,6 +492,7 @@ main {
     justify-content: center;
     flex-direction: column;
     padding: 0 5rem;
+    gap: 3rem;
     .lil-title {
         text-transform: uppercase;
         color: $grey;
@@ -502,7 +503,7 @@ main {
         gap: 4rem;
         .title-icon-block {
             display: flex;
-            gap: 1.25rem;
+            justify-content: space-between;
             flex-direction: column;
             .titleBlock {
                 display: flex;
@@ -927,6 +928,22 @@ main {
     }
 }
 
+@media (max-width: 1620px) {
+    .advantagesSection {
+        .advantagesBlock {
+            .consultBlock {
+                .ltandt {
+                    .title {
+                        p {
+                            font-size: var(--fz64);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1366px) {
     header {
         .header {
@@ -1113,13 +1130,26 @@ main {
                     }
                 }
                 .cardsBlock {
-                    flex-direction: column;
                     .card {
                         padding: 2.5rem;
                         justify-content: center;
                         flex-grow: 1;
                         max-width: 600px;
                         width: 100%;
+                        max-height: 460px;
+                        height: 100%;
+                        &.one {
+                            .sub-title {
+                                max-width: 80%;
+                                font-size: var(--fz18);
+                            }
+                        }
+                        &.two {
+                            .sub-title {
+                                max-width: 94%;
+                                font-size: var(--fz18);
+                            }
+                        }
                     }
                 }
             }
@@ -1319,6 +1349,9 @@ main {
             .videoBlock {
                 flex-direction: column;
             }
+            .cardsBlock { 
+                flex-direction: column;
+            }
         }
     }
     .frameInstSection {
@@ -1420,6 +1453,7 @@ main {
                 .btns {
                     flex-direction: column;
                     align-items: start;
+                    max-width: 100%;
                     .white {
                         max-width: 50%;
                         width: 100%;
@@ -1580,7 +1614,15 @@ main {
 }
 
 @media (max-width: 400px) {
+    .welcome {
+        padding: 0 2rem;
+        .title {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
     .heroSection {
+        padding: 5rem 3rem;
         .heroSectionBlock {
             .btn-info {
                 .btns {
