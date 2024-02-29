@@ -1,13 +1,12 @@
 .btn {
-    padding: 1rem 1.5rem;
+    padding: 1.125rem 2rem;
     border-radius: 6px 6px 18px 6px;
     cursor: pointer;
     transition: all .3s ease-in;
-    font-size: var(--fz20);
+    font-size: var(--fz18);
     &:hover {
         scale: (0.9);
     }
-    font-size: var(--fz18);
 
     &.white {
         background-color: $white;
