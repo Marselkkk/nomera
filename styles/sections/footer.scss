@@ -1,112 +1,117 @@
 footer {
-    .footerBlock {
-        display: flex;
-        padding: 120px 40px;
+    .footerSection {
         background-color: #000;
-        justify-content: center;
-        .title-block {
+        .footerBlock {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            .title-phone {
+            padding: 10rem 0;
+            .title-block {
                 display: flex;
                 flex-direction: column;
-                gap: 80px;
-                .title {
-                    color: $white;
-                    font-size: var(--fz32);
-                    max-width: 70%;
-                }
-                .phone-mail {
+                justify-content: space-between;
+                .title-phone {
                     display: flex;
                     flex-direction: column;
-                    gap: 20px;
-                    a {
+                    gap: 80px;
+                    .title {
                         color: $white;
-                        font-size: var(--fz20);
+                        font-size: var(--fz48);
+                        font-weight: 600;
+                        max-width: 60%;
                     }
-                    .phone, 
-                    .mail {
+                    .phone-mail {
                         display: flex;
+                        flex-direction: column;
                         gap: 20px;
-                        font-weight: 400;
-                    }
-                }
-            }
-            .privacyPol {
-                font-size: var(--fz12);
-                font-weight: 400;
-                p {
-                    color: $dark;
-                    max-width: 45%;
-                    width: 100%;
-                }
-            }
-        }
-        .auth-block {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 100px;
-            .form {
-                display: flex;
-                flex-direction: column;
-                gap: 60px;
-                max-width: 642px;
-                width: 100%;
-                input {
-                    outline: none;
-                    border: none;
-                    border-bottom: 1px solid $grey;
-                    transition: all .3s;
-                    font-size: var(--fz16);
-                    font-weight: 400;
-                    background-color: transparent;
-                    width: 100%;
-                    &:focus {
-                        border-bottom: 1px solid $black;
-                        transition: all .3s;
-                    }
-                }
-                .btn {
-                    width: 50%;
-                }
-                .inp {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    gap: 10px;
-                    .txt {
-                        color: $dark;
-                        font-weight: 400;
-                    }
-                    input {
-                        color: $white;
-                        border-bottom: 1px solid $dark;
-                        &:focus {
-                            border-bottom: 1px solid $white;
+                        a {
+                            color: $white;
+                            font-size: var(--fz24);
+                            font-weight: 400;
+                        }
+                        .phone, 
+                        .mail {
+                            display: flex;
+                            gap: 20px;
                         }
                     }
                 }
-            }
-            .icons {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 2rem;
-                .socials {
-                    display: flex;
-                    gap: 20px;
-                    img {
-                        width: 65px;
-                        height: 65px;
+                .privacyPol {
+                    font-size: var(--fz18);
+                    font-weight: 400;
+                    p {
+                        color: $dark;
+                        max-width: 45%;
+                        width: 100%;
                     }
                 }
-                .logo {
-                    img {
-                        width: 70px;
-                        height: 40px;
+            }
+            .auth-block {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                max-width: 36%;
+                width: 100%;
+                gap: 100px;
+                .form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 60px;
+                    max-width: 100%;
+                    width: 100%;
+                    input {
+                        outline: none;
+                        border: none;
+                        border-bottom: 1px solid $grey;
+                        transition: all .3s;
+                        font-size: var(--fz16);
+                        font-weight: 400;
+                        background-color: transparent;
+                        width: 100%;
+                        &:focus {
+                            border-bottom: 1px solid $black;
+                            transition: all .3s;
+                        }
+                    }
+                    .btn {
+                        width: 50%;
+                    }
+                    .inp {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 10px;
+                        .txt {
+                            color: #666666;
+                            font-size: var(--fz24);
+                            font-weight: 400;
+                        }
+                        input {
+                            color: $white;
+                            border-bottom: 1px solid $dark;
+                            &:focus {
+                                border-bottom: 1px solid $white;
+                            }
+                        }
+                    }
+                }
+                .icons {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 2rem;
+                    .socials {
+                        display: flex;
+                        gap: 20px;
+                        img {
+                            width: 65px;
+                            height: 65px;
+                        }
+                    }
+                    .logo {
+                        img {
+                            width: 70px;
+                            height: 40px;
+                        }
                     }
                 }
             }

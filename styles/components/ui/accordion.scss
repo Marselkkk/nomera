@@ -22,7 +22,9 @@
                 }
                 svg {
                     transform: rotate(135deg);
-                    fill: $black;
+                    path {
+                        fill: $black;
+                    }
                 }
             }
         }

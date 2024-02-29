@@ -3,16 +3,28 @@
 // Руты для единых размеров
 
 :root {
-    --fz128: 144px;
+    --fz144: 9rem;
     --fz96: 6rem;
     --fz64: 4rem;
     --fz48: 3rem;
+    --fz36: 2.25rem;
     --fz32: 2rem;
     --fz24: 1.5rem;
     --fz20: 1.25rem;
     --fz18: 1.125rem;
     --fz16: 1rem;
     --fz12: 0.75rem;
+    @include desktop-lite {
+        --fz144: 6rem;
+        --fz96: 4rem;
+        --fz48: 2rem;
+        --fz32: 1.5rem;
+        --fz24: 1.125rem;
+        --fz20: 1.25rem;
+        --fz18: 1.125rem;
+        --fz16: 1rem;
+        --fz12: 0.75rem;
+    }
     @include mobile {
         --fz96: 4rem;
         --fz64: 2rem;
@@ -23,6 +35,7 @@
     }
     @include mobile-lite {
         --fz96: 3rem;
+        --fz20: 1rem;
         --fz18: 1rem;
         --fz16: 0.75rem;
     }
@@ -148,16 +161,16 @@ input, textarea {
 
 //////////////////////////////////////
 /// 
+@media (min-width: 1680px) {
+    .container {
+        max-width: 1520px;
+    }
+}
 @media (min-width: 1920px) {
     .container {
         max-width: 1760px;
     }
 }
-// @media (min-width: 1656px) {
-//     .container {
-//         max-width: 1600px;
-//     }
-// }
 @media (max-width: 1366px) {
     .container {
         max-width: 1300px;

@@ -27,7 +27,7 @@ main {
             flex-direction: column;
             gap: 18.75rem;
             .big-title {
-                font-size: var(--fz128);
+                font-size: var(--fz144);
                 line-height: 100%;
                 color: $white;
                 font-weight: 600;
@@ -44,12 +44,13 @@ main {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
+                max-width: 35%;
                 gap: 3.75rem;
                 .title {
                     font-size: var(--fz32);
                     color: $white;
                     font-weight: 600;
-                    max-width: 100%;
+                    max-width: 75%;
                     width: 100%;
                 }
                 .sub-title {
@@ -218,14 +219,13 @@ main {
             padding: 3.75rem;
             display: flex;
             flex-direction: column;
-            gap: 4.688rem;
+            gap: 2.5rem;
             border-bottom: 0.063rem solid rgb(191,191,191, 0.3);
             max-width: 100%;
             max-height: 100%;
             .title {
                 font-size: var(--fz48);
                 font-weight: 600;
-                max-width: 90%;
                 color: #2a1a80;
             }
             .sub-titles {
@@ -250,74 +250,6 @@ main {
                 max-width: 100%;
                 width: 100%;
                 height: auto;
-            }
-        }
-    }
-}
-
-.sliderSection {
-    .sliderBlock {
-        .swiper {
-            .swiper-wrapper {
-                .swiper-slide {
-                    display: flex;
-                    background-color: #99A8BF;
-                    color: $white;
-                    align-items: center;
-                    gap: 3rem;
-                    padding: 2rem;
-                    border-radius: 1.5rem 1.5rem 3rem 1.5rem;
-                    .other {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 5rem;
-                        .sub-and-title {
-                            display: flex;
-                            flex-direction: column;
-                            gap: 3rem;
-                            .title {
-                                font-size: var(--fz32);
-                                font-weight: 600;
-                                max-width: 60%;
-                            }
-                            .sub-title {
-                                font-size: var(--fz20);
-                                font-weight: 400;
-                                max-width: 60%;
-                            }
-                        }
-                        .desc {
-                            font-size: var(--fz16);
-                            font-weight: 500;
-                            max-width: 60%
-                        }
-                        .cost-and-arr {
-                            @include df_ac;
-                            justify-content: space-between;
-                            .cost {
-                                font-size: var(--fz32);
-                                font-weight: 600;
-                            }
-                            .arr {
-                                display: flex;
-                                gap: 0.833rem;
-                                .next, 
-                                .prev {
-                                    @include df_ac;
-                                    background-color: #fff;
-                                    padding: 1rem;
-                                    border-radius: 100%;
-                                    transition: all .3s;
-                                    cursor: pointer;
-                                    &:hover {
-                                        scale: (0.9);
-                                        transition: all .3s;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }
@@ -356,7 +288,7 @@ main {
         .blocks {
             display: flex;
             flex-direction: column;
-            gap: 10rem;
+            gap: 8.125rem;
             .first-block {
                 display: flex;
                 justify-content: space-between;
@@ -380,7 +312,7 @@ main {
                         display: flex;
                         flex-direction: column;
                         gap: 2.5rem;
-                        max-width: 35%;
+                        max-width: 32%;
                         .title {
                             font-size: var(--fz32);
                             font-weight: 600;
@@ -446,6 +378,7 @@ main {
     }
 }
 .cardsSection {
+    padding: 0 2.5rem;
     .cardsBlock {
         display: flex;
         justify-content: center;
@@ -456,7 +389,7 @@ main {
         .card-two {
             display: flex;
             flex-direction: column;
-            gap: 15rem;
+            gap: 12rem;
             border-radius: 1.125rem;
             padding: 3.75rem;
             max-width: 70rem;
@@ -488,13 +421,96 @@ main {
                 }
             }
         }
+        .card-one {
+            .title-sub {
+                .sub-title {
+                    max-width: 80%;
+                }
+            }
+        }
+    }
+    .sliderBlock {
+        .swiper {
+            .swiper-wrapper {
+                .swiper-slide {
+                    display: flex;
+                    background-color: #99A8BF;
+                    color: $white;
+                    align-items: center;
+                    gap: 3rem;
+                    padding: 2rem;
+                    border-radius: 1.5rem 1.5rem 3rem 1.5rem;
+                    .img {
+                        max-width: 690px;
+                        max-height: 640px;
+                        width: 100%;
+                        height: 100%;
+                        img {
+                            max-width: 690px;
+                            max-height: 640px;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .other {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5rem;
+                        .sub-and-title {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 3rem;
+                            .title {
+                                font-size: var(--fz48);
+                                font-weight: 600;
+                                max-width: 75%;
+                            }
+                            .sub-title {
+                                font-size: var(--fz24);
+                                font-weight: 400;
+                                max-width: 66%;
+                            }
+                        }
+                        .desc {
+                            font-size: var(--fz16);
+                            font-weight: 500;
+                            max-width: 50%
+                        }
+                        .cost-and-arr {
+                            @include df_ac;
+                            justify-content: space-between;
+                            .cost {
+                                font-size: var(--fz48);
+                                font-weight: 600;
+                            }
+                            .arr {
+                                display: flex;
+                                gap: 0.833rem;
+                                .next, 
+                                .prev {
+                                    @include df_ac;
+                                    background-color: #fff;
+                                    padding: 1rem;
+                                    border-radius: 100%;
+                                    transition: all .3s;
+                                    cursor: pointer;
+                                    &:hover {
+                                        scale: (0.9);
+                                        transition: all .3s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 .feedbackSection {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 0 5rem;
     gap: 3rem;
     .lil-title {
         text-transform: uppercase;
@@ -558,13 +574,19 @@ main {
                 }
             }
             .btn {
-                width: fit-content;
+                max-width: 55%;
+                width: 100%;
             }
             .inp {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
                 gap: 0.625rem;
+                label {
+                    font-size: var(--fz24);
+                    font-weight: 400;
+                    color: $grey;
+                }
             }
         }
     }
@@ -575,13 +597,14 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 2.5rem;
         .videoBlock {
             display: flex;
             justify-content: center;
             max-width: 100%;
             width: 100%;
             video {
-                max-width: 100%;
+                max-width: 960px;
                 width: 100%;
             }
             .info-block {
@@ -590,7 +613,7 @@ main {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                max-width: 100%;
+                max-width: 960px;
                 width: 100%;
                 .title-block {
                     display: flex;
@@ -607,7 +630,7 @@ main {
                         }
                     }
                     .title {
-                        font-size: var(--fz64);
+                        font-size: var(--fz96);
                         color: $white;
                         line-height: 100%;
                         font-weight: 500;
@@ -645,14 +668,13 @@ main {
             gap: 2.5rem;
             align-items: center;
             justify-content: space-between;
-            padding: 2.5rem 2.5rem 0 2.5rem;
             .card {
                 display: flex;
                 flex-direction: column;
                 gap: 12.5rem;
                 padding: 5rem;
                 max-width: 70rem;
-                max-height: 530px;
+                max-height: 37rem;
                 height: 100%;
                 width: 100%;
                 .btn {
@@ -691,7 +713,6 @@ main {
     justify-content: center;
     flex-direction: column;
     .frameInstBlock {
-        padding: 0 5rem;
         display: flex;
         flex-direction: column;
         gap: 5rem;
@@ -700,9 +721,10 @@ main {
             flex-direction: column;
             gap: 2.5rem;
             .title {
-                max-width: 65%;
+                max-width: 80%;
                 p {
-                    font-size: var(--fz64);
+                    font-size: var(--fz96);
+                    line-height: 100%;
                     font-weight: 600;
                     span {
                         color: #2a1a80;
@@ -710,10 +732,10 @@ main {
                 }
             }
             .sub-title {
-                max-width: 55%;
+                max-width: 70%;
                 p {
                     color: $grey;
-                    font-size: var(--fz32);
+                    font-size: var(--fz48);
                     font-weight: 600;
                 }
             }
@@ -745,7 +767,7 @@ main {
                         font-size: var(--fz24);
                     }
                     .beb {
-                        font-size: var(--fz18);
+                        font-size: var(--fz16);
                         font-weight: 400;
                         color: $grey;
                     }
@@ -764,10 +786,13 @@ main {
                 p {
                     max-width: 50%;
                     width: 100%;
-                    font-size: var(--fz18);
+                    font-size: var(--fz24);
                     font-weight: 400;
                     span {
                         font-weight: bold;
+                    }
+                    &:last-of-type {
+                        max-width: 55%;
                     }
                 }
             }
@@ -808,14 +833,13 @@ main {
         background-image: url(../images/sections/sled.png);
         background-size: contain;
         background-repeat: repeat-x;
-        height: 6rem;
+        height: 12rem;
         width: 100%;
     }
 }
 .portfolioSection {
     display: flex;
     flex-wrap: nowrap;
-    gap: 1.25rem;
     background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.6)),#2a1a80;
     overflow-x: auto;
     video {
@@ -827,63 +851,71 @@ main {
 .faqSection {
     @include df_ac_jcc;
     .faqBlock {
-        padding: 0 5rem;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         gap: 1.875rem;
-        .titleBlock {
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-            .lil-title {
-                color: $gray;
-                font-size: var(--fz16);
-                font-weight: 600;
-                text-transform: uppercase;
-            }
-            .title {
-                font-size: var(--fz32);
-                font-weight: 600;
-            }
-            .logo {
-                img {
-                    max-width: 4.375rem;
-                    max-height: 2.5rem;
-                    width: 100%;
-                    width: 100%;
-                }
-            }
+        .lil-title {
+            color: $gray;
+            font-size: var(--fz16);
+            font-weight: 600;
+            text-transform: uppercase;
         }
-        .questionMenu {
+        .title-and-question {
             display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-            .first-que, 
-            .second-que, 
-            .third-que {
-                &.que {
+            .title-logo {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .titleBlock {
                     display: flex;
                     flex-direction: column;
-                    gap: 1.875rem;
-                }
-                .question {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+                    gap: 2.5rem;
                     .title {
-                        font-size: var(--fz32);
+                        font-size: var(--fz48);
                         font-weight: 600;
-                        &:hover {
-                            color: $black;
-                            scale: 95;
-                            transition: all .3s;
-                        }
                     }
                 }
-                .content {
-                    font-size: var(--fz24);
-                    font-weight: 400;
-                    max-width: 80%;
+                .logo {
+                    img {
+                        max-width: 4.375rem;
+                        max-height: 2.5rem;
+                        width: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+            .questionMenu {
+                display: flex;
+                flex-direction: column;
+                gap: 1.25rem;
+                .first-que, 
+                .second-que, 
+                .third-que {
+                    &.que {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.875rem;
+                    }
+                    .question {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .title {
+                            font-size: var(--fz32);
+                            font-weight: 600;
+                            &:hover {
+                                color: $black;
+                                scale: 95;
+                                transition: all .3s;
+                            }
+                        }
+                    }
+                    .content {
+                        font-size: var(--fz24);
+                        font-weight: 400;
+                        max-width: 80%;
+                    }
                 }
             }
         }
@@ -891,51 +923,63 @@ main {
 }
 .deliverySection {
     display: flex;
-    padding: 5rem 5rem 0 5rem;
+    position: relative;
+    padding: 5rem 0 5rem 0;
     background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.6)),#2a1a80;
     .deliveryBlock {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        .delivery {
+        .del-and-step {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            .title {
-                font-size: var(--fz64);
-                color: $white;
-                max-width: 70%;
-                width: 100%;
-                font-weight: 500;
-            }
-            .sub-title {
-                font-size: var(--fz24);
-                color: #99A8BF;
-                font-weight: 600;
-            }
-        }
-        .deliverySteps {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: start;
-            padding-left: 2.5rem;
-            border-left: 0.063rem solid $white;
-            gap: 3rem;
-            .step {
+            .delivery {
                 display: flex;
                 flex-direction: column;
-                gap: 0.5rem;
+                align-items: flex-start;
                 .title {
-                    font-size: var(--fz20);
+                    font-size: var(--fz96);
                     color: $white;
-                    font-weight: 600;
+                    line-height: 100%;
+                    max-width: 90%;
+                    width: 100%;
+                    font-weight: 500;
                 }
                 .sub-title {
-                    font-size: var(--fz16);
-                    color: $white;
-                    font-weight: 400;
+                    font-size: var(--fz32);
+                    color: #99A8BF;
+                    font-weight: 600;
                 }
             }
+            .deliverySteps {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: start;
+                padding-left: 2.5rem;
+                border-left: 0.063rem solid $white;
+                gap: 3rem;
+                .step {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.5rem;
+                    .title {
+                        font-size: var(--fz32);
+                        color: $white;
+                        font-weight: 600;
+                    }
+                    .sub-title {
+                        font-size: var(--fz24);
+                        color: $white;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        img {
+            position: absolute;
+            z-index: 20;
+            left: 0;
+            bottom: 0;
         }
     }
 }
@@ -961,12 +1005,12 @@ main {
         .header {
             .headerBlock {
                 display: flex;
-                gap: 1.25rem;
+                gap: 2.5rem;
                 padding: 0 5rem;
                 .logo {
                     a {
                         img {
-                            max-height: 15px;
+                            max-height: 20px;
                             height: 100%;
                         }
                     }
@@ -995,6 +1039,23 @@ main {
                     gap: 2.5rem;
                     .info-block {
                         align-items: flex-start;
+                    }
+                }
+            }
+        }
+        .sliderSection {
+            .sliderBlock {
+                .swiper {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            .other {
+                                .sub-and-title {
+                                    .title {
+                                        font-size: var(--fz36);
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1129,9 +1190,6 @@ main {
                         gap: 5rem;
                         .title-block {
                             gap: 2.5rem;
-                            .title {
-                                font-size: var(--fz48);
-                            }
                             .sub-title {
                                 font-size: var(--fz18);
                             }
@@ -1187,9 +1245,11 @@ main {
         }
         .faqSection {
             .faqBlock {
-                .titleBlock {
-                    .title {
-                        font-size: var(--fz24);
+                .title-logo {
+                    .titleBlock {
+                        .title {
+                            font-size: var(--fz24);
+                        }
                     }
                 }
             }
@@ -1382,9 +1442,11 @@ main {
     .faqSection {
         .faqBlock {
             flex-direction: column;
-            .titleBlock {
-                .logo {
-                    display: none;
+            .title-logo {
+                .titleBlock {
+                    .logo {
+                        display: none;
+                    }
                 }
             }
         }
