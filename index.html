@@ -12,13 +12,15 @@
     <script src="https://kit.fontawesome.com/0396950dcd.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="welcome" >
-        <div class="title">Оформите заявку прямо сейчас, и получите скидку 10% на первый заказ!</div>
-        <a href="#feedback">
-            <button class="ofbut">
-                Оформить
-            </button>
-        </a>
+    <div class="welcome">
+        <div class="title-bok container">
+            <div class="title">Оформите заявку прямо сейчас, и получите скидку 10% на первый заказ!</div>
+            <a href="#feedback">
+                <button class="ofbut">
+                    Оформить
+                </button>
+            </a>
+        </div>
     </div>
     <header>
         <div class="header">
@@ -113,7 +115,7 @@
                 <div class="cards-and-oth">
                     <div class="tandlogo">
                         <div class="sub-title">
-                            <p class="firp">Вы получаете <span>надежную, безотказную</span> систему продуманную до мелочей на долгие года.</p>
+                            <p class="firp">Вы получаете <span>надежную, безотказную систему</span> продуманную до мелочей на долгие года.</p>
                             <p class="secp">Наши клиенты <span>меняют не рамки</span>, а приезжают к нам на переустановку когда покупают новое авто.</p>
                         </div>
                         <div class="logot">
@@ -121,33 +123,33 @@
                         </div>
                     </div>
                     <div class="cards">
-                        <div class="card">
+                        <div class="card first-card">
                             <div class="icon">
                                 <img src="./images/sections/card/speed.svg" alt="icon">
                             </div>
                             <div class="title">Безупречная работа на любой скорости</div>
                             <div class="sub-title">Быстрое и безопасное открытие и закрытие рамки на скорости до 324 км/ч.</div>
                         </div>
-                        <div class="card">
+                        <div class="card second-card">
                             <div class="icon">
                                 <img src="./images/sections/card/settings.svg" alt="icon">
                             </div>
                             <div class="title">Уникальная технология «Stealth Race»</div>
                             <div class="sub-title">Уникальная технология скрытых петель в паре с мощным редуктором исключает обнаружение механизма даже при самом тщательном осмотре.</div>
                         </div>
-                        <div class="card">
+                        <div class="card third-card">
                             <div class="icon">
                                 <img src="./images/sections/card/lock.svg" alt="icon">
                             </div>
                             <div class="title">Универсальный механизм</div>
                             <div class="sub-title">Позволяет установить рамки на любой автомобиль, в том числе грузовики, автобусы, минивэны, и т.д.</div>
                         </div>
-                        <div class="card">
+                        <div class="card fourth-card">
                             <div class="icon">
                                 <img src="./images/sections/card/shield.svg" alt="icon">
                             </div>
                             <div class="title">Надежная защита от воды, снега и грязи</div>
-                            <div class="sub-title">Наши рамки оснащены мощными водо-влагозащитными моторами, которые приспособлены к любым погодным условиям.</div>
+                            <div class="sub-title"><p>Наши рамки оснащены мощными водо-влагозащитными моторами, которые приспособлены к любым погодным условиям.</p></div>
                         </div>
                     </div>
                 </div>
@@ -203,7 +205,7 @@
                 </div>
                 <div class="blocks">
                     <div class="first-block">
-                        <div class="lil-title">Рекомендации<br> <span>по использованию</span></div>
+                        <div class="lil-title">Рекомендации <span>по<br> использованию</span></div>
                         <div class="mech-moy">
                             <div class="mech cal">
                                 <hr>
@@ -233,7 +235,7 @@
         </section>
 
         <section class="cardsSection" id="cards">
-            <div class="cardsBlock">
+            <div class="cardsBlock container">
                 <div class="card-one" style="background-image: url(./images/sections/cardssec/second.png); background-size: cover; background-repeat: no-repeat; background-position: center">
                     <div class="title-sub">
                         <div class="title">
@@ -525,51 +527,53 @@
             </div>
             <div class="sled"></div>
         </section>
-        <section class="feedbackSection container">
-            <div class="lil-title">Будем на <span>связи</span></div>
-            <div class="title-form">
-                <div class="title-icon-block">
-                    <div class="titleBlock">
-                        <div class="title">Оставьте заявку на обратный звонок, и наш менеджер свяжется с Вами в ближайшее время</div>
-                        <div class="sub-title">Или напишите нам в соц.сетях</div>
+        <section class="feedbackSection">
+            <div class="feedbackBlock container">
+                <div class="lil-title">Будем на <span>связи</span></div>
+                <div class="title-form">
+                    <div class="title-icon-block">
+                        <div class="titleBlock">
+                            <div class="title">Оставьте заявку на обратный звонок, и наш менеджер свяжется с Вами в ближайшее время</div>
+                            <div class="sub-title">Или напишите нам в соц.сетях</div>
+                        </div>
+                        <div class="iconBlock">
+                            <div class="telegram icon">
+                                <img src="./images/sections/feedback/telegram.svg" alt="icon">
+                            </div>
+                            <div class="whatsapp icon">
+                                <img src="./images/sections/feedback/whatsapp.svg" alt="icon">
+                            </div>
+                            <div class="viber icon">
+                                <img src="./images/sections/feedback/viber.svg" alt="icon">
+                            </div>
+                        </div>
                     </div>
-                    <div class="iconBlock">
-                        <div class="telegram icon">
-                            <img src="./images/sections/feedback/telegram.svg" alt="icon">
+                    <form class="form">
+                        <div class="inp-one inp">
+                            <label for="">Имя и фамилия</label>
+                            <input type="text">
                         </div>
-                        <div class="whatsapp icon">
-                            <img src="./images/sections/feedback/whatsapp.svg" alt="icon">
+                        <div class="inp-two inp">
+                            <label for="">Номер телефона</label>
+                            <input type="text">
                         </div>
-                        <div class="viber icon">
-                            <img src="./images/sections/feedback/viber.svg" alt="icon">
+                        <div class="inp-three inp">
+                            <label for="">Вопрос (кратко)</label>
+                            <input type="text">
                         </div>
-                    </div>
+                        <button class="btn blue">Отправить</button>
+                    </form>
                 </div>
-                <form class="form">
-                    <div class="inp-one inp">
-                        <label for="">Имя и фамилия</label>
-                        <input type="text">
-                    </div>
-                    <div class="inp-two inp">
-                        <label for="">Номер телефона</label>
-                        <input type="text">
-                    </div>
-                    <div class="inp-three inp">
-                        <label for="">Вопрос (кратко)</label>
-                        <input type="text">
-                    </div>
-                    <button class="btn blue">Отправить</button>
-                </form>
             </div>
         </section>
         <section class="portfolioSection" id="portfolio">
-            <video controls="" autoplay="" name="media">
+            <video controls="" autoplay="" name="media" width="546">
                 <source src="https://dev.nomer-msk.ru/media/services/video_setup/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE_%D1%82%D0%B5%D1%81%D0%BB%D0%B02_7evUGfv.mp4" type="video/mp4">
             </video>
-            <video controls="" autoplay="" name="media">
+            <video controls="" autoplay="" name="media" width="546">
                 <source src="https://dev.nomer-msk.ru/media/services/video_setup/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE_%D1%82%D0%B5%D1%81%D0%BB%D0%B02_7evUGfv.mp4" type="video/mp4">
             </video>
-            <video controls="" autoplay="" name="media">
+            <video controls="" autoplay="" name="media" width="546">
                 <source src="https://dev.nomer-msk.ru/media/services/video_setup/%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE_%D1%82%D0%B5%D1%81%D0%BB%D0%B02_7evUGfv.mp4" type="video/mp4">
             </video>
             <video controls="" autoplay="" name="media">

@@ -1,24 +1,29 @@
 .welcome {
     background-image: url(../images/header/welcome-gradient.png);
     @include bg_s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.938rem 0;
-    gap: 2.5rem;
-    .title {
-        font-size: var(--fz16);
-        color: $white;
-        font-weight: 500;
-    }
-    .ofbut {
-        font-size: var(--fz18);
-        text-transform: uppercase;
-        color: $grey;
-        transition: all .3s;
-        &:hover {
+    .title-bok {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.938rem 0;
+        gap: 2.5rem;
+        @include mobile {
+            gap: 0.5rem;
+        }
+        .title {
+            font-size: 16px;
+            color: $white;
+            font-weight: 500;
+        }
+        .ofbut {
+            font-size: 18px;
+            text-transform: uppercase;
+            color: $grey;
             transition: all .3s;
-            scale: (0.9);
+            &:hover {
+                transition: all .3s;
+                scale: (0.9);
+            }
         }
     }
 }
@@ -38,6 +43,9 @@ header {
             @include df_ac;
             justify-content: space-between;
             margin: 1.563rem 2rem;
+            @include desktop-lite {
+                margin: 1.25rem 2.5rem;
+            }
             .logo {
                 display: flex;
                 align-items: center;
@@ -52,7 +60,10 @@ header {
                         @include df_ac_jcc;
                         gap: 3.75rem;
                         font-weight: 600;
-                        font-size: var(--fz18);
+                        font-size: 18px;
+                        @include desktop-lite {
+                            gap: 2.5rem;
+                        }
                         a {
                             text-transform: uppercase;
                             color: $black;
@@ -68,6 +79,12 @@ header {
             .btn-nav {
                 @include df_ac_jcc;
                 gap: 1.25rem;
+                .btn {
+                    max-height: 50px;
+                    @include desktop-lite {
+                        font-size: 18px;
+                    }
+                }
                 .quest {
                     @include df_ac_jcc;
                     transition: all .3s;
@@ -86,16 +103,6 @@ header {
                 .burger-menu {
                     display: none;
                 }
-            }
-        }
-    }
-}
-
-@media (max-width: 1620px) {
-    header {
-        .header {
-            .headerBlock {
-                margin: 1.563rem 10rem;
             }
         }
     }

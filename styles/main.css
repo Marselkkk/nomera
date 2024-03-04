@@ -11,7 +11,7 @@
   --fz16: 1rem;
   --fz12: 0.75rem;
 }
-@media (max-width: 1360px) {
+@media (max-width: 1366px) {
   :root {
     --fz144: 6rem;
     --fz96: 4rem;
@@ -19,9 +19,8 @@
     --fz32: 1.5rem;
     --fz24: 1.125rem;
     --fz20: 1.25rem;
-    --fz18: 1.125rem;
-    --fz16: 1rem;
-    --fz12: 0.75rem;
+    --fz18: 1rem;
+    --fz16: 0.75rem;
   }
 }
 @media (max-width: 768px) {
@@ -30,7 +29,7 @@
     --fz64: 2rem;
     --fz48: 1.5rem;
     --fz32: 1.25rem;
-    --fz24: 1.125rem;
+    --fz24: 1;
     --fz20: 1rem;
   }
 }
@@ -115,6 +114,21 @@ input:hover, textarea:hover {
   border-right: 3px solid;
 }
 
+@media (max-width: 400px) {
+  .container {
+    max-width: 335px;
+  }
+}
+@media (max-width: 1160px) {
+  .container {
+    max-width: 1080px;
+  }
+}
+@media (max-width: 1366px) {
+  .container {
+    max-width: 1286px;
+  }
+}
 @media (min-width: 1680px) {
   .container {
     max-width: 1520px;
@@ -125,16 +139,16 @@ input:hover, textarea:hover {
     max-width: 1760px;
   }
 }
-@media (max-width: 1366px) {
-  .container {
-    max-width: 1300px;
-  }
-}
 main {
   display: flex;
   flex-direction: column;
   gap: 12.5rem;
   justify-content: center;
+}
+@media (max-width: 1366px) {
+  main {
+    gap: 7.5rem;
+  }
 }
 
 .heroSection {
@@ -154,7 +168,16 @@ main {
   display: flex;
   flex-direction: column;
   gap: 12.5rem;
-  margin: 0 2rem;
+}
+@media (max-width: 1366px) {
+  .heroSection .heroSectionBlock {
+    gap: 5rem;
+  }
+}
+@media (max-width: 768px) {
+  .heroSection .heroSectionBlock {
+    gap: 20.917rem;
+  }
 }
 .heroSection .heroSectionBlock .btn-tit {
   display: flex;
@@ -170,13 +193,25 @@ main {
 }
 @media (max-width: 768px) {
   .heroSection .heroSectionBlock .btn-tit .big-title {
-    font-size: 20px;
+    font-size: 48px;
+    max-width: 60%;
   }
 }
 .heroSection .heroSectionBlock .btn-info {
   display: flex;
   justify-content: space-between;
   gap: 21.875rem;
+}
+@media (max-width: 1366px) {
+  .heroSection .heroSectionBlock .btn-info {
+    flex-direction: column-reverse;
+    gap: 9rem;
+  }
+}
+@media (max-width: 768px) {
+  .heroSection .heroSectionBlock .btn-info {
+    gap: 3rem;
+  }
 }
 .heroSection .heroSectionBlock .btn-info .info-block {
   display: flex;
@@ -185,6 +220,20 @@ main {
   max-width: 35%;
   gap: 3.75rem;
 }
+@media (max-width: 1366px) {
+  .heroSection .heroSectionBlock .btn-info .info-block {
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 56%;
+  }
+}
+@media (max-width: 768px) {
+  .heroSection .heroSectionBlock .btn-info .info-block {
+    flex-direction: column;
+    max-width: 100%;
+    gap: 30px;
+  }
+}
 .heroSection .heroSectionBlock .btn-info .info-block .title {
   font-size: var(--fz32);
   color: #FFFFFF;
@@ -192,12 +241,34 @@ main {
   max-width: 75%;
   width: 100%;
 }
+@media (max-width: 1366px) {
+  .heroSection .heroSectionBlock .btn-info .info-block .title {
+    max-width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .heroSection .heroSectionBlock .btn-info .info-block .title {
+    max-width: 80%;
+    font-size: 18px;
+  }
+}
 .heroSection .heroSectionBlock .btn-info .info-block .sub-title {
   font-size: var(--fz24);
   color: #FFFFFF;
   font-weight: 400;
   max-width: 65%;
   width: 100%;
+}
+@media (max-width: 1366px) {
+  .heroSection .heroSectionBlock .btn-info .info-block .sub-title {
+    max-width: 39%;
+  }
+}
+@media (max-width: 768px) {
+  .heroSection .heroSectionBlock .btn-info .info-block .sub-title {
+    max-width: 75%;
+    font-size: 14px;
+  }
 }
 .heroSection .heroSectionBlock .btn-info .info-block .sub-title .border-blink {
   animation: blink 0.5s step-end infinite alternate;
@@ -211,6 +282,26 @@ main {
   max-width: 40%;
   width: 100%;
 }
+@media (max-width: 1366px) {
+  .heroSection .heroSectionBlock .btn-info .btns {
+    max-width: 57%;
+  }
+}
+@media (max-width: 768px) {
+  .heroSection .heroSectionBlock .btn-info .btns {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+  }
+  .heroSection .heroSectionBlock .btn-info .btns .white {
+    max-width: 100%;
+    width: 100%;
+  }
+  .heroSection .heroSectionBlock .btn-info .btns .transparent {
+    max-width: 100%;
+    width: 100%;
+  }
+}
 .heroSection .heroSectionBlock .btn-info .btns .btn {
   max-width: 100%;
   width: 100%;
@@ -222,11 +313,21 @@ main {
   justify-content: center;
   transform: none;
 }
+@media (max-width: 1366px) {
+  .createSection {
+    padding: 0;
+  }
+}
 .createSection .createBlock {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 7.5rem;
+}
+@media (max-width: 768px) {
+  .createSection .createBlock {
+    gap: 60px;
+  }
 }
 .createSection .createBlock .title {
   font-size: var(--fz96);
@@ -234,9 +335,20 @@ main {
   font-weight: 500;
   max-width: 70%;
 }
+@media (max-width: 768px) {
+  .createSection .createBlock .title {
+    max-width: 95%;
+    font-size: 36px;
+  }
+}
 .createSection .createBlock .cards-and-oth {
   display: flex;
-  gap: 21.875rem;
+  gap: 19.2rem;
+}
+@media (max-width: 1366px) {
+  .createSection .createBlock .cards-and-oth {
+    gap: 9.375rem;
+  }
 }
 .createSection .createBlock .cards-and-oth .tandlogo {
   display: flex;
@@ -251,7 +363,17 @@ main {
 .createSection .createBlock .cards-and-oth .tandlogo .sub-title .firp {
   font-size: var(--fz24);
   font-weight: 400;
-  max-width: 75%;
+  max-width: 80%;
+}
+@media (max-width: 1366px) {
+  .createSection .createBlock .cards-and-oth .tandlogo .sub-title .firp {
+    max-width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .createSection .createBlock .cards-and-oth .tandlogo .sub-title .firp {
+    max-width: 80%;
+  }
 }
 .createSection .createBlock .cards-and-oth .tandlogo .sub-title .firp span {
   font-weight: bold;
@@ -259,10 +381,20 @@ main {
 .createSection .createBlock .cards-and-oth .tandlogo .sub-title .secp {
   font-size: var(--fz24);
   font-weight: 400;
-  max-width: 80%;
+  max-width: 90%;
+}
+@media (max-width: 1366px) {
+  .createSection .createBlock .cards-and-oth .tandlogo .sub-title .secp {
+    max-width: 85%;
+  }
 }
 .createSection .createBlock .cards-and-oth .tandlogo .sub-title .secp span {
   font-weight: bold;
+}
+@media (max-width: 768px) {
+  .createSection .createBlock .cards-and-oth .tandlogo .sub-title .secp {
+    max-width: 75%;
+  }
 }
 .createSection .createBlock .cards-and-oth .tandlogo .logot img {
   max-width: 11.813rem;
@@ -274,13 +406,50 @@ main {
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
-  grid-column-gap: 2.5rem;
   grid-row-gap: 6.25rem;
+}
+@media (max-width: 1366px) {
+  .createSection .createBlock .cards-and-oth .cards {
+    grid-row-gap: 3.75rem;
+  }
+}
+@media (max-width: 768px) {
+  .createSection .createBlock .cards-and-oth .cards {
+    grid-row-gap: 80px;
+  }
 }
 .createSection .createBlock .cards-and-oth .cards .card {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+.createSection .createBlock .cards-and-oth .cards .card.second-card .title {
+  max-width: 100%;
+}
+.createSection .createBlock .cards-and-oth .cards .card.second-card .sub-title {
+  max-width: 100%;
+}
+@media (max-width: 1366px) {
+  .createSection .createBlock .cards-and-oth .cards .card.first-card .sub-title {
+    max-width: 70%;
+  }
+  .createSection .createBlock .cards-and-oth .cards .card.second-card .title {
+    max-width: 90%;
+  }
+  .createSection .createBlock .cards-and-oth .cards .card.second-card .sub-title {
+    max-width: 100%;
+  }
+  .createSection .createBlock .cards-and-oth .cards .card.fourth-card .title {
+    max-width: 85%;
+  }
+  .createSection .createBlock .cards-and-oth .cards .card.fourth-card .sub-title {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .createSection .createBlock .cards-and-oth .cards .card.fourth-card .title {
+    max-width: 100%;
+  }
 }
 .createSection .createBlock .cards-and-oth .cards .card .title {
   font-size: var(--fz32);
@@ -289,17 +458,46 @@ main {
 .createSection .createBlock .cards-and-oth .cards .card .sub-title {
   font-size: var(--fz24);
   font-weight: 400;
-  max-width: 85%;
+  max-width: 91%;
 }
-.createSection .createBlock .cards-and-oth .cards .card .icon img {
+.createSection .createBlock .cards-and-oth .cards .card .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
   padding: 1.5rem;
   border: 2px dashed #99A8BF;
   border-radius: 0.375rem 0.375rem 1.125rem 0.375rem;
+}
+@media (max-width: 1366px) {
+  .createSection .createBlock .cards-and-oth .cards .card .icon {
+    width: 64px;
+    height: 64px;
+    padding: 1.125rem;
+  }
+}
+@media (max-width: 1366px) {
+  .createSection .createBlock .cards-and-oth .cards .card .icon img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .advantagesSection .advantagesBlock {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 768px) {
+  .advantagesSection .advantagesBlock {
+    flex: 1;
+  }
+  .advantagesSection .advantagesBlock .videoBlock {
+    order: 3;
+  }
+  .advantagesSection .advantagesBlock .balBlock {
+    order: 2;
+  }
 }
 .advantagesSection .advantagesBlock .consultBlock {
   grid-column: 1;
@@ -312,16 +510,39 @@ main {
   max-width: 100%;
   max-height: 100%;
 }
+@media (max-width: 768px) {
+  .advantagesSection .advantagesBlock .consultBlock {
+    gap: 60px;
+  }
+}
 .advantagesSection .advantagesBlock .consultBlock .ltandt {
   display: flex;
   flex-direction: column;
   gap: 5rem;
+}
+@media (max-width: 1366px) {
+  .advantagesSection .advantagesBlock .consultBlock .ltandt {
+    gap: 3.75rem;
+  }
+  .advantagesSection .advantagesBlock .consultBlock .ltandt .btnka {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .advantagesSection .advantagesBlock .consultBlock .ltandt {
+    gap: 40px;
+  }
 }
 .advantagesSection .advantagesBlock .consultBlock .ltandt .lil-title p {
   font-size: var(--fz16);
   font-weight: 400;
   color: #FFFFFF;
   text-transform: uppercase;
+}
+@media (max-width: 1366px) {
+  .advantagesSection .advantagesBlock .consultBlock .ltandt .lil-title p {
+    font-size: 18px;
+  }
 }
 .advantagesSection .advantagesBlock .consultBlock .ltandt .title p {
   font-size: var(--fz96);
@@ -341,6 +562,17 @@ main {
   font-weight: 400;
   max-width: 65%;
 }
+@media (max-width: 1366px) {
+  .advantagesSection .advantagesBlock .consultBlock .sub-and-btn .sub-title p {
+    max-width: 100%;
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .advantagesSection .advantagesBlock .consultBlock .sub-and-btn .sub-title p {
+    max-width: 100%;
+  }
+}
 .advantagesSection .advantagesBlock .balBlock {
   grid-column: 2;
   grid-row: 2;
@@ -349,13 +581,22 @@ main {
   flex-direction: column;
   gap: 2.5rem;
   border-bottom: 0.063rem solid rgba(191, 191, 191, 0.3);
-  max-width: 100%;
-  max-height: 100%;
+}
+@media (max-width: 768px) {
+  .advantagesSection .advantagesBlock .balBlock {
+    padding: 30px 20px 40px;
+  }
 }
 .advantagesSection .advantagesBlock .balBlock .title {
   font-size: var(--fz48);
   font-weight: 600;
   color: #2a1a80;
+}
+@media (max-width: 768px) {
+  .advantagesSection .advantagesBlock .balBlock .title {
+    font-size: 36px;
+    max-width: 90%;
+  }
 }
 .advantagesSection .advantagesBlock .balBlock .sub-titles ul {
   display: grid;
@@ -364,10 +605,32 @@ main {
   grid-template-columns: repeat(2, 1fr);
   font-weight: 400;
 }
+@media (max-width: 1366px) {
+  .advantagesSection .advantagesBlock .balBlock .sub-titles ul {
+    gap: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .advantagesSection .advantagesBlock .balBlock .sub-titles ul {
+    max-width: 65%;
+    margin-left: 20px;
+    gap: 40px;
+  }
+}
 .advantagesSection .advantagesBlock .balBlock .sub-titles ul li {
   list-style: disc;
   font-size: var(--fz24);
   font-weight: 400;
+  max-width: 75%;
+}
+@media (max-width: 1366px) {
+  .advantagesSection .advantagesBlock .balBlock .sub-titles ul li {
+    font-size: 18px;
+    max-width: 90%;
+  }
+}
+.advantagesSection .advantagesBlock .balBlock .sub-titles ul li:first-of-type {
+  max-width: 90%;
 }
 .advantagesSection .advantagesBlock .videoBlock {
   grid-column: 2;
@@ -377,6 +640,11 @@ main {
   max-width: 100%;
   width: 100%;
   height: auto;
+}
+@media (max-width: 768px) {
+  .advantagesSection .advantagesBlock .videoBlock video {
+    height: 582px;
+  }
 }
 
 .serviceSection {
@@ -403,6 +671,11 @@ main {
 .serviceSection .serviceBlock .title-and-logo .title p span {
   color: #2a1a80;
 }
+@media (max-width: 768px) {
+  .serviceSection .serviceBlock .title-and-logo .title p {
+    font-size: 32px;
+  }
+}
 .serviceSection .serviceBlock .title-and-logo .logo img {
   width: 4.375rem;
   height: 2.5rem;
@@ -417,12 +690,22 @@ main {
   justify-content: space-between;
 }
 .serviceSection .serviceBlock .blocks .first-block .lil-title {
-  font-size: var(--fz16);
-  color: #8C8C8C;
+  font-size: var(--fz18);
+  color: #999999;
   font-weight: 600;
   text-transform: uppercase;
   max-width: 17%;
   width: 100%;
+}
+@media (max-width: 1366px) {
+  .serviceSection .serviceBlock .blocks .first-block .lil-title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .serviceSection .serviceBlock .blocks .first-block .lil-title {
+    max-width: 100%;
+  }
 }
 .serviceSection .serviceBlock .blocks .first-block .lil-title span {
   animation: blink 0.5s step-end infinite alternate;
@@ -433,11 +716,21 @@ main {
   gap: 4rem;
   justify-content: flex-end;
 }
+@media (max-width: 1366px) {
+  .serviceSection .serviceBlock .blocks .first-block .mech-moy {
+    gap: 1.563rem;
+  }
+}
 .serviceSection .serviceBlock .blocks .first-block .mech-moy .mech {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  max-width: 32%;
+  max-width: 35%;
+}
+@media (max-width: 1366px) {
+  .serviceSection .serviceBlock .blocks .first-block .mech-moy .mech {
+    max-width: 420px;
+  }
 }
 .serviceSection .serviceBlock .blocks .first-block .mech-moy .mech .title {
   font-size: var(--fz32);
@@ -447,13 +740,28 @@ main {
 .serviceSection .serviceBlock .blocks .first-block .mech-moy .mech .sub-title {
   font-size: var(--fz24);
   font-weight: 400;
-  max-width: 76%;
+  max-width: 80%;
+}
+@media (max-width: 1366px) {
+  .serviceSection .serviceBlock .blocks .first-block .mech-moy .mech .sub-title {
+    max-width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  .serviceSection .serviceBlock .blocks .first-block .mech-moy .mech .sub-title {
+    max-width: 100%;
+  }
 }
 .serviceSection .serviceBlock .blocks .first-block .mech-moy .moy {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   max-width: 35%;
+}
+@media (max-width: 1366px) {
+  .serviceSection .serviceBlock .blocks .first-block .mech-moy .moy {
+    max-width: 420px;
+  }
 }
 .serviceSection .serviceBlock .blocks .first-block .mech-moy .moy .title {
   font-size: var(--fz32);
@@ -462,7 +770,12 @@ main {
 .serviceSection .serviceBlock .blocks .first-block .mech-moy .moy .sub-title {
   font-size: var(--fz24);
   font-weight: 400;
-  max-width: 90%;
+  max-width: 100%;
+}
+@media (max-width: 1366px) {
+  .serviceSection .serviceBlock .blocks .first-block .mech-moy .moy .sub-title {
+    max-width: 80%;
+  }
 }
 .serviceSection .serviceBlock .blocks .serv-gua {
   display: flex;
@@ -473,6 +786,11 @@ main {
   flex-direction: column;
   gap: 2.5rem;
   max-width: 27%;
+}
+@media (max-width: 1366px) {
+  .serviceSection .serviceBlock .blocks .serv-gua .serv {
+    max-width: 30%;
+  }
 }
 .serviceSection .serviceBlock .blocks .serv-gua .serv .title {
   font-size: var(--fz32);
@@ -497,10 +815,12 @@ main {
   display: flex;
   justify-content: flex-end;
 }
-
-.cardsSection {
-  padding: 0 2.5rem;
+@media (max-width: 768px) {
+  .serviceSection .serviceBlock .blocks .serv-gua .gua .title {
+    max-width: 90%;
+  }
 }
+
 .cardsSection .cardsBlock {
   display: flex;
   justify-content: center;
@@ -508,17 +828,20 @@ main {
   gap: 2.5rem;
   padding-bottom: 5rem;
 }
+@media (max-width: 1366px) {
+  .cardsSection .cardsBlock {
+    display: none;
+  }
+}
 .cardsSection .cardsBlock .card-one,
 .cardsSection .cardsBlock .card-two {
   display: flex;
   flex-direction: column;
-  gap: 12rem;
   border-radius: 1.125rem;
   padding: 3.75rem;
   max-width: 70rem;
   width: 100%;
-  max-height: 36.875rem;
-  height: 100%;
+  height: 630px;
 }
 .cardsSection .cardsBlock .card-one .title-sub,
 .cardsSection .cardsBlock .card-two .title-sub {
@@ -528,13 +851,13 @@ main {
 }
 .cardsSection .cardsBlock .card-one .title-sub .title,
 .cardsSection .cardsBlock .card-two .title-sub .title {
-  font-size: var(--fz32);
+  font-size: var(--fz48);
   color: #FFFFFF;
   font-weight: 500;
 }
 .cardsSection .cardsBlock .card-one .title-sub .sub-title,
 .cardsSection .cardsBlock .card-two .title-sub .sub-title {
-  font-size: var(--fz24);
+  font-size: var(--fz32);
   color: #FFFFFF;
   font-weight: 500;
 }
@@ -546,10 +869,20 @@ main {
 }
 .cardsSection .cardsBlock .card-one .but-cost .cost,
 .cardsSection .cardsBlock .card-two .but-cost .cost {
-  font-size: var(--fz24);
+  font-size: var(--fz32);
+  font-weight: 600;
   color: #FFFFFF;
 }
+.cardsSection .cardsBlock .card-one {
+  gap: 175px;
+}
 .cardsSection .cardsBlock .card-one .title-sub .sub-title {
+  max-width: 75%;
+}
+.cardsSection .cardsBlock .card-two {
+  gap: 130px;
+}
+.cardsSection .cardsBlock .card-two .title-sub .sub-title {
   max-width: 80%;
 }
 .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide {
@@ -557,9 +890,19 @@ main {
   background-color: #99A8BF;
   color: #FFFFFF;
   align-items: center;
-  gap: 3rem;
-  padding: 2rem;
+  gap: 5rem;
+  padding: 1.25rem;
   border-radius: 1.5rem 1.5rem 3rem 1.5rem;
+}
+@media (max-width: 1366px) {
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide {
+    gap: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide {
+    flex-direction: column;
+  }
 }
 .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .img {
   max-width: 690px;
@@ -567,36 +910,89 @@ main {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 1366px) {
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .img {
+    max-width: 460px;
+    max-height: 420px;
+  }
+}
 .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .img img {
   max-width: 690px;
   max-height: 640px;
   width: 100%;
   height: 100%;
 }
+@media (max-width: 1366px) {
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .img img {
+    max-width: 460px;
+    max-height: 430px;
+  }
+}
 .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other {
   display: flex;
   flex-direction: column;
   gap: 5rem;
+}
+@media (max-width: 1366px) {
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other:nth-child(1) {
+    gap: 40px;
+  }
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other:nth-child(2) {
+    gap: 60px;
+  }
 }
 .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .sub-and-title {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
+@media (max-width: 1366px) {
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .sub-and-title {
+    gap: 2.5rem;
+  }
+}
 .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .sub-and-title .title {
   font-size: var(--fz48);
   font-weight: 600;
   max-width: 75%;
+}
+@media (max-width: 1366px) {
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .sub-and-title .title {
+    max-width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .sub-and-title .title {
+    max-width: 85%;
+  }
 }
 .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .sub-and-title .sub-title {
   font-size: var(--fz24);
   font-weight: 400;
   max-width: 66%;
 }
+@media (max-width: 768px) {
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .sub-and-title .sub-title {
+    max-width: 100%;
+    font-size: 16px;
+  }
+}
 .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .desc {
   font-size: var(--fz16);
   font-weight: 500;
-  max-width: 50%;
+  max-width: 45%;
+}
+@media (max-width: 1366px) {
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .desc {
+    font-size: 16px;
+    max-width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .desc {
+    max-width: 100%;
+    font-size: 14px;
+  }
 }
 .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr {
   display: flex;
@@ -607,6 +1003,11 @@ main {
   font-size: var(--fz48);
   font-weight: 600;
 }
+@media (max-width: 1366px) {
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .cost {
+    font-size: 36px;
+  }
+}
 .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .arr {
   display: flex;
   gap: 0.833rem;
@@ -615,75 +1016,127 @@ main {
 .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .arr .prev {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
   background-color: #fff;
   padding: 1rem;
   border-radius: 100%;
   transition: all 0.3s;
   cursor: pointer;
 }
+@media (max-width: 1366px) {
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .arr .next,
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .arr .prev {
+    width: 64px;
+    height: 64px;
+  }
+}
 .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .arr .next:hover,
 .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .arr .prev:hover {
   scale: 0.9;
   transition: all 0.3s;
 }
+.cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .arr .next img,
+.cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .arr .prev img {
+  width: 36px;
+  height: 36px;
+}
+@media (max-width: 1366px) {
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .arr .next img,
+  .cardsSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .arr .prev img {
+    width: 24px;
+    height: 24px;
+  }
+}
 
 .feedbackSection {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  gap: 3rem;
 }
-.feedbackSection .lil-title {
+.feedbackSection .feedbackBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.feedbackSection .feedbackBlock .lil-title {
   text-transform: uppercase;
   color: #BFBFBF;
   font-size: var(--fz18);
+  font-weight: 600;
 }
-.feedbackSection .lil-title span {
+@media (max-width: 1366px) {
+  .feedbackSection .feedbackBlock .lil-title {
+    font-size: 18px;
+  }
+}
+.feedbackSection .feedbackBlock .lil-title span {
   animation: blink 0.5s step-end infinite alternate;
   border-right: 3px solid;
 }
-.feedbackSection .title-form {
+.feedbackSection .feedbackBlock .title-form {
   display: flex;
   gap: 4rem;
 }
-.feedbackSection .title-form .title-icon-block {
+.feedbackSection .feedbackBlock .title-form .title-icon-block {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
-.feedbackSection .title-form .title-icon-block .titleBlock {
+@media (max-width: 768px) {
+  .feedbackSection .feedbackBlock .title-form .title-icon-block {
+    gap: 30px;
+  }
+}
+.feedbackSection .feedbackBlock .title-form .title-icon-block .titleBlock {
   display: flex;
   flex-direction: column;
   gap: 3.75rem;
 }
-.feedbackSection .title-form .title-icon-block .titleBlock .title {
+@media (max-width: 1366px) {
+  .feedbackSection .feedbackBlock .title-form .title-icon-block .titleBlock {
+    gap: 14.75rem;
+  }
+}
+.feedbackSection .feedbackBlock .title-form .title-icon-block .titleBlock .title {
   font-size: var(--fz48);
   max-width: 99%;
   width: 100%;
   font-weight: 600;
 }
-.feedbackSection .title-form .title-icon-block .titleBlock .sub-title {
+.feedbackSection .feedbackBlock .title-form .title-icon-block .titleBlock .sub-title {
   font-size: var(--fz24);
   font-weight: 400;
 }
-.feedbackSection .title-form .title-icon-block .iconBlock {
+@media (max-width: 1366px) {
+  .feedbackSection .feedbackBlock .title-form .title-icon-block .titleBlock .sub-title {
+    font-size: 20px;
+  }
+}
+.feedbackSection .feedbackBlock .title-form .title-icon-block .iconBlock {
   display: flex;
   gap: 1.25rem;
 }
-.feedbackSection .title-form .title-icon-block .iconBlock .icon {
+.feedbackSection .feedbackBlock .title-form .title-icon-block .iconBlock .icon {
   max-width: 4rem;
   max-height: 4rem;
   width: 100%;
   height: 100%;
 }
-.feedbackSection .title-form .form {
+@media (max-width: 1366px) {
+  .feedbackSection .feedbackBlock .title-form .title-icon-block .iconBlock .icon img {
+    max-width: rem;
+    max-height: 3rem;
+  }
+}
+.feedbackSection .feedbackBlock .title-form .form {
   display: flex;
   flex-direction: column;
   gap: 3.75rem;
   max-width: 40.125rem;
   width: 100%;
 }
-.feedbackSection .title-form .form input {
+.feedbackSection .feedbackBlock .title-form .form input {
   outline: none;
   border: none;
   border-bottom: 0.063rem solid #BFBFBF;
@@ -692,24 +1145,32 @@ main {
   font-size: var(--fz16);
   font-weight: 400;
 }
-.feedbackSection .title-form .form input:focus {
+.feedbackSection .feedbackBlock .title-form .form input:focus {
   border-bottom: 0.063rem solid #0D0D0D;
   transition: all 0.3s;
 }
-.feedbackSection .title-form .form .btn {
+.feedbackSection .feedbackBlock .title-form .form .btn {
   max-width: 55%;
   width: 100%;
 }
-.feedbackSection .title-form .form .inp {
+.feedbackSection .feedbackBlock .title-form .form .inp {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 0.625rem;
 }
-.feedbackSection .title-form .form .inp label {
+.feedbackSection .feedbackBlock .title-form .form .inp label {
   font-size: var(--fz24);
   font-weight: 400;
   color: #BFBFBF;
+}
+@media (max-width: 1366px) {
+  .feedbackSection .feedbackBlock .title-form .form .inp label {
+    font-size: 20px;
+  }
+}
+.feedbackSection .feedbackBlock .title-form .form .inp-three {
+  gap: 100px;
 }
 
 .optionalSection .optionalBlock {
@@ -729,6 +1190,11 @@ main {
   max-width: 960px;
   width: 100%;
 }
+@media (max-width: 1366px) {
+  .optionalSection .optionalBlock .videoBlock video {
+    height: 658px;
+  }
+}
 .optionalSection .optionalBlock .videoBlock .info-block {
   padding: 5rem;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #2a1a80;
@@ -738,16 +1204,26 @@ main {
   max-width: 960px;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .optionalSection .optionalBlock .videoBlock .info-block {
+    padding: 1.667rem;
+  }
+}
 .optionalSection .optionalBlock .videoBlock .info-block .title-block {
   display: flex;
   flex-direction: column;
   gap: 5rem;
 }
 .optionalSection .optionalBlock .videoBlock .info-block .title-block .lil-title {
-  font-size: var(--fz16);
+  font-size: var(--fz18);
   text-transform: uppercase;
   color: #FFFFFF;
   font-weight: 600;
+}
+@media (max-width: 1366px) {
+  .optionalSection .optionalBlock .videoBlock .info-block .title-block .lil-title {
+    font-size: 18px;
+  }
 }
 .optionalSection .optionalBlock .videoBlock .info-block .title-block .lil-title span {
   animation: blink 0.5s step-end infinite alternate;
@@ -760,9 +1236,16 @@ main {
   font-weight: 500;
 }
 .optionalSection .optionalBlock .videoBlock .info-block .title-block .sub-title {
-  font-size: var(--fz24);
+  font-size: var(--fz32);
   color: #8C8C8C;
   font-weight: 600;
+  max-width: 50%;
+}
+@media (max-width: 1366px) {
+  .optionalSection .optionalBlock .videoBlock .info-block .title-block .sub-title {
+    max-width: 65%;
+    font-size: 24px;
+  }
 }
 .optionalSection .optionalBlock .videoBlock .info-block .title-block .info ul {
   list-style: inside;
@@ -772,11 +1255,16 @@ main {
 }
 .optionalSection .optionalBlock .videoBlock .info-block .title-block .info ul li {
   color: #FFFFFF;
-  font-size: var(--fz18);
+  font-size: var(--fz24);
   font-weight: 400;
 }
+@media (max-width: 1366px) {
+  .optionalSection .optionalBlock .videoBlock .info-block .title-block .info ul li {
+    font-size: 20px;
+  }
+}
 .optionalSection .optionalBlock .videoBlock .info-block .cost {
-  font-size: var(--fz32);
+  font-size: var(--fz48);
   line-height: 125%;
   color: #FFFFFF;
   font-weight: 600;
@@ -786,28 +1274,85 @@ main {
   flex-direction: row;
   gap: 2.5rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+}
+@media (max-width: 1366px) {
+  .optionalSection .optionalBlock .cardsBlock {
+    gap: 1.667rem;
+  }
 }
 .optionalSection .optionalBlock .cardsBlock .card {
   display: flex;
   flex-direction: column;
-  gap: 12.5rem;
+  gap: 130px;
   padding: 5rem;
   max-width: 70rem;
-  max-height: 37rem;
+  max-height: 39.375rem;
   height: 100%;
   width: 100%;
+}
+@media (max-width: 1366px) {
+  .optionalSection .optionalBlock .cardsBlock .card {
+    padding: 2.5rem;
+    justify-content: center;
+    flex-grow: 1;
+    max-width: 623px;
+    width: 100%;
+    max-height: 450px;
+    height: 100%;
+  }
+}
+@media (max-width: 1366px) and (max-width: 768px) {
+  .optionalSection .optionalBlock .cardsBlock .card {
+    padding: 1.667rem;
+  }
+}
+@media (max-width: 1366px) {
+  .optionalSection .optionalBlock .cardsBlock .card.one .titles .sub-title {
+    max-width: 95%;
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 1366px) and (max-width: 1366px) {
+  .optionalSection .optionalBlock .cardsBlock .card.one .titles .sub-title {
+    max-width: 80%;
+  }
+}
+@media (max-width: 1366px) and (max-width: 768px) {
+  .optionalSection .optionalBlock .cardsBlock .card.one .titles .sub-title {
+    font-size: 18px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 1366px) {
+  .optionalSection .optionalBlock .cardsBlock .card.two .titles .sub-title {
+    max-width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 1366px) and (max-width: 768px) {
+  .optionalSection .optionalBlock .cardsBlock .card.two .titles .sub-title {
+    font-size: 18px;
+  }
 }
 .optionalSection .optionalBlock .cardsBlock .card .btn {
   width: fit-content;
 }
+@media (max-width: 768px) {
+  .optionalSection .optionalBlock .cardsBlock .card .btn {
+    max-width: 100%;
+    width: 100%;
+  }
+}
 .optionalSection .optionalBlock .cardsBlock .card .titles .title {
-  font-size: var(--fz64);
-  font-weight: 500;
+  font-size: var(--fz96);
+  font-weight: 600;
   color: #FFFFFF;
 }
 .optionalSection .optionalBlock .cardsBlock .card .titles .sub-title {
-  font-size: var(--fz24);
+  font-size: var(--fz32);
   font-weight: 600;
   color: #FFFFFF;
   max-width: 70%;
@@ -818,14 +1363,24 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
+.optionalSection .optionalBlock .cardsBlock .card.one .titles {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
 .optionalSection .optionalBlock .cardsBlock .card.two {
   background-image: url(../images/sections/cardBlock/motosikl.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+.optionalSection .optionalBlock .cardsBlock .card.two .titles {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
 .optionalSection .optionalBlock .cardsBlock .card.two .sub-title {
-  max-width: 95%;
+  max-width: 100%;
 }
 
 .frameInstSection {
@@ -833,18 +1388,28 @@ main {
   justify-content: center;
   flex-direction: column;
 }
+@media (max-width: 1366px) {
+  .frameInstSection {
+    gap: 100px;
+  }
+}
 .frameInstSection .frameInstBlock {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 10rem;
 }
 .frameInstSection .frameInstBlock .title-sub-title {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 5rem;
 }
 .frameInstSection .frameInstBlock .title-sub-title .title {
   max-width: 80%;
+}
+@media (max-width: 1366px) {
+  .frameInstSection .frameInstBlock .title-sub-title .title {
+    max-width: 75%;
+  }
 }
 .frameInstSection .frameInstBlock .title-sub-title .title p {
   font-size: var(--fz96);
@@ -854,13 +1419,23 @@ main {
 .frameInstSection .frameInstBlock .title-sub-title .title p span {
   color: #2a1a80;
 }
+@media (max-width: 768px) {
+  .frameInstSection .frameInstBlock .title-sub-title .title p {
+    font-size: 32px;
+  }
+}
 .frameInstSection .frameInstBlock .title-sub-title .sub-title {
   max-width: 70%;
 }
 .frameInstSection .frameInstBlock .title-sub-title .sub-title p {
-  color: #BFBFBF;
+  color: #999999;
   font-size: var(--fz48);
   font-weight: 600;
+}
+@media (max-width: 1366px) {
+  .frameInstSection .frameInstBlock .title-sub-title .sub-title p {
+    font-size: 36px;
+  }
 }
 .frameInstSection .frameInstBlock .blocks {
   display: grid;
@@ -883,20 +1458,49 @@ main {
   flex-direction: column;
   gap: 1.875rem;
 }
+.frameInstSection .frameInstBlock .blocks .numb-title .sub-and-title p {
+  max-width: 70%;
+  font-weight: 500;
+  color: #999999;
+}
+@media (max-width: 1366px) {
+  .frameInstSection .frameInstBlock .blocks .numb-title .sub-and-title p {
+    max-width: 80%;
+  }
+}
 .frameInstSection .frameInstBlock .blocks .numb-title .sub-and-title .title {
   color: #0D0D0D;
   font-weight: 600;
   font-size: var(--fz24);
 }
+@media (max-width: 1366px) {
+  .frameInstSection .frameInstBlock .blocks .numb-title .sub-and-title .title {
+    font-size: 24px;
+  }
+}
 .frameInstSection .frameInstBlock .blocks .numb-title .sub-and-title .beb {
   font-size: var(--fz16);
   font-weight: 400;
-  color: #BFBFBF;
+  color: #404040;
+}
+@media (max-width: 1366px) {
+  .frameInstSection .frameInstBlock .blocks .numb-title .sub-and-title .beb {
+    font-size: 16px;
+  }
 }
 .frameInstSection .frameInstBlock .blocks .ben {
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
+}
+@media (max-width: 1366px) {
+  .frameInstSection .frameInstBlock .blocks .ben {
+    width: 440px;
+  }
+}
+.frameInstSection .frameInstBlock .blocks .ben hr {
+  height: 2px;
+  background-color: #0D0D0D;
 }
 .frameInstSection .frameInstBlock .blocks .first-top {
   grid-area: first-top;
@@ -910,11 +1514,21 @@ main {
   font-size: var(--fz24);
   font-weight: 400;
 }
+@media (max-width: 1366px) {
+  .frameInstSection .frameInstBlock .blocks .first-top p {
+    max-width: 55%;
+  }
+}
 .frameInstSection .frameInstBlock .blocks .first-top p span {
   font-weight: bold;
 }
 .frameInstSection .frameInstBlock .blocks .first-top p:last-of-type {
-  max-width: 55%;
+  max-width: 50%;
+}
+@media (max-width: 1366px) {
+  .frameInstSection .frameInstBlock .blocks .first-top p:last-of-type {
+    max-width: 60%;
+  }
 }
 .frameInstSection .frameInstBlock .blocks .first-bottom {
   grid-area: first-bottom;
@@ -925,11 +1539,31 @@ main {
 .frameInstSection .frameInstBlock .blocks .first-bottom .numb-title .numb {
   color: #99A8BF;
 }
-.frameInstSection .frameInstBlock .blocks .first-bottom .numb-title .title {
+.frameInstSection .frameInstBlock .blocks .first-bottom .numb-title .sub-and-title .title {
+  color: #99A8BF;
+  font-size: var(--fz32);
+  max-width: 80%;
+}
+@media (max-width: 1366px) {
+  .frameInstSection .frameInstBlock .blocks .first-bottom .numb-title .sub-and-title .title {
+    max-width: 100%;
+  }
+}
+.frameInstSection .frameInstBlock .blocks .first-bottom .numb-title .sub-and-title .sub-title p {
+  max-width: 71%;
+  font-size: var(--fz24);
   color: #99A8BF;
 }
-.frameInstSection .frameInstBlock .blocks .first-bottom .numb-title .sub-title {
-  color: #99A8BF;
+@media (max-width: 1366px) {
+  .frameInstSection .frameInstBlock .blocks .first-bottom .numb-title .sub-and-title .sub-title p {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1366px) {
+  .frameInstSection .frameInstBlock .blocks .first-bottom .numb-title .sub-and-title .sub-title {
+    font-size: 20px;
+    max-width: 90%;
+  }
 }
 .frameInstSection .frameInstBlock .blocks .first-bottom hr {
   background-color: #99A8BF;
@@ -940,11 +1574,19 @@ main {
 .frameInstSection .frameInstBlock .blocks .second-middle {
   grid-area: second-middle;
 }
+@media (max-width: 1366px) {
+  .frameInstSection .frameInstBlock .blocks .second-middle .numb-title .sub-and-title .sub-title {
+    max-width: 100%;
+  }
+}
 .frameInstSection .frameInstBlock .blocks .third-middle {
   grid-area: third-middle;
 }
 .frameInstSection .frameInstBlock .blocks .third-bottom {
   grid-area: third-bottom;
+}
+.frameInstSection .frameInstBlock .blocks .third-bottom .numb-title .sub-and-title p {
+  max-width: 60%;
 }
 .frameInstSection .sled {
   background-image: url(../images/sections/sled.png);
@@ -961,9 +1603,14 @@ main {
   overflow-x: auto;
 }
 .portfolioSection video {
-  max-width: 100%;
   width: 100%;
-  height: auto;
+  height: 100%;
+}
+@media (max-width: 1366px) {
+  .portfolioSection video {
+    min-width: 480px;
+    max-height: 658px;
+  }
 }
 
 .faqSection {
@@ -986,6 +1633,11 @@ main {
 .faqSection .faqBlock .title-and-question {
   display: flex;
 }
+@media (max-width: 768px) {
+  .faqSection .faqBlock .title-and-question {
+    flex-direction: column;
+  }
+}
 .faqSection .faqBlock .title-and-question .title-logo {
   display: flex;
   flex-direction: column;
@@ -1000,6 +1652,16 @@ main {
   font-size: var(--fz48);
   font-weight: 600;
 }
+@media (max-width: 1366px) {
+  .faqSection .faqBlock .title-and-question .title-logo .titleBlock .title {
+    max-width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .faqSection .faqBlock .title-and-question .title-logo .logo {
+    display: none;
+  }
+}
 .faqSection .faqBlock .title-and-question .title-logo .logo img {
   max-width: 4.375rem;
   max-height: 2.5rem;
@@ -1010,6 +1672,12 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+@media (max-width: 1366px) {
+  .faqSection .faqBlock .title-and-question .questionMenu {
+    max-width: 526px;
+    width: 100%;
+  }
 }
 .faqSection .faqBlock .title-and-question .questionMenu .first-que.que,
 .faqSection .faqBlock .title-and-question .questionMenu .second-que.que,
@@ -1045,6 +1713,13 @@ main {
   font-weight: 400;
   max-width: 80%;
 }
+@media (max-width: 1366px) {
+  .faqSection .faqBlock .title-and-question .questionMenu .first-que .content,
+  .faqSection .faqBlock .title-and-question .questionMenu .second-que .content,
+  .faqSection .faqBlock .title-and-question .questionMenu .third-que .content {
+    max-width: 72%;
+  }
+}
 
 .deliverySection {
   display: flex;
@@ -1057,13 +1732,25 @@ main {
   flex-direction: column;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .deliverySection .deliveryBlock {
+    padding-bottom: 10rem;
+  }
+}
 .deliverySection .deliveryBlock .del-and-step {
   display: flex;
+}
+@media (max-width: 768px) {
+  .deliverySection .deliveryBlock .del-and-step {
+    flex-direction: column;
+    gap: 60px;
+  }
 }
 .deliverySection .deliveryBlock .del-and-step .delivery {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 60px;
 }
 .deliverySection .deliveryBlock .del-and-step .delivery .title {
   font-size: var(--fz96);
@@ -1087,10 +1774,26 @@ main {
   border-left: 0.063rem solid #FFFFFF;
   gap: 3rem;
 }
+@media (max-width: 1366px) {
+  .deliverySection .deliveryBlock .del-and-step .deliverySteps {
+    padding-left: 30px;
+  }
+}
+.deliverySection .deliveryBlock .del-and-step .deliverySteps .second-step .sub-title {
+  max-width: 70%;
+}
+.deliverySection .deliveryBlock .del-and-step .deliverySteps .third-step .sub-title {
+  max-width: 70%;
+}
 .deliverySection .deliveryBlock .del-and-step .deliverySteps .step {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+}
+@media (max-width: 1366px) {
+  .deliverySection .deliveryBlock .del-and-step .deliverySteps .step {
+    gap: 1.875rem;
+  }
 }
 .deliverySection .deliveryBlock .del-and-step .deliverySteps .step .title {
   font-size: var(--fz32);
@@ -1102,44 +1805,49 @@ main {
   color: #FFFFFF;
   font-weight: 400;
 }
+@media (max-width: 1366px) {
+  .deliverySection .deliveryBlock .del-and-step .deliverySteps .step .sub-title {
+    font-size: 20px;
+    max-width: 73%;
+  }
+}
+@media (max-width: 768px) {
+  .deliverySection .deliveryBlock .del-and-step .deliverySteps .step .sub-title {
+    font-size: 16px;
+    max-width: 95%;
+  }
+}
+@media (max-width: 1366px) {
+  .deliverySection .deliveryBlock .del-and-step .deliverySteps .step:last-of-type .sub-title {
+    font-size: 24px;
+    max-width: 80%;
+  }
+}
 .deliverySection .deliveryBlock img {
   position: absolute;
   z-index: 20;
   left: 0;
   bottom: 0;
 }
-
-@media (max-width: 1620px) {
-  .advantagesSection .advantagesBlock .consultBlock .ltandt .title p {
-    font-size: var(--fz64);
+@media (max-width: 1366px) {
+  .deliverySection .deliveryBlock img {
+    width: 556px;
   }
 }
+@media (max-width: 400px) {
+  .deliverySection .deliveryBlock img {
+    width: 375px;
+  }
+}
+
 @media (max-width: 1366px) {
   header .header .headerBlock {
     display: flex;
     gap: 2.5rem;
-    padding: 0 5rem;
   }
   header .header .headerBlock .logo a img {
     max-height: 20px;
     height: 100%;
-  }
-  header .header .headerBlock .nav-sec nav ul {
-    display: flex;
-    gap: 1.25rem;
-  }
-  main .heroSection .heroSectionBlock .btn-tit .big-title {
-    font-size: var(--fz96);
-  }
-  main .heroSection .heroSectionBlock .btn-info {
-    flex-direction: column-reverse;
-    gap: 2.5rem;
-  }
-  main .heroSection .heroSectionBlock .btn-info .info-block {
-    align-items: flex-start;
-  }
-  main .sliderSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .other .sub-and-title .title {
-    font-size: var(--fz36);
   }
   main .createSection .createBlock .title {
     font-size: var(--fz64);
@@ -1150,31 +1858,9 @@ main {
     width: 100%;
     height: 100%;
   }
-  main .createSection .createBlock .cards-and-oth .cards {
-    grid-column-gap: 2.5rem;
-    grid-row-gap: 3.75rem;
-  }
-  main .createSection .createBlock .cards-and-oth .cards .card .icon img {
-    max-width: 5rem;
-    max-height: 5rem;
-    width: 100%;
-    height: 100%;
-  }
   main .advantagesSection .advantagesBlock .consultBlock .sub-and-btn {
     gap: 2.5rem;
-  }
-  main .advantagesSection .advantagesBlock .consultBlock .sub-and-btn .sub-title p {
-    font-size: var(--fz18);
-  }
-  main .advantagesSection .advantagesBlock .balBlock .title {
-    font-size: var(--fz24);
-  }
-  main .advantagesSection .advantagesBlock .balBlock .sub-titles ul li {
-    font-size: var(--fz18);
-  }
-  main .serviceSection .serviceBlock .title-and-logo .title p {
-    font-size: var(--fz48);
-    font-weight: 500;
+    max-width: 70%;
   }
   main .serviceSection .serviceBlock .blocks .cal .title {
     font-size: var(--fz24);
@@ -1190,9 +1876,6 @@ main {
     gap: 2.5rem;
     width: 100%;
     grid-area: gua;
-  }
-  main .cardsSection {
-    display: none;
   }
   main .feedbackSection .lil-title {
     font-size: var(--fz12);
@@ -1217,33 +1900,9 @@ main {
   }
   main .optionalSection .optionalBlock .videoBlock .info-block {
     padding: 2.5rem;
-    gap: 5rem;
   }
   main .optionalSection .optionalBlock .videoBlock .info-block .title-block {
     gap: 2.5rem;
-  }
-  main .optionalSection .optionalBlock .videoBlock .info-block .title-block .sub-title {
-    font-size: var(--fz18);
-  }
-  main .optionalSection .optionalBlock .videoBlock .info-block .title-block .info ul li {
-    font-size: var(--fz12);
-  }
-  main .optionalSection .optionalBlock .cardsBlock .card {
-    padding: 2.5rem;
-    justify-content: center;
-    flex-grow: 1;
-    max-width: 600px;
-    width: 100%;
-    max-height: 460px;
-    height: 100%;
-  }
-  main .optionalSection .optionalBlock .cardsBlock .card.one .sub-title {
-    max-width: 80%;
-    font-size: var(--fz18);
-  }
-  main .optionalSection .optionalBlock .cardsBlock .card.two .sub-title {
-    max-width: 94%;
-    font-size: var(--fz18);
   }
   main .frameInstSection .frameInstBlock .blocks {
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -1288,6 +1947,11 @@ main {
     width: 100%;
   }
 }
+@media (max-width: 1620px) {
+  .advantagesSection .advantagesBlock .consultBlock .ltandt .title p {
+    font-size: var(--fz64);
+  }
+}
 @media (max-width: 1170px) {
   header .header .headerBlock {
     justify-content: space-around;
@@ -1308,9 +1972,6 @@ main {
     height: 3px;
     width: 25px;
     background-color: black;
-  }
-  .heroSection {
-    padding: 5rem 5rem;
   }
   .serviceSection .serviceBlock .blocks {
     display: flex;
@@ -1416,9 +2077,6 @@ main {
     display: flex;
     flex-direction: column;
   }
-  .advantagesSection .advantagesBlock .consultBlock {
-    gap: 2rem;
-  }
   .advantagesSection .advantagesBlock .consultBlock .ltandt .title p {
     font-size: 2rem;
   }
@@ -1432,53 +2090,11 @@ main {
     font-size: var(--fz16);
     font-weight: 400;
   }
-  .heroSection {
-    padding: 5rem 5rem;
-  }
-  .heroSection .heroSectionBlock {
-    gap: 6rem;
-  }
-  .heroSection .heroSectionBlock .btn-tit .big-title {
-    font-size: var(--fz32);
-  }
-  .heroSection .heroSectionBlock .btn-info .btns {
-    flex-direction: column;
-    align-items: start;
-    max-width: 100%;
-  }
-  .heroSection .heroSectionBlock .btn-info .btns .white {
-    max-width: 50%;
-    width: 100%;
-  }
-  .heroSection .heroSectionBlock .btn-info .btns .transparent {
-    max-width: 50%;
-    width: 100%;
-  }
   .createSection .createBlock .cards-and-oth {
     gap: 2rem;
   }
 }
 @media (max-width: 590px) {
-  .welcome .title {
-    max-width: 50%;
-    width: 100%;
-  }
-  .heroSection .heroSectionBlock .btn-tit .big-title {
-    font-size: var(--fz64);
-    font-weight: 500;
-  }
-  .heroSection .heroSectionBlock .btn-info .btns .white {
-    max-width: 70%;
-  }
-  .heroSection .heroSectionBlock .btn-info .btns .transparent {
-    max-width: 70%;
-  }
-  .heroSection .heroSectionBlock .btn-info .info-block .title {
-    max-width: 100%;
-  }
-  .heroSection .heroSectionBlock .btn-info .info-block .sub-title {
-    max-width: 100%;
-  }
   .serviceSection .serviceBlock .title-and-logo .title p {
     max-width: 100%;
   }
@@ -1491,9 +2107,6 @@ main {
   .createSection .createBlock .cards-and-oth .tandlogo .sub-title p {
     max-width: 100%;
     font-size: var(--fz16);
-  }
-  .frameInstSection .frameInstBlock {
-    padding: 0 2rem;
   }
   .frameInstSection .frameInstBlock .title-sub-title .title {
     max-width: 100%;
@@ -1526,16 +2139,6 @@ main {
   }
 }
 @media (max-width: 400px) {
-  .welcome {
-    padding: 0 2rem;
-  }
-  .welcome .title {
-    max-width: 100%;
-    width: 100%;
-  }
-  .heroSection {
-    padding: 5rem 3rem;
-  }
   .heroSection .heroSectionBlock .btn-info .btns .white {
     max-width: 100%;
   }
@@ -1554,14 +2157,7 @@ main {
   .advantagesSection .advantagesBlock .consultBlock {
     padding: 1.5rem;
   }
-  .advantagesSection .advantagesBlock .consultBlock .ltandt {
-    gap: 2.5rem;
-  }
   .advantagesSection .advantagesBlock .consultBlock .sub-and-btn .btn {
-    width: 100%;
-  }
-  .advantagesSection .advantagesBlock .consultBlock .sub-and-btn .sub-title p {
-    max-width: 85%;
     width: 100%;
   }
   .sliderSection .sliderBlock .swiper .swiper-wrapper .swiper-slide .img {
@@ -1579,6 +2175,9 @@ main {
     max-width: 300px;
   }
 }
+.black hr {
+  background-color: #0D0D0D;
+}
 .black .question .title {
   color: black !important;
 }
@@ -1589,6 +2188,10 @@ main {
   cursor: pointer;
   transition: all 0.3s ease-in;
   font-size: var(--fz18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Hauora";
 }
 .btn:hover {
   scale: 0.9;
@@ -1596,11 +2199,13 @@ main {
 .btn.white {
   background-color: #FFFFFF;
   color: #0D0D0D;
+  font-size: 20px;
 }
 .btn.transparent {
   background-color: transparent;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
+  font-size: 20px;
 }
 .btn.white-blue {
   background-color: #FFFFFF;
@@ -1609,6 +2214,12 @@ main {
 .btn.blue {
   background-color: #2A1A80;
   color: #FFFFFF;
+}
+
+@media (max-width: 1366px) {
+  .first-que .question .title {
+    max-width: 60%;
+  }
 }
 
 .accordion-item {
@@ -1653,7 +2264,7 @@ footer .footerSection {
 }
 footer .footerSection .footerBlock {
   display: flex;
-  padding: 10rem 0;
+  padding: 60px 0px 40px 0px;
 }
 footer .footerSection .footerBlock .title-block {
   display: flex;
@@ -1691,9 +2302,14 @@ footer .footerSection .footerBlock .title-block .privacyPol {
   font-weight: 400;
 }
 footer .footerSection .footerBlock .title-block .privacyPol p {
-  color: #404040;
+  color: #666666;
   max-width: 45%;
   width: 100%;
+}
+@media (max-width: 1366px) {
+  footer .footerSection .footerBlock .title-block .privacyPol p {
+    max-width: 57%;
+  }
 }
 footer .footerSection .footerBlock .auth-block {
   display: flex;
@@ -1702,6 +2318,11 @@ footer .footerSection .footerBlock .auth-block {
   max-width: 36%;
   width: 100%;
   gap: 100px;
+}
+@media (max-width: 1366px) {
+  footer .footerSection .footerBlock .auth-block {
+    max-width: 526px;
+  }
 }
 footer .footerSection .footerBlock .auth-block .form {
   display: flex;
@@ -1727,6 +2348,15 @@ footer .footerSection .footerBlock .auth-block .form input:focus {
 footer .footerSection .footerBlock .auth-block .form .btn {
   width: 50%;
 }
+@media (max-width: 1366px) {
+  footer .footerSection .footerBlock .auth-block .form .btn {
+    max-width: 340px;
+    max-height: 60px;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+  }
+}
 footer .footerSection .footerBlock .auth-block .form .inp {
   display: flex;
   flex-direction: column;
@@ -1745,6 +2375,9 @@ footer .footerSection .footerBlock .auth-block .form .inp input {
 }
 footer .footerSection .footerBlock .auth-block .form .inp input:focus {
   border-bottom: 1px solid #FFFFFF;
+}
+footer .footerSection .footerBlock .auth-block .form .inp:last-of-type {
+  gap: 100px;
 }
 footer .footerSection .footerBlock .auth-block .icons {
   display: flex;
@@ -1789,24 +2422,31 @@ footer .footerSection .footerBlock .auth-block .icons .logo img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.welcome .title-bok {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.938rem 0;
   gap: 2.5rem;
 }
-.welcome .title {
-  font-size: var(--fz16);
+@media (max-width: 768px) {
+  .welcome .title-bok {
+    gap: 0.5rem;
+  }
+}
+.welcome .title-bok .title {
+  font-size: 16px;
   color: #FFFFFF;
   font-weight: 500;
 }
-.welcome .ofbut {
-  font-size: var(--fz18);
+.welcome .title-bok .ofbut {
+  font-size: 18px;
   text-transform: uppercase;
   color: #BFBFBF;
   transition: all 0.3s;
 }
-.welcome .ofbut:hover {
+.welcome .title-bok .ofbut:hover {
   transition: all 0.3s;
   scale: 0.9;
 }
@@ -1831,6 +2471,11 @@ header .header .headerBlock {
   justify-content: space-between;
   margin: 1.563rem 2rem;
 }
+@media (max-width: 1366px) {
+  header .header .headerBlock {
+    margin: 1.25rem 2.5rem;
+  }
+}
 header .header .headerBlock .logo {
   display: flex;
   align-items: center;
@@ -1845,7 +2490,12 @@ header .header .headerBlock .nav-sec nav ul {
   justify-content: center;
   gap: 3.75rem;
   font-weight: 600;
-  font-size: var(--fz18);
+  font-size: 18px;
+}
+@media (max-width: 1366px) {
+  header .header .headerBlock .nav-sec nav ul {
+    gap: 2.5rem;
+  }
 }
 header .header .headerBlock .nav-sec nav ul a {
   text-transform: uppercase;
@@ -1861,6 +2511,14 @@ header .header .headerBlock .btn-nav {
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
+}
+header .header .headerBlock .btn-nav .btn {
+  max-height: 50px;
+}
+@media (max-width: 1366px) {
+  header .header .headerBlock .btn-nav .btn {
+    font-size: 18px;
+  }
 }
 header .header .headerBlock .btn-nav .quest {
   display: flex;
@@ -1883,11 +2541,6 @@ header .header .headerBlock .btn-nav .burger-menu {
   display: none;
 }
 
-@media (max-width: 1620px) {
-  header .header .headerBlock {
-    margin: 1.563rem 10rem;
-  }
-}
 @media (max-width: 1180px) {
   .menu-open {
     display: none;

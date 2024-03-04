@@ -21,16 +21,15 @@
         --fz32: 1.5rem;
         --fz24: 1.125rem;
         --fz20: 1.25rem;
-        --fz18: 1.125rem;
-        --fz16: 1rem;
-        --fz12: 0.75rem;
+        --fz18: 1rem;
+        --fz16: 0.75rem;
     }
     @include mobile {
         --fz96: 4rem;
         --fz64: 2rem;
         --fz48: 1.5rem;
         --fz32: 1.25rem;
-        --fz24: 1.125rem;
+        --fz24: 1;
         --fz20: 1rem;       
     }
     @include mobile-lite {
@@ -160,7 +159,21 @@ input, textarea {
 }
 
 //////////////////////////////////////
-/// 
+@media (max-width: 400px) {
+    .container {
+        max-width: 335px;
+    }
+}
+@media (max-width: 1160px) {
+    .container {
+        max-width: 1080px;
+    }
+}
+@media (max-width: 1366px) {
+    .container {
+        max-width: 1286px;
+    }
+}
 @media (min-width: 1680px) {
     .container {
         max-width: 1520px;
@@ -169,10 +182,5 @@ input, textarea {
 @media (min-width: 1920px) {
     .container {
         max-width: 1760px;
-    }
-}
-@media (max-width: 1366px) {
-    .container {
-        max-width: 1300px;
     }
 }

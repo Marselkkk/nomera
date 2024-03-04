@@ -3,6 +3,9 @@ main {
     flex-direction: column;
     gap: 12.5rem;
     justify-content: center;
+    @include desktop-lite {
+        gap: 7.5rem;
+    }
 }
 .heroSection {
     display: flex;
@@ -20,7 +23,12 @@ main {
         display: flex;
         flex-direction: column;
         gap: 12.5rem;
-        margin: 0 2rem;
+        @include desktop-lite {
+            gap: 5rem;
+        }
+        @include mobile {
+            gap: 20.917rem;
+        }
         .btn-tit {
             display: flex;
             justify-content: space-between;
@@ -32,7 +40,8 @@ main {
                 color: $white;
                 font-weight: 600;
                 @include mobile {
-                    font-size: 20px;
+                    font-size: 48px;
+                    max-width: 60%;
                 }
             }
         }
@@ -40,18 +49,42 @@ main {
             display: flex;
             justify-content: space-between;
             gap: 21.875rem;
+            @include desktop-lite {
+                flex-direction: column-reverse;
+                gap: 9rem;
+            }
+            @include mobile {
+                gap: 3rem;
+            }
             .info-block {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
                 max-width: 35%;
                 gap: 3.75rem;
+                @include desktop-lite {
+                    justify-content: space-between;
+                    flex-direction: row;
+                    max-width: 56%;
+                }
+                @include mobile {
+                    flex-direction: column;
+                    max-width: 100%;
+                    gap: 30px;
+                }
                 .title {
                     font-size: var(--fz32);
                     color: $white;
                     font-weight: 600;
                     max-width: 75%;
                     width: 100%;
+                    @include desktop-lite {
+                        max-width: 50%;
+                    }
+                    @include mobile {
+                        max-width: 80%;
+                        font-size: 18px;
+                    }
                 }
                 .sub-title {
                     font-size: var(--fz24);
@@ -59,6 +92,13 @@ main {
                     font-weight: 400;
                     max-width: 65%;
                     width: 100%;
+                    @include desktop-lite {
+                        max-width: 39%;
+                    }
+                    @include mobile {
+                        max-width: 75%;
+                        font-size: 14px;
+                    }
                     .border-blink {
                         animation: blink .5s step-end infinite alternate;
                         border-right: 2px solid;
@@ -72,6 +112,22 @@ main {
                 justify-content: flex-start;
                 max-width: 40%;
                 width: 100%;
+                @include desktop-lite {
+                    max-width: 57%;
+                }
+                @include mobile {
+                    flex-direction: column;
+                    gap: 10px;
+                    max-width: 100%;
+                    .white {
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                    .transparent {
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                }
                 .btn {
                     max-width: 100%;
                     width: 100%;
@@ -85,20 +141,33 @@ main {
     display: flex;
     justify-content: center;
     transform: none;
+    @include desktop-lite {
+        padding: 0;
+    }
     .createBlock {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 7.5rem;
+        @include mobile {
+            gap: 60px;
+        }
         .title {
             font-size: var(--fz96);
             line-height: 100%;
             font-weight: 500;
             max-width: 70%;
+            @include mobile {
+                max-width: 95%;
+                font-size: 36px;
+            }
         }
         .cards-and-oth {
             display: flex;
-            gap: 21.875rem;
+            gap: 19.2rem;
+            @include desktop-lite {
+                gap: 9.375rem;
+            }
             .tandlogo {
                 display: flex;
                 flex-direction: column;
@@ -109,7 +178,13 @@ main {
                     .firp {
                         font-size: var(--fz24);
                         font-weight: 400;
-                        max-width: 75%;
+                        max-width: 80%;
+                        @include desktop-lite{
+                            max-width: 90%;
+                        }
+                        @include mobile {
+                            max-width: 80%;
+                        }
                         span {
                             font-weight: bold;
                         }
@@ -117,9 +192,15 @@ main {
                     .secp {
                         font-size: var(--fz24);
                         font-weight: 400;
-                        max-width: 80%;
+                        max-width: 90%;
+                        @include desktop-lite{
+                            max-width: 85%;
+                        }
                         span {
                             font-weight: bold;
+                        }
+                        @include mobile {
+                            max-width: 75%;
                         }
                     }
                 }
@@ -136,12 +217,55 @@ main {
                 display: grid;
                 grid-template-columns: repeat(2, auto);
                 grid-template-rows: repeat(2, auto);
-                grid-column-gap: 2.5rem;
                 grid-row-gap: 6.25rem;
+                @include desktop-lite {
+                    grid-row-gap: 3.75rem;
+                }
+                @include mobile {
+                    grid-row-gap: 80px;
+                }
                 .card {
                     display: flex;
                     flex-direction: column;
                     gap: 40px;
+                    &.second-card {
+                        .title {
+                            max-width: 100%;
+                        }
+                        .sub-title {
+                            max-width: 100%;
+                        }
+                    }
+                    @include desktop-lite {
+                        &.first-card {
+                            .sub-title {
+                                max-width: 70%;
+                            }
+                        }
+                        &.second-card {
+                            .title {
+                                max-width: 90%;
+                            }
+                            .sub-title {
+                                max-width: 100%;
+                            }
+                        }
+                        &.fourth-card {
+                            .title {
+                                max-width: 85%;
+                            }
+                            .sub-title {
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                    @include mobile {
+                        &.fourth-card {
+                            .title {
+                                max-width: 100%;
+                            }
+                        }
+                    }
                     .title {
                         font-size: var(--fz32);
                         font-weight: 600;
@@ -149,13 +273,25 @@ main {
                     .sub-title {
                         font-size: var(--fz24);
                         font-weight: 400;
-                        max-width: 85%;
+                        max-width: 91%;
                     }
                     .icon {
+                        @include df_ac_jcc;
+                        width: 96px;
+                        height: 96px;
+                        padding: 1.5rem;
+                        border: 2px dashed $nepal;
+                        border-radius: 0.375rem 0.375rem 1.125rem 0.375rem;
+                        @include desktop-lite {
+                            width: 64px;
+                            height: 64px;
+                            padding: 1.125rem;
+                        }
                         img {
-                            padding: 1.5rem;
-                            border: 2px dashed $nepal;
-                            border-radius: 0.375rem 0.375rem 1.125rem 0.375rem;
+                            @include desktop-lite {
+                                width: 40px;
+                                height: 40px;
+                            }
                         }
                     }
                 }
@@ -167,6 +303,15 @@ main {
     .advantagesBlock {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        @include mobile {
+            flex: 1;
+            .videoBlock {
+                order: 3;
+            }
+            .balBlock {
+                order: 2;
+            }
+        }
         .consultBlock {
             grid-column: 1;
             grid-row: span 2;
@@ -177,16 +322,31 @@ main {
             flex-direction: column;
             max-width: 100%;
             max-height: 100%;
+            @include mobile {
+                gap: 60px;
+            }
             .ltandt {
                 display: flex;
                 flex-direction: column;
                 gap: 5rem;
+                @include desktop-lite {
+                    gap: 3.75rem;
+                    .btnka   {
+                        font-size: 20px;
+                    }
+                }
+                @include mobile {
+                    gap: 40px;
+                }
                 .lil-title {
                     p {
                         font-size: var(--fz16);
                         font-weight: 400;
                         color: $white;
                         text-transform: uppercase;
+                        @include desktop-lite {
+                            font-size: 18px;
+                        }
                     }
                 }
                 .title {
@@ -209,6 +369,13 @@ main {
                         color: $white;
                         font-weight: 400;
                         max-width: 65%;
+                        @include desktop-lite {
+                            max-width: 100%;
+                            font-size: 18px;
+                        }
+                        @include mobile {
+                            max-width: 100%;
+                        }
                     }
                 }
             }
@@ -221,12 +388,17 @@ main {
             flex-direction: column;
             gap: 2.5rem;
             border-bottom: 0.063rem solid rgb(191,191,191, 0.3);
-            max-width: 100%;
-            max-height: 100%;
+            @include mobile {
+                padding: 30px 20px 40px;
+            }
             .title {
                 font-size: var(--fz48);
                 font-weight: 600;
                 color: #2a1a80;
+                @include mobile {
+                    font-size: 36px;
+                    max-width: 90%;
+                }
             }
             .sub-titles {
                 ul {
@@ -235,10 +407,26 @@ main {
                     gap: 3.75rem;
                     grid-template-columns: repeat(2, 1fr);
                     font-weight: 400;
+                    @include desktop-lite {
+                        gap: 2.5rem;
+                    }
+                    @include mobile {
+                        max-width: 65%;
+                        margin-left: 20px;
+                        gap: 40px;
+                    }
                     li {
                         list-style: disc;
                         font-size: var(--fz24);
                         font-weight: 400;
+                        max-width: 75%;
+                        @include desktop-lite {
+                            font-size: 18px;
+                            max-width: 90%;
+                        }
+                        &:first-of-type {
+                            max-width: 90%;
+                        }
                     }
                 }
             }
@@ -250,6 +438,9 @@ main {
                 max-width: 100%;
                 width: 100%;
                 height: auto;
+                @include mobile {
+                    height: 582px;
+                }
             }
         }
     }
@@ -276,6 +467,9 @@ main {
                     span {
                         color: #2a1a80;
                     }
+                    @include mobile {
+                        font-size: 32px;
+                    }
                 }
             }
             .logo {
@@ -293,12 +487,18 @@ main {
                 display: flex;
                 justify-content: space-between;
                 .lil-title {
-                    font-size: var(--fz16);
-                    color: $gray;
+                    font-size: var(--fz18);
+                    color: #999999;
                     font-weight: 600;
                     text-transform: uppercase;
                     max-width: 17%;
                     width: 100%;
+                    @include desktop-lite {
+                        font-size: 18px;
+                    }
+                    @include mobile {
+                        max-width: 100%;
+                    }
                     span {
                         animation: blink 0.5s step-end infinite alternate;
                         border-right: 3px solid;
@@ -308,11 +508,17 @@ main {
                     display: flex;
                     gap: 4rem;
                     justify-content: flex-end;
+                    @include desktop-lite {
+                        gap: 1.563rem;
+                    }
                     .mech {
                         display: flex;
                         flex-direction: column;
                         gap: 2.5rem;
-                        max-width: 32%;
+                        max-width: 35%;
+                        @include desktop-lite {
+                            max-width: 420px;
+                        }
                         .title {
                             font-size: var(--fz32);
                             font-weight: 600;
@@ -321,7 +527,13 @@ main {
                         .sub-title {
                             font-size: var(--fz24);
                             font-weight: 400;
-                            max-width: 76%;
+                            max-width: 80%;
+                            @include desktop-lite {
+                                max-width: 70%;
+                            }
+                            @include mobile {
+                                max-width: 100%;
+                            }
                         }
                     }
                     .moy {
@@ -329,6 +541,9 @@ main {
                         flex-direction: column;
                         gap: 2.5rem;
                         max-width: 35%;
+                        @include desktop-lite {
+                            max-width: 420px;
+                        }
                         .title {
                             font-size: var(--fz32);
                             font-weight: 600;
@@ -336,7 +551,10 @@ main {
                         .sub-title {
                             font-size: var(--fz24);
                             font-weight: 400;
-                            max-width: 90%;
+                            max-width: 100%;
+                            @include desktop-lite {
+                                max-width: 80%;
+                            }
                         }
                     }
                 }
@@ -349,6 +567,9 @@ main {
                     flex-direction: column;
                     gap: 2.5rem;
                     max-width: 27%;
+                    @include desktop-lite {
+                        max-width: 30%;
+                    }
                     .title {
                         font-size: var(--fz32);
                         font-weight: 600;
@@ -371,6 +592,9 @@ main {
                         color: $nepal;
                         display: flex;
                         justify-content: flex-end;
+                        @include mobile {
+                            max-width: 90%;
+                        }
                     }
                 }
             }
@@ -378,35 +602,35 @@ main {
     }
 }
 .cardsSection {
-    padding: 0 2.5rem;
     .cardsBlock {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 2.5rem;
         padding-bottom: 5rem;
+        @include desktop-lite {
+            display: none;
+        }
         .card-one,
         .card-two {
             display: flex;
             flex-direction: column;
-            gap: 12rem;
             border-radius: 1.125rem;
             padding: 3.75rem;
             max-width: 70rem;
             width: 100%;
-            max-height: 36.875rem;
-            height: 100%;
+            height: 630px;
             .title-sub {
                 display: flex;
                 flex-direction: column;
                 gap: 3.75rem;
                 .title {
-                    font-size: var(--fz32);
+                    font-size: var(--fz48);
                     color: $white;
                     font-weight: 500;
                 }
                 .sub-title {
-                    font-size: var(--fz24);
+                    font-size: var(--fz32);
                     color: $white;
                     font-weight: 500;
                 }
@@ -416,12 +640,22 @@ main {
                 align-items: center;
                 gap: 2.5rem;
                 .cost {
-                    font-size: var(--fz24);
+                    font-size: var(--fz32);
+                    font-weight: 600;
                     color: $white;
                 }
             }
         }
         .card-one {
+            gap: 175px;
+            .title-sub {
+                .sub-title {
+                    max-width: 75%;
+                }
+            }
+        }
+        .card-two {
+            gap: 130px;
             .title-sub {
                 .sub-title {
                     max-width: 80%;
@@ -437,44 +671,87 @@ main {
                     background-color: #99A8BF;
                     color: $white;
                     align-items: center;
-                    gap: 3rem;
-                    padding: 2rem;
+                    gap: 5rem;
+                    padding: 1.25rem;
                     border-radius: 1.5rem 1.5rem 3rem 1.5rem;
+                    @include desktop-lite {
+                        gap: 2.5rem;
+                    }
+                    @include mobile {
+                        flex-direction: column;
+                    }
                     .img {
                         max-width: 690px;
                         max-height: 640px;
                         width: 100%;
                         height: 100%;
+                        @include desktop-lite {
+                            max-width: 460px;
+                            max-height: 420px;
+                        }
                         img {
                             max-width: 690px;
                             max-height: 640px;
                             width: 100%;
                             height: 100%;
+                            @include desktop-lite {
+                                max-width: 460px;
+                                max-height: 430px;
+                            }
                         }
                     }
                     .other {
                         display: flex;
                         flex-direction: column;
                         gap: 5rem;
+                        @include desktop-lite {
+                            &:nth-child(1) {
+                                gap: 40px;
+                            }
+                            &:nth-child(2) {
+                                gap: 60px;
+                            }
+                        }
                         .sub-and-title {
                             display: flex;
                             flex-direction: column;
                             gap: 3rem;
+                            @include desktop-lite {
+                                gap: 2.5rem;
+                            }
                             .title {
                                 font-size: var(--fz48);
                                 font-weight: 600;
                                 max-width: 75%;
+                                @include desktop-lite {
+                                    max-width: 60%;
+                                }
+                                @include mobile {
+                                    max-width: 85%;
+                                }
                             }
                             .sub-title {
                                 font-size: var(--fz24);
                                 font-weight: 400;
                                 max-width: 66%;
+                                @include mobile {
+                                    max-width: 100%;
+                                    font-size: 16px;
+                                }
                             }
                         }
                         .desc {
                             font-size: var(--fz16);
                             font-weight: 500;
-                            max-width: 50%
+                            max-width: 45%;
+                            @include desktop-lite {
+                                font-size: 16px;
+                                max-width: 60%;
+                            }
+                            @include mobile {
+                                max-width: 100%;
+                                font-size: 14px;
+                            }
                         }
                         .cost-and-arr {
                             @include df_ac;
@@ -482,21 +759,38 @@ main {
                             .cost {
                                 font-size: var(--fz48);
                                 font-weight: 600;
+                                @include desktop-lite {
+                                    font-size: 36px;
+                                }
                             }
                             .arr {
                                 display: flex;
                                 gap: 0.833rem;
                                 .next, 
                                 .prev {
-                                    @include df_ac;
+                                    @include df_ac_jcc;
+                                    width: 76px;
+                                    height: 76px;
                                     background-color: #fff;
                                     padding: 1rem;
                                     border-radius: 100%;
                                     transition: all .3s;
                                     cursor: pointer;
+                                    @include desktop-lite {
+                                        width: 64px;
+                                        height: 64px;
+                                    }
                                     &:hover {
                                         scale: (0.9);
                                         transition: all .3s;
+                                    }
+                                    img {
+                                        width: 36px;
+                                        height: 36px;
+                                        @include desktop-lite {
+                                            width: 24px;
+                                            height: 24px;
+                                        }
                                     }
                                 }
                             }
@@ -510,82 +804,110 @@ main {
 .feedbackSection {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    gap: 3rem;
-    .lil-title {
-        text-transform: uppercase;
-        color: $grey;
-        font-size: var(--fz18);
-        span {
-            animation: blink 0.5s step-end infinite alternate;
-            border-right: 3px solid;
-        }
-    }
-    .title-form {
+    .feedbackBlock {
         display: flex;
-        gap: 4rem;
-        .title-icon-block {
+        flex-direction: column;
+        gap: 60px;
+        .lil-title {
+            text-transform: uppercase;
+            color: $grey;
+            font-size: var(--fz18);
+            font-weight: 600;
+            @include desktop-lite {
+                font-size: 18px;
+            }
+            span {
+                animation: blink 0.5s step-end infinite alternate;
+                border-right: 3px solid;
+            }
+        }
+        .title-form {
             display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            .titleBlock {
+            gap: 4rem;
+            .title-icon-block {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                @include mobile {
+                    gap: 30px;
+                }
+                .titleBlock {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3.75rem;
+                    @include desktop-lite {
+                        gap: 14.75rem;
+                    }
+                    .title {
+                        font-size: var(--fz48);
+                        max-width: 99%;
+                        width: 100%;
+                        font-weight: 600;
+                    }
+                    .sub-title {
+                        font-size: var(--fz24);
+                        font-weight: 400;
+                        @include desktop-lite {
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .iconBlock {
+                    display: flex;
+                    gap: 1.25rem;
+                    .icon {
+                        max-width: 4rem;
+                        max-height: 4rem;
+                        width: 100%;
+                        height: 100%;
+                        img {
+                            @include desktop-lite {
+                                max-width: rem;
+                                max-height: 3rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .form {
                 display: flex;
                 flex-direction: column;
                 gap: 3.75rem;
-                .title {
-                    font-size: var(--fz48);
-                    max-width: 99%;
-                    width: 100%;
-                    font-weight: 600;
-                }
-                .sub-title {
-                    font-size: var(--fz24);
-                    font-weight: 400;
-                }
-            }
-            .iconBlock {
-                display: flex;
-                gap: 1.25rem;
-                .icon {
-                    max-width: 4rem;
-                    max-height: 4rem;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-        }
-        .form {
-            display: flex;
-            flex-direction: column;
-            gap: 3.75rem;
-            max-width: 40.125rem;
-            width: 100%;
-            input {
-                outline: none;
-                border: none;
-                border-bottom: 0.063rem solid $grey;
-                transition: all .3s;
+                max-width: 40.125rem;
                 width: 100%;
-                font-size: var(--fz16);
-                font-weight: 400;
-                &:focus {
-                    border-bottom: 0.063rem solid $black;
+                input {
+                    outline: none;
+                    border: none;
+                    border-bottom: 0.063rem solid $grey;
                     transition: all .3s;
-                }
-            }
-            .btn {
-                max-width: 55%;
-                width: 100%;
-            }
-            .inp {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                gap: 0.625rem;
-                label {
-                    font-size: var(--fz24);
+                    width: 100%;
+                    font-size: var(--fz16);
                     font-weight: 400;
-                    color: $grey;
+                    &:focus {
+                        border-bottom: 0.063rem solid $black;
+                        transition: all .3s;
+                    }
+                }
+                .btn {
+                    max-width: 55%;
+                    width: 100%;
+                }
+                .inp {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    gap: 0.625rem;
+                    label {
+                        font-size: var(--fz24);
+                        font-weight: 400;
+                        color: $grey;
+                        @include desktop-lite {
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .inp-three {
+                    gap: 100px;
                 }
             }
         }
@@ -606,6 +928,9 @@ main {
             video {
                 max-width: 960px;
                 width: 100%;
+                @include desktop-lite {
+                    height: 658px;
+                }
             }
             .info-block {
                 padding: 5rem;
@@ -615,15 +940,21 @@ main {
                 justify-content: space-between;
                 max-width: 960px;
                 width: 100%;
+                @include mobile {
+                    padding: 1.667rem;
+                }
                 .title-block {
                     display: flex;
                     flex-direction: column;
                     gap: 5rem;
                     .lil-title {
-                        font-size: var(--fz16);
+                        font-size: var(--fz18);
                         text-transform: uppercase;
                         color: $white;
                         font-weight: 600;
+                        @include desktop-lite {
+                            font-size: 18px;
+                        }
                         span {
                             animation: blink 0.5s step-end infinite alternate;
                             border-right: 3px solid;
@@ -636,9 +967,14 @@ main {
                         font-weight: 500;
                     }
                     .sub-title {
-                        font-size: var(--fz24);
+                        font-size: var(--fz32);
                         color: $gray;
                         font-weight: 600;
+                        max-width: 50%;
+                        @include desktop-lite {
+                            max-width: 65%;
+                            font-size: 24px;
+                        }
                     }
                     .info {
                         ul {
@@ -648,14 +984,17 @@ main {
                             gap: 1.875rem;
                             li {
                                 color: $white;
-                                font-size: var(--fz18);
+                                font-size: var(--fz24);
                                 font-weight: 400;
+                                @include desktop-lite {
+                                    font-size: 20px;
+                                }
                             }
                         }
                     }
                 }
                 .cost {
-                    font-size: var(--fz32);
+                    font-size: var(--fz48);
                     line-height: 125%;
                     color: $white;
                     font-weight: 600;
@@ -667,27 +1006,74 @@ main {
             flex-direction: row;
             gap: 2.5rem;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            @include desktop-lite {
+                gap: 1.667rem;
+            }
             .card {
                 display: flex;
                 flex-direction: column;
-                gap: 12.5rem;
+                gap: 130px;
                 padding: 5rem;
                 max-width: 70rem;
-                max-height: 37rem;
+                max-height: 39.375rem;
                 height: 100%;
                 width: 100%;
+                @include desktop-lite {
+                    padding: 2.5rem;
+                    justify-content: center;
+                    flex-grow: 1;
+                    max-width: 623px;
+                    width: 100%;
+                    max-height: 450px;
+                    height: 100%;
+                    @include mobile {
+                        padding: 1.667rem;
+                    }
+                    &.one {
+                        .titles {
+                            .sub-title {
+                                max-width: 95%;
+                                font-size: 24px;
+                                font-weight: 600;
+                                @include desktop-lite {
+                                    max-width: 80%;
+                                }
+                                @include mobile {
+                                    font-size: 18px;
+                                    max-width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    &.two {
+                        .titles {
+                            .sub-title {
+                                max-width: 100%;
+                                font-size: 24px;
+                                font-weight: 600;
+                                @include mobile {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
                 .btn {
                     width: fit-content;
+                    @include mobile {
+                        max-width: 100%;
+                        width: 100%;
+                    }
                 }
                 .titles {
                     .title {
-                        font-size: var(--fz64);
-                        font-weight: 500;
+                        font-size: var(--fz96);
+                        font-weight: 600;
                         color: $white;
                     }
                     .sub-title {
-                        font-size: var(--fz24);
+                        font-size: var(--fz32);
                         font-weight: 600;
                         color: $white;
                         max-width: 70%;
@@ -696,12 +1082,20 @@ main {
                 &.one {
                     background-image: url(../images/sections/cardBlock/gelik.png);
                     @include bg_s;
+                    .titles {
+                        @include df_fdc;
+                        gap: 60px;
+                    }
                 }
                 &.two {
                     background-image: url(../images/sections/cardBlock/motosikl.png);
                     @include bg_s;
+                    .titles {
+                        @include df_fdc;
+                        gap: 60px;
+                    }
                     .sub-title {
-                        max-width: 95%;
+                        max-width: 100%;
                     }
                 }
             }
@@ -712,16 +1106,22 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    @include desktop-lite {
+        gap: 100px;
+    }
     .frameInstBlock {
         display: flex;
         flex-direction: column;
-        gap: 5rem;
+        gap: 10rem;
         .title-sub-title {
             display: flex;
             flex-direction: column;
-            gap: 2.5rem;
+            gap: 5rem;
             .title {
                 max-width: 80%;
+                @include desktop-lite {
+                    max-width: 75%;
+                }
                 p {
                     font-size: var(--fz96);
                     line-height: 100%;
@@ -729,14 +1129,20 @@ main {
                     span {
                         color: #2a1a80;
                     }
+                    @include mobile {
+                        font-size: 32px;
+                    }
                 }
             }
             .sub-title {
                 max-width: 70%;
                 p {
-                    color: $grey;
+                    color: #999999;
                     font-size: var(--fz48);
                     font-weight: 600;
+                    @include desktop-lite {
+                        font-size: 36px;
+                    }
                 }
             }
         }
@@ -761,15 +1167,29 @@ main {
                 .sub-and-title {
                     @include df_fdc;
                     gap: 1.875rem;
+                    p {
+                        max-width: 70%;
+                        font-weight: 500;
+                        color: #999999;
+                        @include desktop-lite {
+                            max-width: 80%;
+                        }
+                    }
                     .title {
                         color: $black;
                         font-weight: 600;
                         font-size: var(--fz24);
+                        @include desktop-lite {
+                            font-size: 24px;
+                        }
                     }
                     .beb {
                         font-size: var(--fz16);
                         font-weight: 400;
-                        color: $grey;
+                        color: $dark;
+                        @include desktop-lite {
+                            font-size: 16px;
+                        }
                     }
                 }
             }
@@ -777,6 +1197,13 @@ main {
                 display: flex;
                 flex-direction: column;
                 gap: 1.875rem;
+                @include desktop-lite {
+                    width: 440px;
+                }
+                hr {
+                    height: 2px;
+                    background-color: $black;
+                }
             }
             /////////////////////
             .first-top {
@@ -788,11 +1215,17 @@ main {
                     width: 100%;
                     font-size: var(--fz24);
                     font-weight: 400;
+                    @include desktop-lite {
+                        max-width: 55%;
+                    }
                     span {
                         font-weight: bold;
                     }
                     &:last-of-type {
-                        max-width: 55%;
+                        max-width: 50%;
+                        @include desktop-lite {
+                            max-width: 60%;
+                        }
                     }
                 }
             }
@@ -804,11 +1237,29 @@ main {
                     .numb {
                         color: $nepal;
                     }
-                    .title {
-                        color: $nepal;
-                    }
-                    .sub-title {
-                        color: $nepal;
+                    .sub-and-title {
+                        .title {
+                            color: $nepal;
+                            font-size: var(--fz32);
+                            max-width: 80%;
+                            @include desktop-lite {
+                                max-width: 100%;
+                            }
+                        }
+                        .sub-title {
+                            p {
+                                max-width: 71%;
+                                font-size: var(--fz24);
+                                color: $nepal;
+                                @include desktop-lite {
+                                    max-width: 100%;
+                                }
+                            }
+                            @include desktop-lite {
+                                font-size: 20px;
+                                max-width: 90%;
+                            }
+                        }
                     }
                 }
                 hr {
@@ -820,12 +1271,28 @@ main {
             }
             .second-middle {
                 grid-area: second-middle;
+                .numb-title {
+                    .sub-and-title {
+                        .sub-title {
+                            @include desktop-lite {
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
             }
             .third-middle {
                 grid-area: third-middle;
             }
             .third-bottom {
                 grid-area: third-bottom;
+                .numb-title {
+                    .sub-and-title {
+                        p {
+                            max-width: 60%;
+                        }
+                    }
+                }
             }
         }
     }
@@ -843,9 +1310,12 @@ main {
     background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.6)),#2a1a80;
     overflow-x: auto;
     video {
-        max-width: 100%;
         width: 100%;
-        height: auto;
+        height: 100%;
+        @include desktop-lite {
+            min-width: 480px;
+            max-height: 658px;
+        }
     }
 }
 .faqSection {
@@ -863,6 +1333,9 @@ main {
         }
         .title-and-question {
             display: flex;
+            @include mobile {
+                flex-direction: column;
+            }
             .title-logo {
                 display: flex;
                 flex-direction: column;
@@ -874,9 +1347,15 @@ main {
                     .title {
                         font-size: var(--fz48);
                         font-weight: 600;
+                        @include desktop-lite {
+                            max-width: 80%;
+                        }
                     }
                 }
                 .logo {
+                    @include mobile {
+                        display: none;
+                    }
                     img {
                         max-width: 4.375rem;
                         max-height: 2.5rem;
@@ -889,6 +1368,10 @@ main {
                 display: flex;
                 flex-direction: column;
                 gap: 1.25rem;
+                @include desktop-lite {
+                    max-width: 526px;
+                    width: 100%;
+                }
                 .first-que, 
                 .second-que, 
                 .third-que {
@@ -915,6 +1398,9 @@ main {
                         font-size: var(--fz24);
                         font-weight: 400;
                         max-width: 80%;
+                        @include desktop-lite {
+                            max-width: 72%;
+                        }
                     }
                 }
             }
@@ -930,12 +1416,20 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include mobile {
+            padding-bottom: 10rem;
+        }
         .del-and-step {
             display: flex;
+            @include mobile {
+                flex-direction: column;
+                gap: 60px;
+            }
             .delivery {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+                gap: 60px;
                 .title {
                     font-size: var(--fz96);
                     color: $white;
@@ -958,10 +1452,26 @@ main {
                 padding-left: 2.5rem;
                 border-left: 0.063rem solid $white;
                 gap: 3rem;
+                @include desktop-lite {
+                    padding-left: 30px;
+                }
+                .second-step {
+                    .sub-title {
+                        max-width: 70%;
+                    }
+                }
+                .third-step {
+                    .sub-title {
+                        max-width: 70%;
+                    }
+                }
                 .step {
                     display: flex;
                     flex-direction: column;
                     gap: 2.5rem;
+                    @include desktop-lite {
+                        gap: 1.875rem;
+                    }
                     .title {
                         font-size: var(--fz32);
                         color: $white;
@@ -971,6 +1481,22 @@ main {
                         font-size: var(--fz24);
                         color: $white;
                         font-weight: 400;
+                        @include desktop-lite {
+                            font-size: 20px;
+                            max-width: 73%;
+                        }
+                        @include mobile {
+                            font-size: 16px;
+                            max-width: 95%;
+                        }
+                    }
+                    &:last-of-type {
+                        @include desktop-lite {
+                            .sub-title {
+                                font-size: 24px;
+                                max-width: 80%;
+                            }
+                        }
                     }
                 }
             }
@@ -980,33 +1506,21 @@ main {
             z-index: 20;
             left: 0;
             bottom: 0;
-        }
-    }
-}
-
-@media (max-width: 1620px) {
-    .advantagesSection {
-        .advantagesBlock {
-            .consultBlock {
-                .ltandt {
-                    .title {
-                        p {
-                            font-size: var(--fz64);
-                        }
-                    }
-                }
+            @include desktop-lite {
+                width: 556px;
+            }
+            @include mobile-lite {
+                width: 375px;
             }
         }
     }
 }
-
 @media (max-width: 1366px) {
     header {
         .header {
             .headerBlock {
                 display: flex;
                 gap: 2.5rem;
-                padding: 0 5rem;
                 .logo {
                     a {
                         img {
@@ -1015,51 +1529,10 @@ main {
                         }
                     }
                 }
-                .nav-sec {
-                    nav {
-                        ul {
-                            display: flex;
-                            gap: 1.25rem;
-                        }
-                    }
-                }
             }
         }
     }
     main {
-        .heroSection {
-            .heroSectionBlock {
-                .btn-tit {
-                    .big-title {
-                        font-size: var(--fz96);
-                    }
-                }
-                .btn-info {
-                    flex-direction: column-reverse;
-                    gap: 2.5rem;
-                    .info-block {
-                        align-items: flex-start;
-                    }
-                }
-            }
-        }
-        .sliderSection {
-            .sliderBlock {
-                .swiper {
-                    .swiper-wrapper {
-                        .swiper-slide {
-                            .other {
-                                .sub-and-title {
-                                    .title {
-                                        font-size: var(--fz36);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
         .createSection {
             .createBlock {
                 .title {
@@ -1076,20 +1549,6 @@ main {
                             }
                         }
                     }
-                    .cards {
-                        grid-column-gap: 2.5rem;
-                        grid-row-gap: 3.75rem;
-                        .card {
-                            .icon {
-                                img {
-                                    max-width: 5rem;
-                                    max-height: 5rem;
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -1098,37 +1557,13 @@ main {
                 .consultBlock {
                     .sub-and-btn {
                         gap: 2.5rem;
-                        .sub-title {
-                            p {
-                                font-size: var(--fz18);
-                            }
-                        }
-                    }
-                }
-                .balBlock {
-                    .title {
-                        font-size: var(--fz24);
-                    }
-                    .sub-titles {
-                        ul {
-                            li {
-                                font-size: var(--fz18);
-                            }
-                        }
+                        max-width: 70%;
                     }
                 }
             }
         }
         .serviceSection {
             .serviceBlock {
-                .title-and-logo {
-                    .title {
-                        p {
-                            font-size: var(--fz48);
-                            font-weight: 500;
-                        }
-                    }
-                }
                 .blocks {
                     .cal {
                         .title {
@@ -1149,9 +1584,6 @@ main {
                     }
                 }
             }
-        }
-        .cardsSection {
-            display: none;
         }
         .feedbackSection {
             .lil-title {
@@ -1187,42 +1619,8 @@ main {
                 .videoBlock {
                     .info-block {
                         padding: 2.5rem;
-                        gap: 5rem;
                         .title-block {
                             gap: 2.5rem;
-                            .sub-title {
-                                font-size: var(--fz18);
-                            }
-                            .info {
-                                ul {
-                                    li {
-                                        font-size: var(--fz12);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                .cardsBlock {
-                    .card {
-                        padding: 2.5rem;
-                        justify-content: center;
-                        flex-grow: 1;
-                        max-width: 600px;
-                        width: 100%;
-                        max-height: 460px;
-                        height: 100%;
-                        &.one {
-                            .sub-title {
-                                max-width: 80%;
-                                font-size: var(--fz18);
-                            }
-                        }
-                        &.two {
-                            .sub-title {
-                                max-width: 94%;
-                                font-size: var(--fz18);
-                            }
                         }
                     }
                 }
@@ -1315,6 +1713,22 @@ main {
     }
 }
 
+@media (max-width: 1620px) {
+    .advantagesSection {
+        .advantagesBlock {
+            .consultBlock {
+                .ltandt {
+                    .title {
+                        p {
+                            font-size: var(--fz64);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1170px) {
     header {
         .header {
@@ -1348,9 +1762,6 @@ main {
                 }
             }
         }
-    }
-    .heroSection {
-        padding: 5rem 5rem;
     }
     .serviceSection {
         .serviceBlock {
@@ -1494,7 +1905,6 @@ main {
             display: flex;
             flex-direction: column;
             .consultBlock {
-                gap: 2rem;
                 .ltandt {
                     .title {
                         p {
@@ -1518,32 +1928,6 @@ main {
             font-weight: 400;
         }
     }
-    .heroSection {
-        padding: 5rem 5rem;
-        .heroSectionBlock {
-            gap: 6rem;
-            .btn-tit {
-                .big-title {
-                    font-size: var(--fz32);
-                }
-            }
-            .btn-info {
-                .btns {
-                    flex-direction: column;
-                    align-items: start;
-                    max-width: 100%;
-                    .white {
-                        max-width: 50%;
-                        width: 100%;
-                    }
-                    .transparent {
-                        max-width: 50%;
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
     .createSection {
         .createBlock {
             .cards-and-oth {
@@ -1554,40 +1938,6 @@ main {
 }
 
 @media (max-width: 590px) {
-    .welcome {
-        .title {
-            max-width: 50%;
-            width: 100%;
-        }
-    }
-    .heroSection {
-        .heroSectionBlock {
-            .btn-tit {
-                .big-title {
-                    font-size: var(--fz64);
-                    font-weight: 500;
-                }
-            }
-            .btn-info {
-                .btns {
-                    .white {
-                        max-width: 70%;
-                    }
-                    .transparent {
-                        max-width: 70%;
-                    }
-                }
-                .info-block {
-                    .title {
-                        max-width: 100%;
-                    }
-                    .sub-title {
-                        max-width: 100%;
-                    }
-                }
-            }
-        }
-    }
     .serviceSection {
         .serviceBlock {
             .title-and-logo {
@@ -1625,7 +1975,6 @@ main {
     }
     .frameInstSection {
         .frameInstBlock {
-            padding: 0 2rem;
             .title-sub-title {
                 .title {
                     max-width: 100%;
@@ -1692,15 +2041,7 @@ main {
 }
 
 @media (max-width: 400px) {
-    .welcome {
-        padding: 0 2rem;
-        .title {
-            max-width: 100%;
-            width: 100%;
-        }
-    }
     .heroSection {
-        padding: 5rem 3rem;
         .heroSectionBlock {
             .btn-info {
                 .btns {
@@ -1733,18 +2074,9 @@ main {
             }
             .consultBlock {
                 padding: 1.5rem;
-                .ltandt {
-                    gap: 2.5rem;
-                }
                 .sub-and-btn {
                     .btn {
                         width: 100%;
-                    }
-                    .sub-title {
-                        p {
-                            max-width: 85%;
-                            width: 100%;
-                        }
                     }
                 }
             }
@@ -1787,6 +2119,9 @@ main {
 }
 
 .black {
+    hr {
+        background-color: $black;
+    }
     .question {
         .title {
             color: black !important;

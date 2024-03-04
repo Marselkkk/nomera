@@ -1,3 +1,12 @@
+.first-que {
+    @include desktop-lite {
+        .question {
+            .title {
+                max-width: 60%;
+            }
+        }
+    }
+}
 .accordion-item {
     cursor: pointer;
     .accordion-header {
