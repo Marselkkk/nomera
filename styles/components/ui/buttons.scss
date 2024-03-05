@@ -12,6 +12,16 @@
         scale: (0.9);
     }
 
+    &.welcome-btn {
+        background-color: transparent;
+        font-size: 18px;
+        color: $prem-gray;
+        text-transform: uppercase;
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+
     &.white {
         background-color: $white;
         color: $black;

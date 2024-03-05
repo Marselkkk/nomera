@@ -1,2130 +1,486 @@
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 12.5rem;
-    justify-content: center;
-    @include desktop-lite {
-        gap: 7.5rem;
-    }
-}
-.heroSection {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 100%;
-    padding: 2rem 0;
-    background-image: url(../images/sections/bgcs.png);
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    .heroSectionBlock {
-        display: flex;
-        flex-direction: column;
-        gap: 12.5rem;
-        @include desktop-lite {
-            gap: 5rem;
-        }
-        @include mobile {
-            gap: 20.917rem;
-        }
-        .btn-tit {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            gap: 18.75rem;
-            .big-title {
-                font-size: var(--fz144);
-                line-height: 100%;
-                color: $white;
-                font-weight: 600;
-                @include mobile {
-                    font-size: 48px;
-                    max-width: 60%;
-                }
-            }
-        }
-        .btn-info {
-            display: flex;
-            justify-content: space-between;
-            gap: 21.875rem;
-            @include desktop-lite {
-                flex-direction: column-reverse;
-                gap: 9rem;
-            }
-            @include mobile {
-                gap: 3rem;
-            }
-            .info-block {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                max-width: 35%;
-                gap: 3.75rem;
-                @include desktop-lite {
-                    justify-content: space-between;
-                    flex-direction: row;
-                    max-width: 56%;
-                }
-                @include mobile {
-                    flex-direction: column;
-                    max-width: 100%;
-                    gap: 30px;
-                }
-                .title {
-                    font-size: var(--fz32);
-                    color: $white;
-                    font-weight: 600;
-                    max-width: 75%;
-                    width: 100%;
-                    @include desktop-lite {
-                        max-width: 50%;
-                    }
-                    @include mobile {
-                        max-width: 80%;
-                        font-size: 18px;
-                    }
-                }
-                .sub-title {
-                    font-size: var(--fz24);
-                    color: $white;
-                    font-weight: 400;
-                    max-width: 65%;
-                    width: 100%;
-                    @include desktop-lite {
-                        max-width: 39%;
-                    }
-                    @include mobile {
-                        max-width: 75%;
-                        font-size: 14px;
-                    }
-                    .border-blink {
-                        animation: blink .5s step-end infinite alternate;
-                        border-right: 2px solid;
-                    }
-                }
-            }
-            .btns {
-                display: flex;
-                gap: 2.5rem;
-                align-items: flex-end;
-                justify-content: flex-start;
-                max-width: 40%;
-                width: 100%;
-                @include desktop-lite {
-                    max-width: 57%;
-                }
-                @include mobile {
-                    flex-direction: column;
-                    gap: 10px;
-                    max-width: 100%;
-                    .white {
-                        max-width: 100%;
-                        width: 100%;
-                    }
-                    .transparent {
-                        max-width: 100%;
-                        width: 100%;
-                    }
-                }
-                .btn {
-                    max-width: 100%;
-                    width: 100%;
-                }
-            }
-        }
-    }
-}
-.createSection {
-    padding: 0 5rem;
-    display: flex;
-    justify-content: center;
-    transform: none;
-    @include desktop-lite {
-        padding: 0;
-    }
-    .createBlock {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 7.5rem;
-        @include mobile {
-            gap: 60px;
-        }
+.welcome-section {
+    background-image: url(../images/header/welcome-gradient.png);
+    .welcome-block {
+        @include df_ac_jcc;
+        gap: 2.5rem;
         .title {
-            font-size: var(--fz96);
+            color: $white;
+            @include fz-welc;
+        }
+    }
+}
+
+.hero-section {
+    background-image: url(../images/sections/bgcs.png);
+    @include bg_s;
+    aspect-ratio: 16 / 7;
+    .hero-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding-top: 5rem;
+        .big-title {
+            @include h1;
             line-height: 100%;
-            font-weight: 500;
-            max-width: 70%;
-            @include mobile {
-                max-width: 95%;
-                font-size: 36px;
+            max-width: 60%
+        }
+        .btn-and-titles {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            .btn-block {
+                @include df_ac;
+                gap: 2.5rem;
+                padding-bottom: 5rem;
+                padding-top: 5rem;
+                max-width: 45rem;
+                width: 100%;
+                .btn {
+                    white-space: nowrap;
+                    flex: 1;
+                }
+            }
+            .title-block {
+                @include df_fdc;
+                gap: 3.75rem;
+                padding-bottom: 5rem;
+                max-width: 40%;
+                .title {
+                    @include h3;
+                    max-width: 65%;
+                }
+                .sub-title {
+                    @include r24;
+                    max-width: 55%;
+                }
             }
         }
-        .cards-and-oth {
+    }
+}
+.production-section {
+    @include mt-12;
+    .production-block {
+        @include df_fdc;
+        gap: 7.5rem;
+        .big-title {
+            @include h2;
+        }
+        .content {
             display: flex;
-            gap: 19.2rem;
-            @include desktop-lite {
-                gap: 9.375rem;
-            }
-            .tandlogo {
-                display: flex;
-                flex-direction: column;
+            justify-content: space-between;
+            .title-and-logo {
+                @include df_fdc;
                 justify-content: space-between;
-                .sub-title {
+                .titles {
                     @include df_fdc;
-                    gap: 1.25rem;
-                    .firp {
-                        font-size: var(--fz24);
-                        font-weight: 400;
-                        max-width: 80%;
-                        @include desktop-lite{
-                            max-width: 90%;
-                        }
-                        @include mobile {
-                            max-width: 80%;
-                        }
+                    gap: 2.5rem;
+                    p {
+                        @include r24;
+                        color: $black;
+                        max-width: 50%;
                         span {
                             font-weight: bold;
                         }
-                    }
-                    .secp {
-                        font-size: var(--fz24);
-                        font-weight: 400;
-                        max-width: 90%;
-                        @include desktop-lite{
-                            max-width: 85%;
-                        }
-                        span {
-                            font-weight: bold;
-                        }
-                        @include mobile {
-                            max-width: 75%;
-                        }
-                    }
-                }
-                .logot {
-                    img {
-                        max-width: 11.813rem;
-                        max-height: 6.563rem;
-                        width: 100%;
-                        height: 100%;
                     }
                 }
             }
             .cards {
                 display: grid;
-                grid-template-columns: repeat(2, auto);
-                grid-template-rows: repeat(2, auto);
+                grid-template-columns: 1fr 1fr;
                 grid-row-gap: 6.25rem;
-                @include desktop-lite {
-                    grid-row-gap: 3.75rem;
-                }
-                @include mobile {
-                    grid-row-gap: 80px;
-                }
+                grid-column-gap: 2.5rem;
+                max-width: 1040px;
+                width: 100%;
                 .card {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 40px;
-                    &.second-card {
-                        .title {
-                            max-width: 100%;
-                        }
-                        .sub-title {
-                            max-width: 100%;
-                        }
-                    }
-                    @include desktop-lite {
-                        &.first-card {
-                            .sub-title {
-                                max-width: 70%;
-                            }
-                        }
-                        &.second-card {
-                            .title {
-                                max-width: 90%;
-                            }
-                            .sub-title {
-                                max-width: 100%;
-                            }
-                        }
-                        &.fourth-card {
-                            .title {
-                                max-width: 85%;
-                            }
-                            .sub-title {
-                                max-width: 100%;
-                            }
-                        }
-                    }
-                    @include mobile {
-                        &.fourth-card {
-                            .title {
-                                max-width: 100%;
-                            }
-                        }
-                    }
-                    .title {
-                        font-size: var(--fz32);
-                        font-weight: 600;
-                    }
-                    .sub-title {
-                        font-size: var(--fz24);
-                        font-weight: 400;
-                        max-width: 91%;
-                    }
+                    @include df_fdc;
+                    gap: 2.5rem;
                     .icon {
                         @include df_ac_jcc;
-                        width: 96px;
-                        height: 96px;
-                        padding: 1.5rem;
+                        border-radius: 6px 6px 18px 6px;
+                        // width: fit-content;
+                        max-width: 6.5rem;
+                        aspect-ratio: 1 / 1;
+                        box-sizing: border-box;
+                        // max-height: 6rem;
+                        padding: 27px;
                         border: 2px dashed $nepal;
-                        border-radius: 0.375rem 0.375rem 1.125rem 0.375rem;
-                        @include desktop-lite {
-                            width: 64px;
-                            height: 64px;
-                            padding: 1.125rem;
-                        }
-                        img {
-                            @include desktop-lite {
-                                width: 40px;
-                                height: 40px;
-                            }
-                        }
+                    }
+                    .title {
+                        @include h3;
+                        color: $black;
+                        max-width: 70%;
+                    }
+                    .sub-title {
+                        @include r24;
+                        color: $black;
                     }
                 }
             }
         }
     }
 }
-.advantagesSection {
-    .advantagesBlock {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        @include mobile {
-            flex: 1;
-            .videoBlock {
-                order: 3;
-            }
-            .balBlock {
-                order: 2;
-            }
-        }
-        .consultBlock {
-            grid-column: 1;
-            grid-row: span 2;
-            background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.6)),#2a1a80;
+.advantages-section {
+    @include mt-12;
+    .advantages-block {
+        display: flex;
+        .blue-content {
+            background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.6)),$blue;
             padding: 5rem;
-            display: flex;
+            @include df_fdc;
             justify-content: space-between;
-            flex-direction: column;
-            max-width: 100%;
-            max-height: 100%;
-            @include mobile {
-                gap: 60px;
-            }
-            .ltandt {
-                display: flex;
-                flex-direction: column;
+            .little-and-title {
+                @include df_fdc;
                 gap: 5rem;
-                @include desktop-lite {
-                    gap: 3.75rem;
-                    .btnka   {
-                        font-size: 20px;
-                    }
-                }
-                @include mobile {
-                    gap: 40px;
-                }
-                .lil-title {
-                    p {
-                        font-size: var(--fz16);
-                        font-weight: 400;
-                        color: $white;
-                        text-transform: uppercase;
-                        @include desktop-lite {
-                            font-size: 18px;
-                        }
-                    }
+                .little {
+                    @include sb18;
+                    text-transform: uppercase
                 }
                 .title {
-                    p {
-                        font-size: var(--fz96);
-                        color: $white;
-                        line-height: 125%;
-                        font-weight: 500;
-                    }
+                    @include h2;
+                    color: $white;
                 }
             }
-            .sub-and-btn {
-                display: flex;
-                align-items: flex-start;
-                flex-direction: column;
+            .desc-and-btn {
+                @include df_fdc;
                 gap: 3.75rem;
-                .sub-title {
-                    p {
-                        font-size: var(--fz24);
-                        color: $white;
-                        font-weight: 400;
-                        max-width: 65%;
-                        @include desktop-lite {
-                            max-width: 100%;
-                            font-size: 18px;
-                        }
-                        @include mobile {
-                            max-width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-        .balBlock {
-            grid-column: 2;
-            grid-row: 2;
-            padding: 3.75rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-            border-bottom: 0.063rem solid rgb(191,191,191, 0.3);
-            @include mobile {
-                padding: 30px 20px 40px;
-            }
-            .title {
-                font-size: var(--fz48);
-                font-weight: 600;
-                color: #2a1a80;
-                @include mobile {
-                    font-size: 36px;
-                    max-width: 90%;
-                }
-            }
-            .sub-titles {
-                ul {
-                    display: grid;
-                    justify-content: center;
-                    gap: 3.75rem;
-                    grid-template-columns: repeat(2, 1fr);
-                    font-weight: 400;
-                    @include desktop-lite {
-                        gap: 2.5rem;
-                    }
-                    @include mobile {
-                        max-width: 65%;
-                        margin-left: 20px;
-                        gap: 40px;
-                    }
-                    li {
-                        list-style: disc;
-                        font-size: var(--fz24);
-                        font-weight: 400;
-                        max-width: 75%;
-                        @include desktop-lite {
-                            font-size: 18px;
-                            max-width: 90%;
-                        }
-                        &:first-of-type {
-                            max-width: 90%;
-                        }
-                    }
-                }
-            }
-        }
-        .videoBlock {
-            grid-column: 2;
-            grid-row: 1;
-            video {
-                max-width: 100%;
-                width: 100%;
-                height: auto;
-                @include mobile {
-                    height: 582px;
-                }
-            }
-        }
-    }
-}
-
-.serviceSection {
-    display: flex;
-    justify-content: center;
-    .serviceBlock {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 7.5rem;
-        .title-and-logo {
-            display: flex;
-            justify-content: space-between;
-            .title {
-                p {
-                    font-size: var(--fz96);
-                    line-height: 100%;
-                    max-width: 70%;
-                    width: 100%;
-                    font-weight: 500;
-                    span {
-                        color: #2a1a80;
-                    }
-                    @include mobile {
-                        font-size: 32px;
-                    }
-                }
-            }
-            .logo {
-                img {
-                    width: 4.375rem;
-                    height: 2.5rem;
-                }
-            }
-        }
-        .blocks {
-            display: flex;
-            flex-direction: column;
-            gap: 8.125rem;
-            .first-block {
-                display: flex;
-                justify-content: space-between;
-                .lil-title {
-                    font-size: var(--fz18);
-                    color: #999999;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    max-width: 17%;
-                    width: 100%;
-                    @include desktop-lite {
-                        font-size: 18px;
-                    }
-                    @include mobile {
-                        max-width: 100%;
-                    }
-                    span {
-                        animation: blink 0.5s step-end infinite alternate;
-                        border-right: 3px solid;
-                    }
-                }
-                .mech-moy {
-                    display: flex;
-                    gap: 4rem;
-                    justify-content: flex-end;
-                    @include desktop-lite {
-                        gap: 1.563rem;
-                    }
-                    .mech {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 2.5rem;
-                        max-width: 35%;
-                        @include desktop-lite {
-                            max-width: 420px;
-                        }
-                        .title {
-                            font-size: var(--fz32);
-                            font-weight: 600;
-                            color: $black;
-                        }
-                        .sub-title {
-                            font-size: var(--fz24);
-                            font-weight: 400;
-                            max-width: 80%;
-                            @include desktop-lite {
-                                max-width: 70%;
-                            }
-                            @include mobile {
-                                max-width: 100%;
-                            }
-                        }
-                    }
-                    .moy {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 2.5rem;
-                        max-width: 35%;
-                        @include desktop-lite {
-                            max-width: 420px;
-                        }
-                        .title {
-                            font-size: var(--fz32);
-                            font-weight: 600;
-                        }
-                        .sub-title {
-                            font-size: var(--fz24);
-                            font-weight: 400;
-                            max-width: 100%;
-                            @include desktop-lite {
-                                max-width: 80%;
-                            }
-                        }
-                    }
-                }
-            }
-            .serv-gua {
-                display: flex;
-                gap: 12rem;
-                .serv {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 2.5rem;
-                    max-width: 27%;
-                    @include desktop-lite {
-                        max-width: 30%;
-                    }
-                    .title {
-                        font-size: var(--fz32);
-                        font-weight: 600;
-                    }
-                    .sub-title {
-                        font-size: var(--fz24);
-                        font-weight: 400;
-                    }
-                }
-                .gua {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 2.5rem;
-                    max-width: 90%;
-                    width: 100%;
-                    .title {
-                        font-size: var(--fz48);
-                        font-weight: 600;
-                        max-width: 80%;
-                        color: $nepal;
-                        display: flex;
-                        justify-content: flex-end;
-                        @include mobile {
-                            max-width: 90%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-.cardsSection {
-    .cardsBlock {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2.5rem;
-        padding-bottom: 5rem;
-        @include desktop-lite {
-            display: none;
-        }
-        .card-one,
-        .card-two {
-            display: flex;
-            flex-direction: column;
-            border-radius: 1.125rem;
-            padding: 3.75rem;
-            max-width: 70rem;
-            width: 100%;
-            height: 630px;
-            .title-sub {
-                display: flex;
-                flex-direction: column;
-                gap: 3.75rem;
-                .title {
-                    font-size: var(--fz48);
-                    color: $white;
-                    font-weight: 500;
-                }
-                .sub-title {
-                    font-size: var(--fz32);
-                    color: $white;
-                    font-weight: 500;
-                }
-            }
-            .but-cost {
-                display: flex;
-                align-items: center;
-                gap: 2.5rem;
-                .cost {
-                    font-size: var(--fz32);
-                    font-weight: 600;
-                    color: $white;
-                }
-            }
-        }
-        .card-one {
-            gap: 175px;
-            .title-sub {
-                .sub-title {
-                    max-width: 75%;
-                }
-            }
-        }
-        .card-two {
-            gap: 130px;
-            .title-sub {
-                .sub-title {
-                    max-width: 80%;
-                }
-            }
-        }
-    }
-    .sliderBlock {
-        .swiper {
-            .swiper-wrapper {
-                .swiper-slide {
-                    display: flex;
-                    background-color: #99A8BF;
-                    color: $white;
-                    align-items: center;
-                    gap: 5rem;
-                    padding: 1.25rem;
-                    border-radius: 1.5rem 1.5rem 3rem 1.5rem;
-                    @include desktop-lite {
-                        gap: 2.5rem;
-                    }
-                    @include mobile {
-                        flex-direction: column;
-                    }
-                    .img {
-                        max-width: 690px;
-                        max-height: 640px;
-                        width: 100%;
-                        height: 100%;
-                        @include desktop-lite {
-                            max-width: 460px;
-                            max-height: 420px;
-                        }
-                        img {
-                            max-width: 690px;
-                            max-height: 640px;
-                            width: 100%;
-                            height: 100%;
-                            @include desktop-lite {
-                                max-width: 460px;
-                                max-height: 430px;
-                            }
-                        }
-                    }
-                    .other {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 5rem;
-                        @include desktop-lite {
-                            &:nth-child(1) {
-                                gap: 40px;
-                            }
-                            &:nth-child(2) {
-                                gap: 60px;
-                            }
-                        }
-                        .sub-and-title {
-                            display: flex;
-                            flex-direction: column;
-                            gap: 3rem;
-                            @include desktop-lite {
-                                gap: 2.5rem;
-                            }
-                            .title {
-                                font-size: var(--fz48);
-                                font-weight: 600;
-                                max-width: 75%;
-                                @include desktop-lite {
-                                    max-width: 60%;
-                                }
-                                @include mobile {
-                                    max-width: 85%;
-                                }
-                            }
-                            .sub-title {
-                                font-size: var(--fz24);
-                                font-weight: 400;
-                                max-width: 66%;
-                                @include mobile {
-                                    max-width: 100%;
-                                    font-size: 16px;
-                                }
-                            }
-                        }
-                        .desc {
-                            font-size: var(--fz16);
-                            font-weight: 500;
-                            max-width: 45%;
-                            @include desktop-lite {
-                                font-size: 16px;
-                                max-width: 60%;
-                            }
-                            @include mobile {
-                                max-width: 100%;
-                                font-size: 14px;
-                            }
-                        }
-                        .cost-and-arr {
-                            @include df_ac;
-                            justify-content: space-between;
-                            .cost {
-                                font-size: var(--fz48);
-                                font-weight: 600;
-                                @include desktop-lite {
-                                    font-size: 36px;
-                                }
-                            }
-                            .arr {
-                                display: flex;
-                                gap: 0.833rem;
-                                .next, 
-                                .prev {
-                                    @include df_ac_jcc;
-                                    width: 76px;
-                                    height: 76px;
-                                    background-color: #fff;
-                                    padding: 1rem;
-                                    border-radius: 100%;
-                                    transition: all .3s;
-                                    cursor: pointer;
-                                    @include desktop-lite {
-                                        width: 64px;
-                                        height: 64px;
-                                    }
-                                    &:hover {
-                                        scale: (0.9);
-                                        transition: all .3s;
-                                    }
-                                    img {
-                                        width: 36px;
-                                        height: 36px;
-                                        @include desktop-lite {
-                                            width: 24px;
-                                            height: 24px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-.feedbackSection {
-    display: flex;
-    justify-content: center;
-    .feedbackBlock {
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
-        .lil-title {
-            text-transform: uppercase;
-            color: $grey;
-            font-size: var(--fz18);
-            font-weight: 600;
-            @include desktop-lite {
-                font-size: 18px;
-            }
-            span {
-                animation: blink 0.5s step-end infinite alternate;
-                border-right: 3px solid;
-            }
-        }
-        .title-form {
-            display: flex;
-            gap: 4rem;
-            .title-icon-block {
-                display: flex;
-                justify-content: space-between;
-                flex-direction: column;
-                @include mobile {
-                    gap: 30px;
-                }
-                .titleBlock {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 3.75rem;
-                    @include desktop-lite {
-                        gap: 14.75rem;
-                    }
-                    .title {
-                        font-size: var(--fz48);
-                        max-width: 99%;
-                        width: 100%;
-                        font-weight: 600;
-                    }
-                    .sub-title {
-                        font-size: var(--fz24);
-                        font-weight: 400;
-                        @include desktop-lite {
-                            font-size: 20px;
-                        }
-                    }
-                }
-                .iconBlock {
-                    display: flex;
-                    gap: 1.25rem;
-                    .icon {
-                        max-width: 4rem;
-                        max-height: 4rem;
-                        width: 100%;
-                        height: 100%;
-                        img {
-                            @include desktop-lite {
-                                max-width: rem;
-                                max-height: 3rem;
-                            }
-                        }
-                    }
-                }
-            }
-            .form {
-                display: flex;
-                flex-direction: column;
-                gap: 3.75rem;
-                max-width: 40.125rem;
-                width: 100%;
-                input {
-                    outline: none;
-                    border: none;
-                    border-bottom: 0.063rem solid $grey;
-                    transition: all .3s;
-                    width: 100%;
-                    font-size: var(--fz16);
-                    font-weight: 400;
-                    &:focus {
-                        border-bottom: 0.063rem solid $black;
-                        transition: all .3s;
-                    }
-                }
-                .btn {
-                    max-width: 55%;
-                    width: 100%;
-                }
-                .inp {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    gap: 0.625rem;
-                    label {
-                        font-size: var(--fz24);
-                        font-weight: 400;
-                        color: $grey;
-                        @include desktop-lite {
-                            font-size: 20px;
-                        }
-                    }
-                }
-                .inp-three {
-                    gap: 100px;
-                }
-            }
-        }
-    }
-}
-.optionalSection {
-    .optionalBlock {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2.5rem;
-        .videoBlock {
-            display: flex;
-            justify-content: center;
-            max-width: 100%;
-            width: 100%;
-            video {
-                max-width: 960px;
-                width: 100%;
-                @include desktop-lite {
-                    height: 658px;
-                }
-            }
-            .info-block {
-                padding: 5rem;
-                background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.6)),#2a1a80;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                max-width: 960px;
-                width: 100%;
-                @include mobile {
-                    padding: 1.667rem;
-                }
-                .title-block {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5rem;
-                    .lil-title {
-                        font-size: var(--fz18);
-                        text-transform: uppercase;
-                        color: $white;
-                        font-weight: 600;
-                        @include desktop-lite {
-                            font-size: 18px;
-                        }
-                        span {
-                            animation: blink 0.5s step-end infinite alternate;
-                            border-right: 3px solid;
-                        }
-                    }
-                    .title {
-                        font-size: var(--fz96);
-                        color: $white;
-                        line-height: 100%;
-                        font-weight: 500;
-                    }
-                    .sub-title {
-                        font-size: var(--fz32);
-                        color: $gray;
-                        font-weight: 600;
-                        max-width: 50%;
-                        @include desktop-lite {
-                            max-width: 65%;
-                            font-size: 24px;
-                        }
-                    }
-                    .info {
-                        ul {
-                            list-style: inside;
-                            display: flex;
-                            flex-direction: column;
-                            gap: 1.875rem;
-                            li {
-                                color: $white;
-                                font-size: var(--fz24);
-                                font-weight: 400;
-                                @include desktop-lite {
-                                    font-size: 20px;
-                                }
-                            }
-                        }
-                    }
-                }
-                .cost {
-                    font-size: var(--fz48);
-                    line-height: 125%;
-                    color: $white;
-                    font-weight: 600;
-                }
-            }
-        }
-        .cardsBlock {
-            display: flex;
-            flex-direction: row;
-            gap: 2.5rem;
-            align-items: center;
-            justify-content: center;
-            @include desktop-lite {
-                gap: 1.667rem;
-            }
-            .card {
-                display: flex;
-                flex-direction: column;
-                gap: 130px;
-                padding: 5rem;
-                max-width: 70rem;
-                max-height: 39.375rem;
-                height: 100%;
-                width: 100%;
-                @include desktop-lite {
-                    padding: 2.5rem;
-                    justify-content: center;
-                    flex-grow: 1;
-                    max-width: 623px;
-                    width: 100%;
-                    max-height: 450px;
-                    height: 100%;
-                    @include mobile {
-                        padding: 1.667rem;
-                    }
-                    &.one {
-                        .titles {
-                            .sub-title {
-                                max-width: 95%;
-                                font-size: 24px;
-                                font-weight: 600;
-                                @include desktop-lite {
-                                    max-width: 80%;
-                                }
-                                @include mobile {
-                                    font-size: 18px;
-                                    max-width: 100%;
-                                }
-                            }
-                        }
-                    }
-                    &.two {
-                        .titles {
-                            .sub-title {
-                                max-width: 100%;
-                                font-size: 24px;
-                                font-weight: 600;
-                                @include mobile {
-                                    font-size: 18px;
-                                }
-                            }
-                        }
-                    }
+                .desc {
+                    @include r24;
                 }
                 .btn {
                     width: fit-content;
-                    @include mobile {
-                        max-width: 100%;
-                        width: 100%;
-                    }
+                    font-weight: 600;
                 }
-                .titles {
-                    .title {
-                        font-size: var(--fz96);
-                        font-weight: 600;
-                        color: $white;
-                    }
-                    .sub-title {
-                        font-size: var(--fz32);
-                        font-weight: 600;
-                        color: $white;
-                        max-width: 70%;
-                    }
+            }
+        }
+        .video-points-cont {
+            .video-content {
+                video {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 16 / 9;
                 }
-                &.one {
-                    background-image: url(../images/sections/cardBlock/gelik.png);
-                    @include bg_s;
-                    .titles {
-                        @include df_fdc;
-                        gap: 60px;
-                    }
+            }
+            .points-content {
+                padding: 3.75rem;
+                @include df_fdc;
+                gap: 7.5rem;
+                .title {
+                    @include sb48;
+                    color: $blue;
                 }
-                &.two {
-                    background-image: url(../images/sections/cardBlock/motosikl.png);
-                    @include bg_s;
-                    .titles {
-                        @include df_fdc;
-                        gap: 60px;
-                    }
-                    .sub-title {
-                        max-width: 100%;
+                .points {
+                    nav {
+                        ul {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            list-style: disc;
+                            gap: 3.75rem;
+                            @include r24;
+                            color: $black;
+                            li {
+                                max-width: 85%;
+                                &:nth-last-of-type(2) {
+                                    max-width: 70%;
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
     }
 }
-.frameInstSection {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    @include desktop-lite {
-        gap: 100px;
-    }
-    .frameInstBlock {
-        display: flex;
-        flex-direction: column;
-        gap: 10rem;
-        .title-sub-title {
-            display: flex;
-            flex-direction: column;
-            gap: 5rem;
-            .title {
-                max-width: 80%;
-                @include desktop-lite {
-                    max-width: 75%;
-                }
-                p {
-                    font-size: var(--fz96);
-                    line-height: 100%;
-                    font-weight: 600;
-                    span {
-                        color: #2a1a80;
-                    }
-                    @include mobile {
-                        font-size: 32px;
-                    }
-                }
-            }
-            .sub-title {
-                max-width: 70%;
-                p {
-                    color: #999999;
-                    font-size: var(--fz48);
-                    font-weight: 600;
-                    @include desktop-lite {
-                        font-size: 36px;
-                    }
-                }
+.guarantee-section {
+    @include mt-12;
+    .guarantee-block {
+        @include df_jcsb;
+        .title {
+            @include h2;
+            max-width: 65rem;
+            span {
+                color: $blue;
             }
         }
-        .blocks {
-            display: grid;
-            grid-template-columns: .8fr .5fr .5fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-template-areas: 
-            "first-top second-top ."
-            ". second-middle third-middle"
-            "first-bottom . third-bottom";
-            column-gap: 3rem;
-            row-gap: 3rem;
-            /////////////////////
-            .numb-title {
-                display: flex;
-                gap: 1.25rem;
-                .numb {
-                    font-size: var(--fz18);
-                    font-weight: 600;
-                }
-                .sub-and-title {
-                    @include df_fdc;
-                    gap: 1.875rem;
-                    p {
-                        max-width: 70%;
-                        font-weight: 500;
-                        color: #999999;
-                        @include desktop-lite {
-                            max-width: 80%;
-                        }
-                    }
-                    .title {
-                        color: $black;
-                        font-weight: 600;
-                        font-size: var(--fz24);
-                        @include desktop-lite {
-                            font-size: 24px;
-                        }
-                    }
-                    .beb {
-                        font-size: var(--fz16);
-                        font-weight: 400;
-                        color: $dark;
-                        @include desktop-lite {
-                            font-size: 16px;
-                        }
-                    }
-                }
+        .logo {
+            img {
+                width: 4.481rem;
+                height: 2.5rem;
             }
-            .ben {
-                display: flex;
-                flex-direction: column;
-                gap: 1.875rem;
-                @include desktop-lite {
-                    width: 440px;
-                }
-                hr {
-                    height: 2px;
-                    background-color: $black;
-                }
+        }
+    }
+}
+.instruction-section {
+    @include mt-12;
+    .instruction-block {
+        @include df_jcsb;
+        .line-card {
+            @include df_fdc;
+            gap: 2.5rem;
+            max-width: 29.063rem;
+            .title {
+                @include h3;
+                color: $black;
             }
-            /////////////////////
-            .first-top {
-                grid-area: first-top;
+            .sub-title {
+                @include r24;
+                color: $black;
+                max-width: 28.125rem;
+            }
+        }
+        .service-content {
+            @include df_jcsb_fdc;
+            .little-title {
+                @include sb18;
+                color: $grey-txt;
+                max-width: 12.938rem;
+                text-transform: uppercase;
+            }
+        }
+        .mechanizm-content {
+            @include df_jcsb_fdc;
+            gap: 7.5rem;
+            .mech-and-wash {
+                display: flex;
+                gap: 4.688rem;
+            }
+            .guar {
+                max-width: 65.5rem;
                 @include df_fdc;
                 gap: 2.5rem;
-                p {
-                    max-width: 50%;
-                    width: 100%;
-                    font-size: var(--fz24);
-                    font-weight: 400;
-                    @include desktop-lite {
-                        max-width: 55%;
-                    }
-                    span {
-                        font-weight: bold;
-                    }
-                    &:last-of-type {
-                        max-width: 50%;
-                        @include desktop-lite {
-                            max-width: 60%;
-                        }
-                    }
-                }
-            }
-            .first-bottom {
-                grid-area: first-bottom;
-                @include df_fdc;
-                gap: 1.875rem;
-                .numb-title {
-                    .numb {
-                        color: $nepal;
-                    }
-                    .sub-and-title {
-                        .title {
-                            color: $nepal;
-                            font-size: var(--fz32);
-                            max-width: 80%;
-                            @include desktop-lite {
-                                max-width: 100%;
-                            }
-                        }
-                        .sub-title {
-                            p {
-                                max-width: 71%;
-                                font-size: var(--fz24);
-                                color: $nepal;
-                                @include desktop-lite {
-                                    max-width: 100%;
-                                }
-                            }
-                            @include desktop-lite {
-                                font-size: 20px;
-                                max-width: 90%;
-                            }
-                        }
-                    }
-                }
                 hr {
                     background-color: $nepal;
                 }
-            }
-            .second-top {
-                grid-area: second-top;
-            }
-            .second-middle {
-                grid-area: second-middle;
-                .numb-title {
-                    .sub-and-title {
-                        .sub-title {
-                            @include desktop-lite {
-                                max-width: 100%;
-                            }
-                        }
-                    }
-                }
-            }
-            .third-middle {
-                grid-area: third-middle;
-            }
-            .third-bottom {
-                grid-area: third-bottom;
-                .numb-title {
-                    .sub-and-title {
-                        p {
-                            max-width: 60%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .sled {
-        background-image: url(../images/sections/sled.png);
-        background-size: contain;
-        background-repeat: repeat-x;
-        height: 12rem;
-        width: 100%;
-    }
-}
-.portfolioSection {
-    display: flex;
-    flex-wrap: nowrap;
-    background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.6)),#2a1a80;
-    overflow-x: auto;
-    video {
-        width: 100%;
-        height: 100%;
-        @include desktop-lite {
-            min-width: 480px;
-            max-height: 658px;
-        }
-    }
-}
-.faqSection {
-    @include df_ac_jcc;
-    .faqBlock {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 1.875rem;
-        .lil-title {
-            color: $gray;
-            font-size: var(--fz16);
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        .title-and-question {
-            display: flex;
-            @include mobile {
-                flex-direction: column;
-            }
-            .title-logo {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                .titleBlock {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 2.5rem;
-                    .title {
-                        font-size: var(--fz48);
-                        font-weight: 600;
-                        @include desktop-lite {
-                            max-width: 80%;
-                        }
-                    }
-                }
-                .logo {
-                    @include mobile {
-                        display: none;
-                    }
-                    img {
-                        max-width: 4.375rem;
-                        max-height: 2.5rem;
-                        width: 100%;
-                        width: 100%;
-                    }
-                }
-            }
-            .questionMenu {
-                display: flex;
-                flex-direction: column;
-                gap: 1.25rem;
-                @include desktop-lite {
-                    max-width: 526px;
-                    width: 100%;
-                }
-                .first-que, 
-                .second-que, 
-                .third-que {
-                    &.que {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 1.875rem;
-                    }
-                    .question {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        .title {
-                            font-size: var(--fz32);
-                            font-weight: 600;
-                            &:hover {
-                                color: $black;
-                                scale: 95;
-                                transition: all .3s;
-                            }
-                        }
-                    }
-                    .content {
-                        font-size: var(--fz24);
-                        font-weight: 400;
-                        max-width: 80%;
-                        @include desktop-lite {
-                            max-width: 72%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-.deliverySection {
-    display: flex;
-    position: relative;
-    padding: 5rem 0 5rem 0;
-    background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.6)),#2a1a80;
-    .deliveryBlock {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        @include mobile {
-            padding-bottom: 10rem;
-        }
-        .del-and-step {
-            display: flex;
-            @include mobile {
-                flex-direction: column;
-                gap: 60px;
-            }
-            .delivery {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 60px;
                 .title {
-                    font-size: var(--fz96);
+                    color: $nepal;
+                    @include sb48;
+                }
+            }
+        }
+    }
+}
+.cards-section {
+    margin: 12.5rem 2.5rem 0 2.5rem;
+    .cards-block {
+        @include df_jcsb;
+        gap: 2.5rem;
+        .card {
+            padding: 5rem;
+            @include df_jcsb_fdc;
+            @include bg_s;
+            aspect-ratio: 16 / 9;
+            border-radius: 0.938rem;
+            flex: 1;
+            gap: 9rem;
+            .sub-and-title {
+                @include df_fdc;
+                gap: 3.75rem;
+                .title {
+                    @include sb48;
                     color: $white;
-                    line-height: 100%;
-                    max-width: 90%;
-                    width: 100%;
-                    font-weight: 500;
+                    max-width: 41.875rem;
                 }
                 .sub-title {
-                    font-size: var(--fz32);
-                    color: #99A8BF;
-                    font-weight: 600;
+                    @include h3;
+                    max-width: 40.563rem;
                 }
             }
-            .deliverySteps {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: start;
-                padding-left: 2.5rem;
-                border-left: 0.063rem solid $white;
-                gap: 3rem;
-                @include desktop-lite {
-                    padding-left: 30px;
+            .btn-and-cost {
+                @include df_ac;
+                gap: 2.5rem;
+                .cost {
+                    @include h3;
                 }
-                .second-step {
-                    .sub-title {
-                        max-width: 70%;
-                    }
-                }
-                .third-step {
-                    .sub-title {
-                        max-width: 70%;
-                    }
-                }
-                .step {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 2.5rem;
-                    @include desktop-lite {
-                        gap: 1.875rem;
-                    }
-                    .title {
-                        font-size: var(--fz32);
-                        color: $white;
-                        font-weight: 600;
-                    }
-                    .sub-title {
-                        font-size: var(--fz24);
-                        color: $white;
-                        font-weight: 400;
-                        @include desktop-lite {
-                            font-size: 20px;
-                            max-width: 73%;
-                        }
-                        @include mobile {
-                            font-size: 16px;
-                            max-width: 95%;
-                        }
-                    }
-                    &:last-of-type {
-                        @include desktop-lite {
-                            .sub-title {
-                                font-size: 24px;
-                                max-width: 80%;
-                            }
-                        }
-                    }
+                .btn {
+                    font-size: var(--fz20);
                 }
             }
-        }
-        img {
-            position: absolute;
-            z-index: 20;
-            left: 0;
-            bottom: 0;
-            @include desktop-lite {
-                width: 556px;
+            &.card-one {
+                background-image: url(../images/sections/cardssec/first.png);
             }
-            @include mobile-lite {
-                width: 375px;
+            &.card-two {
+                background-image: url(../images/sections/cardssec/second.png);
             }
         }
     }
 }
-@media (max-width: 1366px) {
-    header {
-        .header {
-            .headerBlock {
+.slider-section {
+    @include mt-12;
+    .swiper {
+        .swiper-wrapper {
+            .swiper-slide {
                 display: flex;
-                gap: 2.5rem;
-                .logo {
-                    a {
-                        img {
-                            max-height: 20px;
-                            height: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    main {
-        .createSection {
-            .createBlock {
-                .title {
-                    font-size: var(--fz64);
-                }
-                .cards-and-oth {
-                    .tandlogo {
-                        .logot {
-                            img {
-                                max-width: 4.5rem;
-                                max-height: 2.5rem;
-                                width: 100%;
-                                height: 100%;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .advantagesSection {
-            .advantagesBlock {
-                .consultBlock {
-                    .sub-and-btn {
-                        gap: 2.5rem;
-                        max-width: 70%;
-                    }
-                }
-            }
-        }
-        .serviceSection {
-            .serviceBlock {
-                .blocks {
-                    .cal {
-                        .title {
-                            font-size: var(--fz24);
-                            font-weight: bold;
-                        }
-                        .sub-title {
-                            font-size: var(--fz20);
-                            font-weight: 400;
-                        }
-                    }
-                    .gua {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 2.5rem;
-                        width: 100%;
-                        grid-area: gua;
-                    }
-                }
-            }
-        }
-        .feedbackSection {
-            .lil-title {
-                font-size: var(--fz12);
-                span {
-                    animation: blink 0.5s step-end infinite alternate;
-                    border-right: 3px solid;
-                }
-            }
-            .title-form {
-                .title-icon-block {
-                    .titleBlock {
-                        .title {
-                            font-size: var(--fz24);
-                            font-weight: 600;
-                        }
-                        .sub-title {
-                            font-size: var(--fz20);
-                            font-weight: 400;
-                        }
-                    }
-                    .iconBlock {
-                        max-width: 3rem;
-                        max-height: 3rem;
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-            }
-        }
-        .optionalSection {
-            .optionalBlock {
-                .videoBlock {
-                    .info-block {
-                        padding: 2.5rem;
-                        .title-block {
-                            gap: 2.5rem;
-                        }
-                    }
-                }
-            }
-        }
-        .frameInstSection {
-            .frameInstBlock {
-                .blocks {
-                    grid-template-rows: 1fr 1fr 1fr 1fr;
-                    grid-template-areas:
-                        "first-top . second-top"
-                        ". . second-middle"
-                        ". . third-middle"
-                        "first-bottom . third-bottom";
-                    .first-top {
-                        font-size: var(--fz18);
-                    }
-                }
-            }
-        }
-        .faqSection {
-            .faqBlock {
-                .title-logo {
-                    .titleBlock {
-                        .title {
-                            font-size: var(--fz24);
-                        }
-                    }
-                }
-            }
-        }
-        .deliverySection {
-            .deliveryBlock {
-                align-items: center;
-                .delivery {
-                    .title {
-                        font-size: var(--fz48);
-                    }
-                    .sub-title {
-                        font-size: var(--fz18);
-                    }
+                border-radius: 1.125rem 1.125rem 2.25rem 1.125rem;
+                padding: 1.25rem;
+                gap: 5rem;
+                background-color: $nepal;
+                .img {
+                    @include slider;
+                    @include wh;
                     img {
-                        max-width: 70%;
-                        max-height: 70%;
+                        @include wh;
                     }
                 }
-                .deliverySteps {
-                    align-items: center;
-                }
-            }
-        }
-    }
-    footer {
-        .footerBlock {
-            .title-block {
-                .title-phone {
-                    .title {
-                        font-size: var(--fz24);
+                .other {
+                    @include df_jcsb_fdc;
+                    width: 100%;
+                    .sub-and-title {
+                        @include df_fdc;
+                        gap: 3.75rem;
+                        .title {
+                            @include sb48;
+                            color: $white;
+                            max-width: 42.938rem;
+                        }
+                        .sub-title {
+                            @include r24;
+                            max-width: 39.813rem;
+                        }
+                        .desc {
+                            @include m16;
+                            max-width: 25.813rem;
+                        }
                     }
-                    .phone-mail {
-                        .phone, 
-                        .mail {
-                            a {
-                                font-size: var(--fz16);
+                    .cost-and-arr {
+                        @include df_jcsb;
+                        .cost {
+                            @include sb48;
+                            color: $white;
+                        }
+                        .arr {
+                            @include df_ac_jcc;
+                            gap: 1.25rem;
+                            .arrow {
+                                padding: 1.25rem;
+                                width: 4.75rem;
+                                height: 4.75rem;
+                                background-color: $white;
+                                border-radius: 100rem;
+                                @include df_ac_jcc;
                             }
                         }
                     }
                 }
             }
-            .auth-block {
-                .form {
-                    .inp {
-                        .txt {
-                            font-size: var(--fz12);
-                        }
+        }
+    }
+}
+.feedback-section {
+    @include mt-12;
+    .feedback-block {
+        @include df_fdc;
+        gap: 3.75rem;
+        .little-title {
+            @include sb18;
+            text-transform: uppercase;
+            color: $grey-txt;
+        }
+        .authorization {
+            @include df_jcsb;
+            .title-icon {
+                @include df_jcsb_fdc;
+                .title-and-desc {
+                    @include df_fdc;
+                    gap: 3.75rem;
+                    .title {
+                        @include sb48;
+                        max-width: 55.313rem;
+                    }
+                    .desc {
+                        @include r24;
+                        color: $black;
                     }
                 }
                 .icons {
-                    .socials {
-                        img {
-                            max-width: 3rem;
-                            max-height: 3rem;
-                            height: 100%;
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 1620px) {
-    .advantagesSection {
-        .advantagesBlock {
-            .consultBlock {
-                .ltandt {
-                    .title {
-                        p {
-                            font-size: var(--fz64);
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 1170px) {
-    header {
-        .header {
-            .headerBlock {
-                justify-content: space-around;
-                .nav-sec {
-                    nav {
-                        ul {
-                            a {
-                                display: none;
-                            }
-                        }
-                    }
-                }
-                .btn-nav {
-                    .tel {
-                        display: none;
-
-                    }
-                    .btn {
-                        display: none;
-                    }
-                    .burger-menu {
-                        display: block;
-                        div {
-                            height: 3px;
-                            width: 25px;
-                            background-color: black;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .serviceSection {
-        .serviceBlock {
-            .blocks {
-                display: flex;
-                flex-direction: column;
-                gap: 3rem;
-                .first-block {
-                    flex-direction: column;
-                    gap: 2rem;
-                    .mech-moy {
-                        flex-direction: column;
-                        .mech {
-                            max-width: 100%;
-                        }
-                        .moy {
-                            max-width: 100%;
-                        }
-                    }
-                }
-                .serv-gua {
-                    flex-direction: column;
-                    gap: 2rem;
-                    .serv {
-                        max-width: 100%;
-                    }
-                    .gua {
-                        max-width: 100%;
-                    }
-                }
-            }
-        }
-    }
-
-    .sliderSection {
-        .sliderBlock {
-            .swiper {
-                .swiper-wrapper {
-                    .swiper-slide {
-                        display: flex;
-                        flex-direction: column;
-                        .other {
-                            gap: 3rem;
-                            .sub-and-title {
-                                .title {
-                                    max-width: 100%;
-                                }
-                                .sub-title {
-                                    max-width: 100%;
-                                }
-                            }
-                            .desc {
-                                max-width: 100%;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .feedbackSection {
-        display: flex;
-        justify-content: center;
-        .title-form {
-            gap: 5rem;
-            flex-direction: column;
-            justify-content: center;
-        }
-    }
-    .optionalSection {
-        .optionalBlock {
-            .videoBlock {
-                flex-direction: column;
-            }
-            .cardsBlock { 
-                flex-direction: column;
-            }
-        }
-    }
-    .frameInstSection {
-        gap: 2rem;
-        .frameInstBlock {
-            .blocks {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-    }
-    .faqSection {
-        .faqBlock {
-            flex-direction: column;
-            .title-logo {
-                .titleBlock {
-                    .logo {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-    .deliverySection {
-        padding: 5rem;
-        .deliveryBlock {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            .delivery {
-                img {
-                    display: none;
-                }
-            }
-            .deliverySteps {
-                display: flex;
-                padding-bottom: 2rem;
-            }
-        }
-    }
-    .createSection {
-        .createBlock {
-            .cards-and-oth {
-                flex-direction: column;
-                .cards {
-                    grid-template-columns: repeat(1, auto);
-                    .card {
-                        .icon {
-                            max-width: 4rem;
-                            max-height: 4rem;
-                        }
-                    }
-                }
-                .tandlogo {
-                    .logot {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-    .advantagesSection {
-        .advantagesBlock {
-            display: flex;
-            flex-direction: column;
-            .consultBlock {
-                .ltandt {
-                    .title {
-                        p {
-                            font-size: 2rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 760px) {
-    .welcome {
-        .title {
-            font-size: var(--fz12);
-            font-weight: 400;
-        }
-        .ofbut {
-            font-size: var(--fz16);
-            font-weight: 400;
-        }
-    }
-    .createSection {
-        .createBlock {
-            .cards-and-oth {
-                gap: 2rem;
-            }
-        }
-    }
-}
-
-@media (max-width: 590px) {
-    .serviceSection {
-        .serviceBlock {
-            .title-and-logo {
-                .title {
-                    p {
-                        max-width: 100%;
-                    }
-                }
-                .logo {
-                    display: none;
-                }
-            }
-        }
-    }
-    .createSection {
-        .createBlock {
-            .cards-and-oth {
-                .cards {
-                    .card {
-                        .sub-title {
-                            max-width: 100%;
-                        }
-                    }
-                }
-                .tandlogo {
-                    .sub-title {
-                        p {
-                            max-width: 100%;
-                            font-size: var(--fz16);
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .frameInstSection {
-        .frameInstBlock {
-            .title-sub-title {
-                .title {
-                    max-width: 100%;
-                }
-                .sub-title {
-                    max-width: 100%;
-                }
-            }
-            .blocks {
-                .first-top {
-                    p {
-                        max-width: 100%;
-                    }
-                }
-            }
-        }
-    }
-    .feedbackSection {
-        .title-form {
-            .title-icon-block {
-                .iconBlock {
-                    .icon {
-                        img {
-                            max-width: 2rem;
-                            max-height: 2rem;
-                        }
-                    }
+                    @include df_ac;
+                    gap: 1.25rem;
                 }
             }
             .form {
+                max-width: 40.125rem;
+                width: 100%;
+                @include df_fdc;
+                gap: 3.75rem;
                 .btn {
-                    max-width: 100%;
-                    width: 100%;
+                    max-width: 21.25rem;
+                    width: 100%
                 }
-            }
-        }
-    }
-    .optionalSection {
-        .optionalBlock {
-            .cardsBlock {
-                .card {
-                    gap: 6rem;
-                    .btn {
-                        text-align: center;
+                .inp {
+                    @include df_fdc;
+                    label {
+                        @include r24;
+                        color: $grey-txt;
                     }
-                    .titles {
-                        .sub-title {
-                            font-weight: 600;
+                    input {
+                        border: none;
+                        border-bottom: 2px solid $grey-txt;
+                        padding-top: 2.5rem;
+                        @include r24;
+                        color: $black;
+                        transition: all .3s;
+                        &:hover {
+                            border-bottom: 2px solid $black;
+                            transition: all .3s;
                         }
                     }
-                }
-            }
-        }
-    }
-    .footer {
-        .footerBlock {
-            .auth-block {
-                .icons {
-                    gap: 1rem;
+                    &:last-of-type {
+                        gap: 6.25rem;
+                    }
                 }
             }
         }
     }
 }
-
-@media (max-width: 400px) {
-    .heroSection {
-        .heroSectionBlock {
-            .btn-info {
-                .btns {
-                    .white {
-                        max-width: 100%;
-                    }
-                    .transparent {
-                        max-width: 100%;
-                    }
-                }
+.optional-section {
+    @include mt-12;
+    .optional-block {
+        display: flex;
+        max-height: 100vh;
+        .video-content {
+            flex: 1;
+            video {
+                height: 100%;
+                width: 60rem;
             }
         }
-    }
-    .faqSection {
-        .faqBlock {
-            padding: 0 2rem;
-        }
-    }
-    .feedbackSection {
-        padding: 0 2rem;
-    }
-    .advantagesSection {
-        .advantagesBlock {
-            .balBlock {
-                .sub-titles {
-                    ul {
-                        grid-template-columns: repeat(1, 1fr);
-                    }
+        .info-block {
+            background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.6)),$blue;
+            padding: 5rem;
+            @include df_jcsb_fdc;
+            flex: 1;
+            .title-block {
+                @include df_fdc;
+                gap: 5rem;
+                .little-title {
+                    @include sb18;
                 }
-            }
-            .consultBlock {
-                padding: 1.5rem;
-                .sub-and-btn {
-                    .btn {
-                        width: 100%;
-                    }
+                .title {
+                    @include h2;
+                    color: $white;
                 }
-            }
-        }
-    }
-    .sliderSection {
-        .sliderBlock {
-            .swiper {
-                .swiper-wrapper {
-                    .swiper-slide {
-                        .img {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            img {
-                                max-width: 295px;
-                                max-height: 260px;
-                                width: 100%;
-                                height: 100%;
+                .sub-title {
+                    @include h3;
+                    color: $grey-op;
+                    max-width: 34rem
+                }
+                .points {
+                    nav {
+                        ul {
+                            @include r24;
+                            @include df_fdc;
+                            gap: 1.875rem;
+                            padding-left: 1.875rem;
+                            li {
+                                list-style: disc;
                             }
                         }
                     }
                 }
             }
-        }
-    }
-    footer {
-        .footerBlock {
-            .auth-block {
-                .form {
-                    .inp {
-                        input {
-                            max-width: 300px;
-                        }
-                    }
-                }
+            .cost {
+                @include sb48;
+                color: $white;
             }
-        }
-    }
-}
-
-.black {
-    hr {
-        background-color: $black;
-    }
-    .question {
-        .title {
-            color: black !important;
         }
     }
 }

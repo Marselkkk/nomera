@@ -2,52 +2,102 @@
 
 // Руты для единых размеров
 
-:root {
-    --fz144: 9rem;
-    --fz96: 6rem;
-    --fz64: 4rem;
-    --fz48: 3rem;
-    --fz36: 2.25rem;
-    --fz32: 2rem;
-    --fz24: 1.5rem;
-    --fz20: 1.25rem;
-    --fz18: 1.125rem;
-    --fz16: 1rem;
-    --fz12: 0.75rem;
-    @include desktop-lite {
-        --fz144: 6rem;
-        --fz96: 4rem;
-        --fz48: 2rem;
-        --fz32: 1.5rem;
-        --fz24: 1.125rem;
-        --fz20: 1.25rem;
-        --fz18: 1rem;
-        --fz16: 0.75rem;
-    }
-    @include mobile {
-        --fz96: 4rem;
-        --fz64: 2rem;
-        --fz48: 1.5rem;
-        --fz32: 1.25rem;
-        --fz24: 1;
-        --fz20: 1rem;       
-    }
-    @include mobile-lite {
-        --fz96: 3rem;
-        --fz20: 1rem;
-        --fz18: 1rem;
-        --fz16: 0.75rem;
-    }
-}
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
+}
+
+:root {
+    --fz144: 9rem;
+    --fz96: 6rem;
+    --fz48: 3rem;
+    --fz32: 2rem;
+    --fz24: 1.5rem;
+    --fz20: 1.25rem;
+    --fz18: 1.125rem;
+    --fz-w16: 1rem;
+    @include mobile {
+        --fz144: 4rem;
+        --fz96: 3rem;
+        --fz32: 2.667rem;
+        --fz24: 1.167rem;
+        --fz20: 1.333rem;
+        --fz-w16: 1rem;
+    }
+}
+
+@mixin mt-12 {
+    margin-top: 12.5rem;
+}
+
+@mixin h1 {
+    font-size: var(--fz144);
+    font-weight: 600;
+    letter-spacing: -0.27rem;
+    color: $white;
+}
+
+@mixin h2 {
+    font-size: var(--fz96);
+    font-weight: 500;
+    letter-spacing: -0.27rem;
+    line-height: 100%;
+}
+
+@mixin sb48 {
+    font-size: var(--fz48);
+    font-weight: 600;
+}
+
+@mixin h3 {
+    font-size: var(--fz32);
+    font-weight: 600;
+    letter-spacing: -2%;
+    color: $white;
+}
+@mixin r24 {
+    font-size: var(--fz24);
+    font-weight: 400;
+    color: $white;
+}
+
+@mixin btn-title {
+    font-size: var(--fz20);
+    font-weight: 600;
+    letter-spacing: -2%;
+}
+
+@mixin sb18 {
+    font-size: var(--fz18);
+    font-weight: 600;
+    color: $white;
+}
+
+@mixin m16 {
+    font-size: var(--fz-w16);
+    font-weight: 500;
+    color: $white;
+}
+
+@mixin fz-welc {
+    font-size: var(--fz-w16);
+    font-weight: 600;
+    letter-spacing: -2%;
 }
 
 // Базовые миксины для комфорта
+
+@mixin slider {
+    max-width: 43.125rem;
+    max-height: 40rem;
+}
+
+@mixin wh {
+    width: 100%;
+    height: 100%;
+}
 
 @mixin df_ac {
     display: flex;
@@ -70,6 +120,16 @@
     flex-direction: column;
     justify-content: center;
 }
+@mixin df_jcsb_fdc {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@mixin df_jcsb {
+    display: flex;
+    justify-content: space-between;
+}
 
 @mixin df_ac_jcc {
     display: flex;
@@ -85,21 +145,34 @@
 
 
 // Цвета на сайте
-$black: #0D0D0D;
+
+$black: #000000;
+$white: #ffffff;
 $dark: #404040;
 $gray: #8C8C8C;
 $grey: #BFBFBF;
+$grey-bgc: #F2F2F2;
+$blue: #2A1A80;
 $nepal: #99A8BF;
-$greyBgc: #F2F2F2;
-$white: #FFFFFF;
-$teal: #025951;
-
+$prem-gray: #9A999B;
+$grey-txt: #999999;
+$grey-op: #706C85;
 
 // Базовые настройки
 
 html{
     margin: 0;
     padding: 0;
+    font-size: 16px;
+    @include extra_large {
+        font-size: 16px;
+    }
+    @include desktop {
+      font-size: .8333vw;
+    }
+    @include mobile {
+        font-size: 12px;
+    }
 }
 
 body {
@@ -107,15 +180,15 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    font-family: 'Jost', sans-serif;
     // Здесь ваш шрифт
     // font-family: 'Your font-family name', sans-serif;
 }
 
 .container {
-    margin: 0 auto;
-    max-width: 1760px;
-    width: 100%;
+    padding: 0 5rem;
+    @include mobile {
+        padding: 1.667rem;
+    }
 }
 
 hr {
@@ -145,42 +218,5 @@ input, textarea {
     outline: none;
     &:hover {
         outline: none;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-.border-blink {
-    animation: blink .5s step-end infinite alternate;
-    border-right: 3px solid;
-}
-
-//////////////////////////////////////
-@media (max-width: 400px) {
-    .container {
-        max-width: 335px;
-    }
-}
-@media (max-width: 1160px) {
-    .container {
-        max-width: 1080px;
-    }
-}
-@media (max-width: 1366px) {
-    .container {
-        max-width: 1286px;
-    }
-}
-@media (min-width: 1680px) {
-    .container {
-        max-width: 1520px;
-    }
-}
-@media (min-width: 1920px) {
-    .container {
-        max-width: 1760px;
     }
 }

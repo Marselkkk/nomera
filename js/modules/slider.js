@@ -3,7 +3,7 @@ export function slider() {
         loop: true,
         slidesPerView: 1,
         centeredSlides: true,
-        spaceBetween: 25,
+        spaceBetween: 80,
         navigation: {
           nextEl: ".mainSlider .next",
           prevEl: ".mainSlider .prev",
