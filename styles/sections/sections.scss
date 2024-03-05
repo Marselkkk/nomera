@@ -72,18 +72,6 @@
             .title-and-logo {
                 @include df_fdc;
                 justify-content: space-between;
-                .titles {
-                    @include df_fdc;
-                    gap: 2.5rem;
-                    p {
-                        @include r24;
-                        color: $black;
-                        max-width: 50%;
-                        span {
-                            font-weight: bold;
-                        }
-                    }
-                }
             }
             .cards {
                 display: grid;
