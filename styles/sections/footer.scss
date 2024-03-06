@@ -72,6 +72,13 @@ footer {
                 .icons {
                     display: flex;
                     gap: 1.25rem;
+                    .icon {
+                        max-width: 4rem;
+                        max-height: 4rem;
+                        img {
+                            @include wh;
+                        }
+                    }
                 }
                 .logo {
                     max-width: 4.481rem;

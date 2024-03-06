@@ -17,6 +17,7 @@
         font-size: var(--fz18);
         color: $prem-gray;
         text-transform: uppercase;
+        padding: 0;
     }
 
     &.white {
@@ -38,5 +39,6 @@
     &.blue {
         background-color: #2A1A80;
         color: $white;
+        font-size: var(--fz20);
     }
 }

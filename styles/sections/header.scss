@@ -11,13 +11,19 @@ header {
             }
         }
         .nav-menu {
+            @include mobile {
+                display: none
+            }
             nav {
                 ul {
                     @include df_ac_jcc;
                     gap: 3.75rem;
                     li {
-                        font-size: var(--fz18);
-                        text-transform: uppercase;
+                        a {
+                            font-size: var(--fz18);
+                            text-transform: uppercase;
+                            color: $black
+                        }
                     }
                 }
             }
@@ -25,6 +31,15 @@ header {
         .btn-menu {
             @include df_ac_jcc;
             gap: 0.625rem;
+            .icon {
+                max-width: 2rem;
+                img {
+                    @include wh;
+                }
+                &.phone-icon {
+                    display: none;
+                }
+            }
         }
     }
 }

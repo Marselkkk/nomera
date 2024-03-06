@@ -15,20 +15,24 @@
     @include bg_s;
     aspect-ratio: 16 / 7;
     .hero-block {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
+        @include df_jcsb_fdc;
         padding-top: 5rem;
+        @include mobile {
+            padding-top: 3.75rem;
+            gap: 5rem;
+        }
         .big-title {
             @include h1;
             line-height: 100%;
             max-width: 60%
         }
         .btn-and-titles {
-            display: flex;
+            @include df_jcsb;
             align-items: flex-end;
-            justify-content: space-between;
+            @include mobile {
+                flex-direction: column-reverse;
+                align-items: flex-start
+            }
             .btn-block {
                 @include df_ac;
                 gap: 2.5rem;
@@ -36,6 +40,11 @@
                 padding-top: 5rem;
                 max-width: 45rem;
                 width: 100%;
+                @include mobile {
+
+                    padding-bottom: 0;
+                    padding-top: 0;
+                }
                 .btn {
                     white-space: nowrap;
                     flex: 1;
@@ -46,6 +55,11 @@
                 gap: 3.75rem;
                 padding-bottom: 5rem;
                 max-width: 40%;
+                @include mobile {
+                    gap: 1.875rem;
+                    max-width: 54%;
+                    padding-bottom: 2.5rem;
+                }
                 .title {
                     @include h3;
                     max-width: 65%;
@@ -53,6 +67,9 @@
                 .sub-title {
                     @include r24;
                     max-width: 55%;
+                    @include mobile {
+                        max-width: 60%;
+                    }
                 }
             }
         }
@@ -67,8 +84,11 @@
             @include h2;
         }
         .content {
-            display: flex;
-            justify-content: space-between;
+            @include df_jcsb;
+            @include mobile {
+                flex-direction: column;
+                gap: 3.75rem;
+            }
             .titles-block {
                 @include df_fdc;
                 gap: 2.5rem;
@@ -82,10 +102,12 @@
                 }
             }
             .title-and-logo {
-                @include df_fdc;
-                justify-content: space-between;
+                @include df_jcsb_fdc;
                 .logo {
                     img {
+                        @include mobile {
+                            display: none;
+                        }
                         max-width: 11.813rem;
                         max-height: 6.563rem;
                     }
@@ -98,9 +120,18 @@
                 grid-column-gap: 2.5rem;
                 max-width: 65rem;
                 width: 100%;
+                @include mobile {
+                    grid-template-columns: 1fr;
+                    grid-row-gap: 5rem; 
+                }
                 .card {
                     @include df_fdc;
                     gap: 2.5rem;
+                    &.tech-card {
+                        .title {
+                            max-width: 80%;
+                        }
+                    }
                     .icon {
                         @include df_ac_jcc;
                         border-radius: 6px 6px 18px 6px;
@@ -110,7 +141,10 @@
                         box-sizing: border-box;
                         // max-height: 6rem;
                         padding: 1.688rem;
-                        border: 0.125rem dashed $nepal;
+                        border: 0.175rem dashed $nepal;
+                        img {
+                            @include wh;
+                        }
                     }
                     .title {
                         @include h3;
@@ -130,13 +164,22 @@
     @include mt-12;
     .advantages-block {
         display: flex;
+        @include mobile {
+            flex-direction: column;
+        }
         .blue-content {
             background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.6)),$blue;
             padding: 5rem;
             @include df_fdc;
             justify-content: space-between;
+            @include mobile {
+                gap: 3.75rem;
+            }
             .little-and-title {
                 @include df_fdc;
+                @include mobile {
+                    gap: 2.5rem;
+                }
                 gap: 5rem;
                 .little {
                     @include sb18;
@@ -150,6 +193,9 @@
             .desc-and-btn {
                 @include df_fdc;
                 gap: 3.75rem;
+                @include mobile {
+                    gap: 2.5rem;
+                }
                 .desc {
                     @include r24;
                 }
@@ -160,6 +206,10 @@
             }
         }
         .video-points-cont {
+            @include mobile {
+                display: flex;
+                flex-direction: column-reverse;
+            }
             .video-content {
                 video {
                     width: 100%;
@@ -171,6 +221,9 @@
                 padding: 3.75rem;
                 @include df_fdc;
                 gap: 7.5rem;
+                @include mobile {
+                    gap: 3.75rem;
+                }
                 .title {
                     @include sb48;
                     color: $blue;
@@ -184,6 +237,9 @@
                             gap: 3.75rem;
                             @include r24;
                             color: $black;
+                            @include mobile {
+                                grid-template-columns: 1fr;
+                            }
                             li {
                                 max-width: 85%;
                                 &:nth-last-of-type(2) {
@@ -209,6 +265,9 @@
             }
         }
         .logo {
+            @include mobile {
+                display: none;
+            }
             img {
                 width: 4.481rem;
                 height: 2.5rem;
@@ -220,10 +279,17 @@
     @include mt-12;
     .instruction-block {
         @include df_jcsb;
+        @include mobile {
+            flex-direction: column;
+            gap: 2.5rem;
+        }
         .line-card {
             @include df_fdc;
             gap: 2.5rem;
             max-width: 29.063rem;
+            @include mobile {
+                max-width: none;
+            }
             .title {
                 @include h3;
                 color: $black;
@@ -232,10 +298,16 @@
                 @include r24;
                 color: $black;
                 max-width: 28.125rem;
+                @include mobile {
+                    max-width: none;
+                }
             }
         }
         .service-content {
             @include df_jcsb_fdc;
+            @include mobile {
+                gap: 2.5rem;
+            }
             .little-title {
                 @include sb18;
                 color: $grey-txt;
@@ -246,9 +318,16 @@
         .mechanizm-content {
             @include df_jcsb_fdc;
             gap: 7.5rem;
+            @include mobile {
+                gap: 2.5rem;
+            }
             .mech-and-wash {
                 display: flex;
                 gap: 4.688rem;
+                @include mobile {
+                    flex-direction: column;
+                    gap: 2.5rem;
+                }
             }
             .guar {
                 max-width: 65.5rem;
@@ -260,6 +339,9 @@
                 .title {
                     color: $nepal;
                     @include sb48;
+                    @include mobile {
+                        font-size: 2.333rem;
+                    }
                 }
             }
         }
@@ -267,9 +349,15 @@
 }
 .cards-section {
     margin: 12.5rem 2.5rem 0 2.5rem;
+    @include mobile {
+        display: none;
+    }
     .cards-block {
         @include df_jcsb;
         gap: 2.5rem;
+        @include mobile {
+            flex-direction: column;
+        }
         .card {
             padding: 5rem;
             @include df_jcsb_fdc;
@@ -278,6 +366,7 @@
             border-radius: 0.938rem;
             flex: 1;
             gap: 9rem;
+            max-height: 39.375rem;
             .sub-and-title {
                 @include df_fdc;
                 gap: 3.75rem;
@@ -320,9 +409,15 @@
                 padding: 1.25rem;
                 gap: 5rem;
                 background-color: $nepal;
+                @include mobile {
+                    flex-direction: column;
+                }
                 .img {
                     @include slider;
-                    @include wh;
+                    @include mobile {
+                        max-width: none;
+                        max-height: none;
+                    }
                     img {
                         @include wh;
                     }
@@ -330,21 +425,38 @@
                 .other {
                     @include df_jcsb_fdc;
                     width: 100%;
+                    @include mobile {
+                        gap: 4.333rem;
+                    }
                     .sub-and-title {
                         @include df_fdc;
                         gap: 3.75rem;
+                        @include mobile {
+                            gap: 2.5rem;
+                        }
                         .title {
                             @include sb48;
                             color: $white;
                             max-width: 42.938rem;
+                            @include mobile {
+                                max-width: none;
+                                font-size: 2.333rem;
+                            }
                         }
                         .sub-title {
                             @include r24;
                             max-width: 39.813rem;
+                            @include mobile {
+                                max-width: none;
+                            }
                         }
                         .desc {
                             @include m16;
                             max-width: 25.813rem;
+                            @include mobile {
+                                font-size: 1.167rem;
+                                max-width: none;
+                            }
                         }
                     }
                     .cost-and-arr {
@@ -376,15 +488,25 @@
     .feedback-block {
         @include df_fdc;
         gap: 3.75rem;
+        @include mobile {
+            gap: 3.333rem;
+        }
         .little-title {
             @include sb18;
             text-transform: uppercase;
             color: $grey-txt;
         }
-        .authorization {
+        .authorization-block {
             @include df_jcsb;
+            @include mobile {
+                flex-direction: column;
+                gap: 6.667rem;
+            }
             .title-icon {
                 @include df_jcsb_fdc;
+                @include mobile {
+                    gap: 2.5rem;
+                }
                 .title-and-desc {
                     @include df_fdc;
                     gap: 3.75rem;
@@ -395,11 +517,21 @@
                     .desc {
                         @include r24;
                         color: $black;
+                        @include mobile {
+                            font-size: 1.667rem;
+                        }
                     }
                 }
                 .icons {
                     @include df_ac;
                     gap: 1.25rem;
+                    .icon {
+                        max-width: 4rem;
+                        max-height: 4rem;
+                        img {
+                            @include wh;
+                        }
+                    }
                 }
             }
             .form {
@@ -407,9 +539,15 @@
                 width: 100%;
                 @include df_fdc;
                 gap: 3.75rem;
+                @include mobile {
+                    max-width: none;
+                }
                 .btn {
                     max-width: 21.25rem;
-                    width: 100%
+                    width: 100%;
+                    @include mobile {
+                        max-width: none;
+                    }
                 }
                 .inp {
                     @include df_fdc;
@@ -431,6 +569,9 @@
                     }
                     &:last-of-type {
                         gap: 6.25rem;
+                        @include mobile {
+                            gap: 4.167rem;
+                        }
                     }
                 }
             }
@@ -442,23 +583,34 @@
     .optional-block {
         display: flex;
         max-height: 100vh;
+        @include mobile {
+            max-height: none;
+            flex-direction: column;
+        }
         .video-content {
             flex: 1;
             video {
                 height: 100%;
                 width: 60rem;
+                @include mobile {
+                    width: 100%;
+                }
             }
         }
         .info-block {
             background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.6)),$blue;
             padding: 5rem;
             @include df_jcsb_fdc;
+            @include mobile {
+                gap: 3.125rem;
+            }
             flex: 1;
             .title-block {
                 @include df_fdc;
                 gap: 5rem;
                 .little-title {
                     @include sb18;
+                    text-transform: uppercase;
                 }
                 .title {
                     @include h2;
@@ -486,6 +638,9 @@
             .cost {
                 @include sb48;
                 color: $white;
+                @include mobile {
+                    font-weight: 500;
+                }
             }
         }
     }
@@ -493,6 +648,9 @@
         padding: 2.5rem 2.5rem 0 2.5rem;
         @include df_ac_jcc;
         gap: 2.5rem;
+        @include mobile {
+            flex-direction: column;
+        }
         .card {
             @include df_fdc;
             padding: 5rem;
@@ -513,6 +671,9 @@
                 background-image: url(../images/sections/cardBlock/gelik.png);
                 @include bg_s;
                 aspect-ratio: 16 / 9;
+                @include mobile {
+                    width: 100%;
+                }
             }
             &.card-two {
                 background-image: url(../images/sections/cardBlock/motosikl.png);
@@ -536,6 +697,7 @@
             gap: 5.313rem;
             .big-title {
                 @include h2;
+                max-width: 80rem;
                 span {
                     color: $blue;
                 }
@@ -543,6 +705,7 @@
             .sub-title {
                 @include sb48;
                 color: $grey-txt;
+                max-width: 70rem;
             }
         }
         .info-block {
@@ -553,10 +716,15 @@
                 width: 100%;
                 @include df_fdc;
                 gap: 1.875rem;
-
+                @include mobile {
+                    max-width: none;
+                }
                 &.fourth-block {
                     max-width: 45rem;
                     width: 100%;
+                    @include mobile {
+                        max-width: none;
+                    }
                     hr {
                         background-color: $nepal;
                     }
@@ -566,6 +734,9 @@
                             @include h3;
                             color: $nepal;
                             max-width: 31.5rem;
+                            @include mobile {
+                                font-size: 1.667rem;
+                            }
                         }
                     }
                     .dash-sub {
@@ -582,6 +753,9 @@
                     .title {
                         @include r24;
                         color: $black;
+                        @include mobile {
+                            font-size: 1.667rem;
+                        }
                     }
                 }
                 .dash-sub {
@@ -595,9 +769,15 @@
             }
             .row {
                 display: flex;
+                @include mobile {
+                    flex-direction: column;
+                }
                 &.first-row {
                     display: flex;
                     gap: 26rem;
+                    @include mobile {
+                        gap: 5rem;
+                    }
                     .titles-block {
                         @include df_fdc;
                         gap: 2.5rem;
@@ -618,6 +798,9 @@
                 }
                 &.third-row {
                     @include df_jcsb;
+                    @include mobile {
+                        gap: 5rem;
+                    }
                 }
             }
         }

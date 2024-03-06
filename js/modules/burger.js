@@ -10,7 +10,7 @@ export function burger() {
     $(document).ready(function(){
         function checkWidth() {
             let windowWidth = $(window).width();
-            if (windowWidth > 1180) {
+            if (windowWidth > 768) {
                 $(".menu-open").removeClass("active");
             }
         }

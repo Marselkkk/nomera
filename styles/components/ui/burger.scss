@@ -1,0 +1,21 @@
+.burger-menu {
+    display: none;
+    position: absolute;
+    background-color: $white;
+    padding: 1.25rem;
+    max-width: 23.438rem;
+    max-height: 28.25rem;
+    @include wh;
+    nav {
+        ul {
+            @include df_fdc;
+            li {
+                a {
+                    font-size: var(--fz18);
+                    text-transform: uppercase;
+                    color: $black
+                }
+            }
+        }
+    }
+}

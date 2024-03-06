@@ -21,8 +21,8 @@
     @include mobile {
         --fz144: 4rem;
         --fz96: 3rem;
-        --fz32: 2.667rem;
-        --fz24: 1.167rem;
+        --fz32: 1.5rem;
+        --fz24: 1.333rem;
         --fz20: 1.333rem;
         --fz-w16: 1rem;
     }
@@ -30,19 +30,20 @@
 
 @mixin mt-12 {
     margin-top: 12.5rem;
+    @include mobile {
+        margin-top: 5rem;
+    }
 }
 
 @mixin h1 {
     font-size: var(--fz144);
     font-weight: 600;
-    letter-spacing: -0.27rem;
     color: $white;
 }
 
 @mixin h2 {
     font-size: var(--fz96);
     font-weight: 500;
-    letter-spacing: -0.27rem;
     line-height: 100%;
 }
 
@@ -181,6 +182,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
     // Здесь ваш шрифт
     // font-family: 'Your font-family name', sans-serif;
 }
