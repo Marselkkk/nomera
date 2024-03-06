@@ -1,17 +1,12 @@
-.first-que {
-    @include desktop-lite {
-        .question {
-            .title {
-                max-width: 60%;
-            }
-        }
-    }
-}
 .accordion-item {
     cursor: pointer;
+    @include df_fdc;
+    gap: 2.5rem;
     .accordion-header {
         pointer-events: none;
+        @include df_jcsb;
         .title {
+            @include h3;
             color: $grey;
             &:hover {
                 scale: (0.9);
@@ -43,6 +38,8 @@
         overflow: hidden;
         pointer-events: none;
         transition: max-height 0.3s ease-out;
+        @include r24;
+        color: $black;
         &.hover {
             scale: (0.9);
             transition: all .3s;

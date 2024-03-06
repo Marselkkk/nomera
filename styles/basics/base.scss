@@ -28,19 +28,6 @@
     }
 }
 
-.titles-block {
-    @include df_fdc;
-    gap: 2.5rem;
-    p {
-        @include r24;
-        color: $black;
-        max-width: 50%;
-        span {
-            font-weight: bold;
-        }
-    }
-}
-
 @mixin mt-12 {
     margin-top: 12.5rem;
 }
@@ -170,6 +157,7 @@ $nepal: #99A8BF;
 $prem-gray: #9A999B;
 $grey-txt: #999999;
 $grey-op: #706C85;
+$grey-footer: #666666;
 
 // Базовые настройки
 

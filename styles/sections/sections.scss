@@ -69,16 +69,34 @@
         .content {
             display: flex;
             justify-content: space-between;
+            .titles-block {
+                @include df_fdc;
+                gap: 2.5rem;
+                p {
+                    @include r24;
+                    color: $black;
+                    max-width: 50%;
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }
             .title-and-logo {
                 @include df_fdc;
                 justify-content: space-between;
+                .logo {
+                    img {
+                        max-width: 11.813rem;
+                        max-height: 6.563rem;
+                    }
+                }
             }
             .cards {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-row-gap: 6.25rem;
                 grid-column-gap: 2.5rem;
-                max-width: 1040px;
+                max-width: 65rem;
                 width: 100%;
                 .card {
                     @include df_fdc;
@@ -91,8 +109,8 @@
                         aspect-ratio: 1 / 1;
                         box-sizing: border-box;
                         // max-height: 6rem;
-                        padding: 27px;
-                        border: 2px dashed $nepal;
+                        padding: 1.688rem;
+                        border: 0.125rem dashed $nepal;
                     }
                     .title {
                         @include h3;
@@ -298,7 +316,7 @@
         .swiper-wrapper {
             .swiper-slide {
                 display: flex;
-                border-radius: 1.125rem 1.125rem 2.25rem 1.125rem;
+                border-radius: 18px 18px 36px 18px;
                 padding: 1.25rem;
                 gap: 5rem;
                 background-color: $nepal;
@@ -401,13 +419,13 @@
                     }
                     input {
                         border: none;
-                        border-bottom: 2px solid $grey-txt;
+                        border-bottom: 0.125rem solid $grey-txt;
                         padding-top: 2.5rem;
                         @include r24;
                         color: $black;
                         transition: all .3s;
                         &:hover {
-                            border-bottom: 2px solid $black;
+                            border-bottom: 0.125rem solid $black;
                             transition: all .3s;
                         }
                     }
@@ -468,6 +486,228 @@
             .cost {
                 @include sb48;
                 color: $white;
+            }
+        }
+    }
+    .install-block {
+        padding: 2.5rem 2.5rem 0 2.5rem;
+        @include df_ac_jcc;
+        gap: 2.5rem;
+        .card {
+            @include df_fdc;
+            padding: 5rem;
+            flex: 1;
+            gap: 13.375rem;
+            .sub-and-title {
+                @include df_fdc;
+                gap: 3.75rem;
+                .title {
+                    @include h2;
+                    color: $white;
+                }
+                .sub-title {
+                    @include h3;
+                }
+            }
+            &.card-one {
+                background-image: url(../images/sections/cardBlock/gelik.png);
+                @include bg_s;
+                aspect-ratio: 16 / 9;
+            }
+            &.card-two {
+                background-image: url(../images/sections/cardBlock/motosikl.png);
+                @include bg_s;
+                aspect-ratio: 16 / 9;
+            }
+            .btn {
+                max-width: 18.875rem;
+                width: 100%;
+            }
+        }
+    }
+}
+.process-section {
+    @include mt-12;
+    .process-block {
+        @include df_fdc;
+        gap: 10rem;
+        .title-block {
+            @include df_fdc;
+            gap: 5.313rem;
+            .big-title {
+                @include h2;
+                span {
+                    color: $blue;
+                }
+            }
+            .sub-title {
+                @include sb48;
+                color: $grey-txt;
+            }
+        }
+        .info-block {
+            @include df_fdc;
+            gap: 5rem;
+            .block {
+                max-width: 27.5rem;
+                width: 100%;
+                @include df_fdc;
+                gap: 1.875rem;
+
+                &.fourth-block {
+                    max-width: 45rem;
+                    width: 100%;
+                    hr {
+                        background-color: $nepal;
+                    }
+                    .number-title {
+                        color: $nepal;
+                        .title {
+                            @include h3;
+                            color: $nepal;
+                            max-width: 31.5rem;
+                        }
+                    }
+                    .dash-sub {
+                        color: $nepal;
+                        .sub-title {
+                            @include r24;
+                            color: $nepal;
+                        }
+                    }
+                }
+                .number-title {
+                    display: flex;
+                    gap: 2.5rem;
+                    .title {
+                        @include r24;
+                        color: $black;
+                    }
+                }
+                .dash-sub {
+                    display: flex;
+                    gap: 2.5rem;
+                    .sub-title {
+                        @include m16;
+                        color: $grey-txt
+                    }
+                }
+            }
+            .row {
+                display: flex;
+                &.first-row {
+                    display: flex;
+                    gap: 26rem;
+                    .titles-block {
+                        @include df_fdc;
+                        gap: 2.5rem;
+                        max-width: 22.563rem;
+                        p {
+                            @include r24;
+                            color: $black;
+                            span {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+                &.second-row {
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 6.25rem;
+                }
+                &.third-row {
+                    @include df_jcsb;
+                }
+            }
+        }
+    }
+}
+.portfolio-section {
+    @include mt-12;
+    .portfolio-block {
+        overflow-x: auto;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+.faq-section {
+    @include mt-12;
+    .faq-block {
+        @include df_fdc;
+        gap: 3.75rem;
+        .little-title {
+            @include m16;
+            color: $grey-txt;
+            text-transform: uppercase;
+        }
+        .title-and-question {
+            @include df_jcsb;
+            .title-logo {
+                @include df_jcsb_fdc;
+                .title {
+                    @include sb48;
+                }
+                .logo {
+                    img {
+                        max-width: 4.481rem;
+                        max-height: 2.5rem;
+                    }
+                }
+            }
+            .questionMenu {
+                @include df_fdc;
+            }
+        }
+    }
+}
+.delivery-section {
+    @include mt-12;
+    .delivery-block {
+        background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.6)),$blue;
+        padding: 5rem;
+        position: relative;
+        @include df_jcsb;
+        .delivery-title-block {
+            @include df_fdc;
+            gap: 3.75rem;
+            max-width: 64.75rem;
+            width: 100%;
+            .title {
+                @include h2;
+                color: $white;
+            }
+            .sub-title {
+                @include h3;
+                color: $nepal;
+            }
+        }
+        .delivery-step-block {
+            border-left: 0.125rem solid $white;
+            padding-left: 5rem;
+            max-width: 39.938rem;
+            width: 100%;
+            @include df_fdc;
+            gap: 6.25rem;
+            .step {
+                @include df_fdc;
+                gap: 2.5rem;
+                .title {
+                    @include h3;
+                }
+                .sub-title {
+                    @include r24;
+                }
+            }
+        }
+        .delivery-img-block {
+            position: absolute;
+            bottom: 0;
+            left: -0.063rem;
+            display: flex;
+            align-items: flex-end;
+            img {
+                width: 53rem;
             }
         }
     }

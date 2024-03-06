@@ -14,28 +14,26 @@
 
     &.welcome-btn {
         background-color: transparent;
-        font-size: 18px;
+        font-size: var(--fz18);
         color: $prem-gray;
         text-transform: uppercase;
-        @include mobile {
-            font-size: 16px;
-        }
     }
 
     &.white {
         background-color: $white;
         color: $black;
-        font-size: 20px;
+        font-size: var(--fz20);
     }
     &.transparent {
         background-color: transparent;
         border: 1px solid $white;
         color: $white;
-        font-size: 20px;
+        font-size: var(--fz20);
     }
     &.white-blue {
         background-color: $white;
         color: #2A1A80;
+        font-size: var(--fz20);
     }
     &.blue {
         background-color: #2A1A80;

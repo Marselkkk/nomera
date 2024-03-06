@@ -1,0 +1,87 @@
+footer {
+    .footer-block {
+        padding: 7.5rem 5rem 5rem 5rem;
+        background-color: $black;
+        @include df_fdc;
+        gap: 10.188rem;
+        .address-auth-block {
+            @include df_jcsb;
+            .footer-title-block {
+                max-width: 42.5rem;
+                @include df_fdc;
+                gap: 5rem;
+                .title {
+                    @include sb48;
+                    color: $white;
+                }
+                .contacts {
+                    @include df_fdc;
+                    gap: 1.25rem;
+                    .footer-icon {
+                        @include df_ac;
+                        gap: 1.25rem;
+                        a {
+                            @include r24;
+                        }
+                    }
+                }
+            }
+            .footer-auth-block {
+                max-width: 40.125rem;
+                width: 100%;
+                @include df_jcsb_fdc;
+                .form {
+                    @include df_fdc;
+                    gap: 3.75rem;
+                    .inp {
+                        @include df_fdc;
+                        label {
+                            @include r24;
+                            color: $grey-txt;
+                        }
+                        input {
+                            background-color: transparent;
+                            border: 0;
+                            border-bottom: 0.125rem solid $grey-txt;
+                            @include r24;
+                        }
+                        &:last-of-type {
+                            gap: 6.25rem;
+                        }
+                    }
+                    .btn {
+                        max-width: 21.25rem;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .footer-privacy-block {
+            @include df_jcsb;
+            align-items: center;
+            .privacy-pol {
+                @include m16;
+                color: $grey-footer;
+                max-width: 27.5rem;
+            }
+            .icon-logo {
+                @include df_jcsb;
+                align-items: center;
+                max-width: 40.125rem;
+                width: 100%;
+                .icons {
+                    display: flex;
+                    gap: 1.25rem;
+                }
+                .logo {
+                    max-width: 4.481rem;
+                    max-height: 2.5rem;
+                    img {
+                        max-width: 4.481rem;
+                        max-height: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

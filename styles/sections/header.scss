@@ -4,6 +4,12 @@ header {
         padding-bottom: 1.563rem;
         @include df_ac;
         justify-content: space-between;
+        .logo {
+            img {
+                max-width: 14.893rem;
+                max-height: 1.563rem;
+            }
+        }
         .nav-menu {
             nav {
                 ul {
