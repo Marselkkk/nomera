@@ -1,4 +1,13 @@
 header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* добавляем тень для эффекта плавности */
+    transition: top 0.3s ease;
+    z-index: 50;
+    &.sticky {
+        top: -100px;
+    }
     .header-block {
         padding-top: 1.563rem;
         padding-bottom: 1.563rem;
@@ -38,6 +47,18 @@ header {
                 }
                 &.phone-icon {
                     display: none;
+                }
+            }
+            .btn-header {
+                @include mobile {
+                    display: none;
+                }
+            }
+            .burger-icon {
+                display: none;
+                transition: all .3s ease-in-out;
+                @include mobile {
+                    display: block;
                 }
             }
         }

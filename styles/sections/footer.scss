@@ -4,24 +4,43 @@ footer {
         background-color: $black;
         @include df_fdc;
         gap: 10.188rem;
+        @include mobile-lite {
+            padding: 3.333rem 1.667rem;
+        }
         .address-auth-block {
             @include df_jcsb;
+            @include mobile {
+                flex-direction: column;
+                gap: 6.667rem;
+            }
             .footer-title-block {
                 max-width: 42.5rem;
                 @include df_fdc;
                 gap: 5rem;
+                @include mobile {
+                    gap: 3.333rem;
+                }
                 .title {
                     @include sb48;
                     color: $white;
+                    @include mobile-lite {
+                        font-size: 2rem;
+                    }
                 }
                 .contacts {
                     @include df_fdc;
                     gap: 1.25rem;
+                    @include mobile {
+                        gap: 1.667rem;
+                    }
                     .footer-icon {
                         @include df_ac;
                         gap: 1.25rem;
                         a {
                             @include r24;
+                            @include mobile-lite {
+                                font-size: 1.5rem;
+                            }
                         }
                     }
                 }
@@ -30,9 +49,15 @@ footer {
                 max-width: 40.125rem;
                 width: 100%;
                 @include df_jcsb_fdc;
+                @include mobile {
+                    max-width: none;
+                }
                 .form {
                     @include df_fdc;
                     gap: 3.75rem;
+                    @include mobile {
+                        gap: 5rem;
+                    }
                     .inp {
                         @include df_fdc;
                         label {
@@ -52,6 +77,9 @@ footer {
                     .btn {
                         max-width: 21.25rem;
                         width: 100%;
+                        @include mobile-lite {
+                            max-width: none;
+                        }
                     }
                 }
             }
@@ -59,16 +87,27 @@ footer {
         .footer-privacy-block {
             @include df_jcsb;
             align-items: center;
+            @include mobile {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                gap: 3.333rem;
+            }
             .privacy-pol {
                 @include m16;
                 color: $grey-footer;
                 max-width: 27.5rem;
+                @include mobile-lite {
+                    font-size: 1.167rem;
+                }
             }
             .icon-logo {
                 @include df_jcsb;
                 align-items: center;
                 max-width: 40.125rem;
                 width: 100%;
+                @include mobile {
+                    max-width: none;
+                }
                 .icons {
                     display: flex;
                     gap: 1.25rem;

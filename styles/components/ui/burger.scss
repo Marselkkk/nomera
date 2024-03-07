@@ -2,20 +2,54 @@
     display: none;
     position: absolute;
     background-color: $white;
-    padding: 1.25rem;
-    max-width: 23.438rem;
-    max-height: 28.25rem;
+    width: 100%;
+    max-height: 37.667rem;
+    z-index: 30;
+    left: 0;
+    top: 5rem;
     @include wh;
+    &.active {
+        display: block;
+    }
     nav {
+        background-color: $white;
         ul {
             @include df_fdc;
             li {
+                border-bottom: 0.083rem solid #e5e5e5;
+                &:nth-last-child(1) {
+                    border: 0;
+                }
+                &:nth-last-child(2) {
+                    border: 0;
+                }
+                .btn {
+                    display: block;
+                    text-align: center;
+                }
                 a {
-                    font-size: var(--fz18);
+                    font-size: 1.44rem;
                     text-transform: uppercase;
-                    color: $black
+                    color: $black;
+                    font-weight: 600;
+                    padding: 1.5rem;
+                    @include df_ac;
+                    gap: 0.833rem;
+                }
+                &:last-of-type {
+                    padding: 1.25rem;
+                }
+                &.tel {
+                    a {
+                        font-size: 2rem;
+                        font-weight: 400;
+                    }
                 }
             }
         }
     }
+}
+.rotate {
+    transform: rotate(90deg);
+    transition: all .3s ease-in-out;
 }

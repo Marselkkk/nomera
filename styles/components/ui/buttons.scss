@@ -1,12 +1,11 @@
-.btn {
+.btn, 
+.btn-header {
     padding: 1.125rem 2rem;
     border-radius: 6px 6px 18px 6px;
     cursor: pointer;
     transition: all .3s ease-in;
     font-size: var(--fz18);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include df_ac_jcc;
     font-family: 'Hauora';
     &:hover {
         scale: (0.9);
@@ -18,27 +17,42 @@
         color: $prem-gray;
         text-transform: uppercase;
         padding: 0;
+        @include mobile-small {
+            font-size: 1.167rem;
+        }
     }
 
     &.white {
         background-color: $white;
         color: $black;
         font-size: var(--fz20);
+        @include mobile-small {
+            font-size: 1.167rem;
+        }
     }
     &.transparent {
         background-color: transparent;
         border: 1px solid $white;
         color: $white;
         font-size: var(--fz20);
+        @include mobile-small {
+            font-size: 1.167rem;
+        }
     }
     &.white-blue {
         background-color: $white;
         color: #2A1A80;
         font-size: var(--fz20);
+        @include mobile-small {
+            font-size: 1.167rem;
+        }
     }
     &.blue {
         background-color: #2A1A80;
         color: $white;
         font-size: var(--fz20);
+        @include mobile-small {
+            font-size: 1.167rem;
+        }
     }
 }

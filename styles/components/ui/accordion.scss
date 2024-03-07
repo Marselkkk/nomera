@@ -5,6 +5,7 @@
     .accordion-header {
         pointer-events: none;
         @include df_jcsb;
+        align-items: center;
         .title {
             @include h3;
             color: $grey;
@@ -43,6 +44,9 @@
         &.hover {
             scale: (0.9);
             transition: all .3s;
+        }
+        .accordion-content {
+            padding-bottom: 30px;
         }
     }
 }

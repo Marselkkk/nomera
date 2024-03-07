@@ -1,8 +1,11 @@
 .welcome-section {
     background-image: url(../images/header/welcome-gradient.png);
+    @include bg_s;
     .welcome-block {
         @include df_ac_jcc;
         gap: 2.5rem;
+        padding-top: 1.438rem;
+        padding-bottom: 1.5rem;
         .title {
             color: $white;
             @include fz-welc;
@@ -17,9 +20,13 @@
     .hero-block {
         @include df_jcsb_fdc;
         padding-top: 5rem;
+        padding-bottom: 1.25rem;
         @include mobile {
             padding-top: 3.75rem;
             gap: 5rem;
+        }
+        @include mobile-lite {
+            gap: 20.917rem;
         }
         .big-title {
             @include h1;
@@ -41,9 +48,15 @@
                 max-width: 45rem;
                 width: 100%;
                 @include mobile {
-
                     padding-bottom: 0;
                     padding-top: 0;
+                }
+                @include mobile-lite {
+                    flex-direction: column;
+                    gap: 0.833rem;
+                    .btn {
+                        width: 100%;
+                    }
                 }
                 .btn {
                     white-space: nowrap;
@@ -60,15 +73,25 @@
                     max-width: 54%;
                     padding-bottom: 2.5rem;
                 }
+                @include mobile-lite {
+                    max-width: 100%
+                }
                 .title {
                     @include h3;
                     max-width: 65%;
+                    @include mobile-lite {
+                        max-width: 75%;
+                    }
                 }
                 .sub-title {
                     @include r24;
                     max-width: 55%;
                     @include mobile {
                         max-width: 60%;
+                        font-size: 1.167rem;
+                    }
+                    @include mobile-lite {
+                        max-width: 70%;
                     }
                 }
             }
@@ -82,6 +105,9 @@
         gap: 7.5rem;
         .big-title {
             @include h2;
+            @include mobile-lite {
+                max-width: 90%;
+            }
         }
         .content {
             @include df_jcsb;
@@ -96,6 +122,9 @@
                     @include r24;
                     color: $black;
                     max-width: 50%;
+                    @include mobile-lite {
+                        max-width: 75%;
+                    }
                     span {
                         font-weight: bold;
                     }
@@ -142,14 +171,28 @@
                         // max-height: 6rem;
                         padding: 1.688rem;
                         border: 0.175rem dashed $nepal;
+                        @include mobile-lite {
+                            max-width: 5.333rem;
+                            padding: 1.333rem;
+                        }
                         img {
                             @include wh;
+                            @include mobile {
+                                width: 2.667rem;
+                                height: 2.667rem;
+                            }
                         }
                     }
                     .title {
                         @include h3;
                         color: $black;
                         max-width: 70%;
+                        @include mobile {
+                            font-size: 1.667rem;
+                        }
+                        @include mobile-lite {
+                            max-width: 90%;
+                        }
                     }
                     .sub-title {
                         @include r24;
@@ -173,6 +216,7 @@
             @include df_fdc;
             justify-content: space-between;
             @include mobile {
+                padding: 1.667rem;
                 gap: 3.75rem;
             }
             .little-and-title {
@@ -198,10 +242,16 @@
                 }
                 .desc {
                     @include r24;
+                    @include mobile-lite {
+                        max-width: 90%;
+                    }
                 }
                 .btn {
                     width: fit-content;
                     font-weight: 600;
+                    @include mobile-lite {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -215,6 +265,9 @@
                     width: 100%;
                     height: auto;
                     aspect-ratio: 16 / 9;
+                    @include mobile-lite {
+                        height: 48.5rem;
+                    }
                 }
             }
             .points-content {
@@ -224,9 +277,20 @@
                 @include mobile {
                     gap: 3.75rem;
                 }
+                @include mobile-lite {
+                    padding: 2.5rem 1.667rem  3.333rem 1.667rem;
+                    gap: 5rem;
+                }
                 .title {
                     @include sb48;
                     color: $blue;
+                    @include mobile-lite {
+                        max-width: 90%;
+                    }
+                    @include mobile-small {
+                        font-size: 2rem;
+                        max-width: none;
+                    }
                 }
                 .points {
                     nav {
@@ -239,9 +303,14 @@
                             color: $black;
                             @include mobile {
                                 grid-template-columns: 1fr;
+                                gap: 3.333rem;
                             }
                             li {
                                 max-width: 85%;
+                                margin-left: 1.833rem;
+                                @include mobile-lite {
+                                    max-width: 70%;
+                                }
                                 &:nth-last-of-type(2) {
                                     max-width: 70%;
                                 }
@@ -260,6 +329,10 @@
         .title {
             @include h2;
             max-width: 65rem;
+            @include mobile-lite {
+                font-size: 2.667rem;
+                letter-spacing: -0.05rem;
+            }
             span {
                 color: $blue;
             }
@@ -290,9 +363,15 @@
             @include mobile {
                 max-width: none;
             }
+            hr {
+                background-color: $black;
+            }
             .title {
                 @include h3;
                 color: $black;
+                @include mobile-lite {
+                    font-size: 1.667rem;
+                }
             }
             .sub-title {
                 @include r24;
@@ -341,6 +420,9 @@
                     @include sb48;
                     @include mobile {
                         font-size: 2.333rem;
+                    }
+                    @include mobile-lite {
+                        letter-spacing: -0.1rem;
                     }
                 }
             }
@@ -412,6 +494,10 @@
                 @include mobile {
                     flex-direction: column;
                 }
+                @include mobile-lite {
+                    padding: 1.667rem;
+                    gap: 3.333rem;
+                }
                 .img {
                     @include slider;
                     @include mobile {
@@ -461,9 +547,13 @@
                     }
                     .cost-and-arr {
                         @include df_jcsb;
+                        align-items: center;
                         .cost {
                             @include sb48;
                             color: $white;
+                            @include mobile-lite {
+                                font-size: 2.333rem;
+                            }
                         }
                         .arr {
                             @include df_ac_jcc;
@@ -475,6 +565,10 @@
                                 background-color: $white;
                                 border-radius: 100rem;
                                 @include df_ac_jcc;
+                                @include mobile-lite {
+                                    width: 4rem;
+                                    height: 4rem;
+                                }
                             }
                         }
                     }
@@ -513,6 +607,10 @@
                     .title {
                         @include sb48;
                         max-width: 55.313rem;
+                        @include mobile-lite {
+                            font-size: 2.333rem;
+                            letter-spacing: -0.1rem;
+                        }
                     }
                     .desc {
                         @include r24;
@@ -595,6 +693,9 @@
                 @include mobile {
                     width: 100%;
                 }
+                @include mobile-lite {
+                    height: 54.833rem;
+                }
             }
         }
         .info-block {
@@ -604,10 +705,16 @@
             @include mobile {
                 gap: 3.125rem;
             }
+            @include mobile-lite {
+                padding: 1.667rem;
+            }
             flex: 1;
             .title-block {
                 @include df_fdc;
                 gap: 5rem;
+                @include mobile-lite {
+                    gap: 3.333rem;
+                }
                 .little-title {
                     @include sb18;
                     text-transform: uppercase;
@@ -651,14 +758,25 @@
         @include mobile {
             flex-direction: column;
         }
+        @include mobile-lite {
+            padding: 2.5rem 1.667rem 0 1.667rem;
+            gap: 1.667rem;
+        }
         .card {
             @include df_fdc;
             padding: 5rem;
             flex: 1;
             gap: 13.375rem;
+            @include mobile-lite {
+                padding: 1.667rem;
+                gap: 13rem;
+            }
             .sub-and-title {
                 @include df_fdc;
                 gap: 3.75rem;
+                @include mobile-lite {
+                    gap: 2.5rem;
+                }
                 .title {
                     @include h2;
                     color: $white;
@@ -683,6 +801,9 @@
             .btn {
                 max-width: 18.875rem;
                 width: 100%;
+                @include mobile-lite {
+                    max-width: none;
+                }
             }
         }
     }
@@ -692,12 +813,22 @@
     .process-block {
         @include df_fdc;
         gap: 10rem;
+        @include mobile-lite {
+            gap: 8.333rem;
+        }
         .title-block {
             @include df_fdc;
             gap: 5.313rem;
+            @include mobile-lite {
+                gap: 6.67rem;
+            }
             .big-title {
                 @include h2;
                 max-width: 80rem;
+                @include mobile-lite {
+                    font-size: 2.667rem;
+                    letter-spacing: -0.1rem;
+                }
                 span {
                     color: $blue;
                 }
@@ -706,6 +837,10 @@
                 @include sb48;
                 color: $grey-txt;
                 max-width: 70rem;
+                @include mobile-lite {
+                    font-size: 2rem;
+                    font-weight: 500;
+                }
             }
         }
         .info-block {
@@ -747,6 +882,19 @@
                         }
                     }
                 }
+                &.fifth-block {
+                    .dash-sub {
+                        @include mobile-lite {
+                            justify-content: flex-start;
+                            gap: 3.85rem;
+                        }
+                        .sub-title {
+                            @include mobile-lite {
+                                max-width: 70%;
+                            }
+                        }
+                    }
+                }
                 .number-title {
                     display: flex;
                     gap: 2.5rem;
@@ -757,13 +905,26 @@
                             font-size: 1.667rem;
                         }
                     }
+                    .number {
+                        @include mobile-lite {
+                            font-size: 1.5rem;
+                        }
+                    }
                 }
                 .dash-sub {
                     display: flex;
                     gap: 2.5rem;
+                    @include mobile-lite {
+                        justify-content: space-between;
+                    }
                     .sub-title {
                         @include m16;
-                        color: $grey-txt
+                        color: $grey-txt;
+                        @include mobile-lite {
+                            font-size: 1.333rem;
+                            font-weight: 400;
+                            max-width: 85%;
+                        }
                     }
                 }
             }
@@ -812,6 +973,9 @@
         overflow-x: auto;
         display: flex;
         flex-wrap: nowrap;
+        video {
+            height: 58.333rem;
+        }
     }
 }
 .faq-section {
@@ -826,15 +990,27 @@
         }
         .title-and-question {
             @include df_jcsb;
+            @include mobile {
+                flex-direction: column;
+            }
+            @include mobile-small {
+                gap: 5rem;
+            }
             .title-logo {
                 @include df_jcsb_fdc;
                 .title {
                     @include sb48;
+                    @include mobile-small {
+                        font-size: 2rem;
+                    }
                 }
                 .logo {
                     img {
                         max-width: 4.481rem;
                         max-height: 2.5rem;
+                    }
+                    @include mobile {
+                        display: none;
                     }
                 }
             }
@@ -851,11 +1027,22 @@
         padding: 5rem;
         position: relative;
         @include df_jcsb;
+        @include mobile {
+            flex-direction: column;
+            gap: 5rem;
+            padding-bottom: 14rem;
+        }
+        @include mobile-lite {
+            padding: 1.667rem 1.667rem 14rem 1.667rem;
+        }
         .delivery-title-block {
             @include df_fdc;
             gap: 3.75rem;
             max-width: 64.75rem;
             width: 100%;
+            @include mobile {
+                gap: 5rem;
+            }
             .title {
                 @include h2;
                 color: $white;
@@ -872,11 +1059,17 @@
             width: 100%;
             @include df_fdc;
             gap: 6.25rem;
+            @include mobile {
+                padding: 1.667rem 0 1.667rem 3.333rem;
+            }
             .step {
                 @include df_fdc;
                 gap: 2.5rem;
                 .title {
                     @include h3;
+                    @include mobile-lite {
+                        font-size: 1.667rem;
+                    }
                 }
                 .sub-title {
                     @include r24;
@@ -890,7 +1083,14 @@
             display: flex;
             align-items: flex-end;
             img {
-                width: 53rem;
+                max-width: 53rem;
+                width: 100%;
+                @include mobile {
+                    width: 31.25rem;
+                }
+                @include mobile-small {
+                    width: 23.333rem;
+                }
             }
         }
     }
