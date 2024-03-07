@@ -138,7 +138,8 @@ input:hover, textarea:hover {
   justify-content: space-between;
   flex-direction: column;
   padding-top: 5rem;
-  padding-bottom: 1.25rem;
+  padding-bottom: 5rem;
+  gap: 14.25rem;
 }
 @media (max-width: 768px) {
   .hero-section .hero-block {
@@ -156,7 +157,7 @@ input:hover, textarea:hover {
   font-weight: 600;
   color: #ffffff;
   line-height: 100%;
-  max-width: 60%;
+  max-width: 65%;
 }
 .hero-section .hero-block .btn-and-titles {
   display: flex;
@@ -173,7 +174,6 @@ input:hover, textarea:hover {
   display: flex;
   align-items: center;
   gap: 2.5rem;
-  padding-bottom: 5rem;
   padding-top: 5rem;
   max-width: 45rem;
   width: 100%;
@@ -201,7 +201,6 @@ input:hover, textarea:hover {
   display: flex;
   flex-direction: column;
   gap: 3.75rem;
-  padding-bottom: 5rem;
   max-width: 40%;
 }
 @media (max-width: 768px) {
@@ -263,6 +262,7 @@ input:hover, textarea:hover {
   font-size: var(--fz96);
   font-weight: 500;
   line-height: 100%;
+  max-width: 70%;
 }
 @media (max-width: 520px) {
   .production-section .production-block .big-title {
@@ -561,7 +561,7 @@ input:hover, textarea:hover {
   font-size: var(--fz96);
   font-weight: 500;
   line-height: 100%;
-  max-width: 65rem;
+  max-width: 68rem;
 }
 @media (max-width: 520px) {
   .guarantee-section .guarantee-block .title {
@@ -732,7 +732,6 @@ input:hover, textarea:hover {
   border-radius: 0.938rem;
   flex: 1;
   gap: 9rem;
-  max-height: 39.375rem;
 }
 .cards-section .cards-block .card .sub-and-title {
   display: flex;
@@ -800,8 +799,7 @@ input:hover, textarea:hover {
   }
 }
 .slider-section .swiper .swiper-wrapper .swiper-slide .img {
-  max-width: 43.125rem;
-  max-height: 40rem;
+  max-width: 690px;
 }
 @media (max-width: 768px) {
   .slider-section .swiper .swiper-wrapper .swiper-slide .img {
@@ -810,8 +808,7 @@ input:hover, textarea:hover {
   }
 }
 .slider-section .swiper .swiper-wrapper .swiper-slide .img img {
-  width: 100%;
-  height: 100%;
+  height: auto;
 }
 .slider-section .swiper .swiper-wrapper .swiper-slide .other {
   display: flex;
@@ -1265,7 +1262,7 @@ input:hover, textarea:hover {
   font-size: var(--fz96);
   font-weight: 500;
   line-height: 100%;
-  max-width: 80rem;
+  max-width: 86.5rem;
 }
 @media (max-width: 520px) {
   .process-section .process-block .title-block .big-title {
@@ -1336,17 +1333,27 @@ input:hover, textarea:hover {
 .process-section .process-block .info-block .block.fourth-block .dash-sub {
   color: #99A8BF;
 }
+@media (max-width: 520px) {
+  .process-section .process-block .info-block .block.fourth-block .dash-sub {
+    justify-content: flex-start;
+    gap: 4.3rem;
+  }
+}
 .process-section .process-block .info-block .block.fourth-block .dash-sub .sub-title {
   font-size: var(--fz24);
   font-weight: 400;
   color: #ffffff;
   color: #99A8BF;
+  max-width: 70%;
 }
 @media (max-width: 520px) {
   .process-section .process-block .info-block .block.fifth-block .dash-sub {
     justify-content: flex-start;
     gap: 3.85rem;
   }
+}
+.process-section .process-block .info-block .block.fifth-block .dash-sub .sub-title {
+  max-width: 55%;
 }
 @media (max-width: 520px) {
   .process-section .process-block .info-block .block.fifth-block .dash-sub .sub-title {
@@ -1387,6 +1394,7 @@ input:hover, textarea:hover {
   font-weight: 500;
   color: #ffffff;
   color: #999999;
+  max-width: 70%;
 }
 @media (max-width: 520px) {
   .process-section .process-block .info-block .block .dash-sub .sub-title {

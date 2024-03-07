@@ -20,7 +20,8 @@
     .hero-block {
         @include df_jcsb_fdc;
         padding-top: 5rem;
-        padding-bottom: 1.25rem;
+        padding-bottom: 5rem;
+        gap: 14.25rem;
         @include mobile {
             padding-top: 3.75rem;
             gap: 5rem;
@@ -31,7 +32,7 @@
         .big-title {
             @include h1;
             line-height: 100%;
-            max-width: 60%
+            max-width: 65%
         }
         .btn-and-titles {
             @include df_jcsb;
@@ -43,7 +44,7 @@
             .btn-block {
                 @include df_ac;
                 gap: 2.5rem;
-                padding-bottom: 5rem;
+                // padding-bottom: 5rem;
                 padding-top: 5rem;
                 max-width: 45rem;
                 width: 100%;
@@ -66,7 +67,7 @@
             .title-block {
                 @include df_fdc;
                 gap: 3.75rem;
-                padding-bottom: 5rem;
+                // padding-bottom: 5rem;
                 max-width: 40%;
                 @include mobile {
                     gap: 1.875rem;
@@ -105,6 +106,7 @@
         gap: 7.5rem;
         .big-title {
             @include h2;
+            max-width: 70%;
             @include mobile-lite {
                 max-width: 90%;
             }
@@ -328,7 +330,7 @@
         @include df_jcsb;
         .title {
             @include h2;
-            max-width: 65rem;
+            max-width: 68rem;
             @include mobile-lite {
                 font-size: 2.667rem;
                 letter-spacing: -0.05rem;
@@ -448,7 +450,7 @@
             border-radius: 0.938rem;
             flex: 1;
             gap: 9rem;
-            max-height: 39.375rem;
+            // max-height: 39.375rem;
             .sub-and-title {
                 @include df_fdc;
                 gap: 3.75rem;
@@ -499,13 +501,13 @@
                     gap: 3.333rem;
                 }
                 .img {
-                    @include slider;
+                    max-width: 690px;
                     @include mobile {
                         max-width: none;
                         max-height: none;
                     }
                     img {
-                        @include wh;
+                        height: auto;
                     }
                 }
                 .other {
@@ -824,7 +826,7 @@
             }
             .big-title {
                 @include h2;
-                max-width: 80rem;
+                max-width: 86.5rem;
                 @include mobile-lite {
                     font-size: 2.667rem;
                     letter-spacing: -0.1rem;
@@ -876,9 +878,14 @@
                     }
                     .dash-sub {
                         color: $nepal;
+                        @include mobile-lite {
+                            justify-content: flex-start;
+                            gap: 4.3rem;
+                        }
                         .sub-title {
                             @include r24;
                             color: $nepal;
+                            max-width: 70%;
                         }
                     }
                 }
@@ -889,6 +896,7 @@
                             gap: 3.85rem;
                         }
                         .sub-title {
+                            max-width: 55%;
                             @include mobile-lite {
                                 max-width: 70%;
                             }
@@ -920,6 +928,7 @@
                     .sub-title {
                         @include m16;
                         color: $grey-txt;
+                        max-width: 70%;
                         @include mobile-lite {
                             font-size: 1.333rem;
                             font-weight: 400;
