@@ -1,0 +1,32 @@
+.hover-back-effect::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  .hover-back-effect:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .hover-back-effect {
+    position: relative;
+    display: inline-block;
+    cursor: default;
+    padding: 8px 0;
+  }
+  .hover-back-effect {
+    &:hover {
+        color: $white;
+    }
+  }
+  .hover-back-effect::before {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    inset: 0;
+    height: 100%;
+    content: "";
+    background: #2A1A80;
+    background-size: cover;
+    z-index: -1;
+    transition: transform .4s ease;
+  }

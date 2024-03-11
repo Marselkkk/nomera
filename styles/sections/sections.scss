@@ -363,6 +363,9 @@
             }
             span {
                 color: $blue;
+                &:hover {
+                    color: $white;
+                }
             }
         }
         .logo {
@@ -891,6 +894,9 @@
                 }
                 span {
                     color: $blue;
+                    &:hover {
+                        color: $white
+                    }
                 }
             }
             .sub-title {

@@ -603,6 +603,9 @@ input.error, textarea.error {
 .guarantee-section .guarantee-block .title span {
   color: #2A1A80;
 }
+.guarantee-section .guarantee-block .title span:hover {
+  color: #ffffff;
+}
 @media (max-width: 768px) {
   .guarantee-section .guarantee-block .logo {
     display: none;
@@ -1337,6 +1340,9 @@ input.error, textarea.error {
 }
 .process-section .process-block .title-block .big-title span {
   color: #2A1A80;
+}
+.process-section .process-block .title-block .big-title span:hover {
+  color: #ffffff;
 }
 .process-section .process-block .title-block .sub-title {
   font-size: var(--fz48);
@@ -2259,6 +2265,40 @@ input.error {
     border-color: transparent;
   }
 }
+.hover-back-effect::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.hover-back-effect:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.hover-back-effect {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+  padding: 8px 0;
+}
+
+.hover-back-effect:hover {
+  color: #ffffff;
+}
+
+.hover-back-effect::before {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  inset: 0;
+  height: 100%;
+  content: "";
+  background: #2A1A80;
+  background-size: cover;
+  z-index: -1;
+  transition: transform 0.4s ease;
+}
+
 @font-face {
   font-family: "Hauora";
   src: local("Hauora"), url("../fonts/HauoraGX.ttf");
