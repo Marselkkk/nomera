@@ -20,6 +20,9 @@
             }
         }
         &.show {
+            .title {
+                color: $black;
+            }
             .plus-btn {
                 &:hover {
                     scale: (0.9);
@@ -27,9 +30,8 @@
                 }
                 svg {
                     transform: rotate(135deg);
-                    path {
-                        fill: $black;
-                    }
+                    stroke: black;
+                    stroke-opacity: 1;
                 }
             }
         }

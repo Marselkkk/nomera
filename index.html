@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./styles/wow/animate.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0396950dcd.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/imask"></script>
 </head>
 <body>
     <section class="welcome-section">
@@ -21,9 +23,9 @@
 
     <header>
         <div class="header-block container">
-            <div class="logo">
+            <a class="logo" href="./index.html">
                 <img src="./images/header/logo.svg" alt="icon">
-            </div>
+            </a>
             <div class="nav-menu">
                 <nav>
                     <ul>
@@ -73,17 +75,17 @@
     <main>
         <section class="hero-section">
             <div class="hero-block container">
-                <div class="big-title">Откидные рамки и номера</div>
+                <div class="big-title wow fadeInDown">Откидные рамки и номера</div>
                 <div class="btn-and-titles">
                     <div class="btn-block">
-                        <div class="btn white">Оформить заказ</div>
-                        <div class="btn transparent">Бесплатная консультация</div>
+                        <div class="btn white wow fadeInDown">Оформить заказ</div>
+                        <div class="btn transparent wow fadeInUp">Бесплатная консультация</div>
                     </div>
                     <div class="title-block">
-                        <div class="title">
+                        <div class="title wow fadeInLeft">
                             Установка номеров под ключ в Москве - от 60 000 ₽
                         </div>
-                        <div class="sub-title">
+                        <div class="sub-title wow fadeInRight">
                             Безотказная работа на скорости до 324 км/ч в любую погоду с гарантией от 365 дней
                         </div>
                     </div>
@@ -92,42 +94,42 @@
         </section>
         <section class="production-section" id="products">
             <div class="production-block container">
-                <div class="big-title">
+                <div class="big-title wow slideInLeft">
                     Производим откидные рамки с 2015 года
                 </div>
-                <div class="content">
+                <div class="content bounce">
                     <div class="title-and-logo">
                         <div class="titles titles-block">
-                            <p>Вы получаете <span>надежную, безотказную систему</span> продуманную до мелочей на долгие года.</p>
-                            <p>Наши клиенты <span>меняют не рамки</span>, а приезжают к нам на переустановку когда покупают новое авто.</p>
+                            <p class="wow fadeInDown">Вы получаете <span>надежную, безотказную систему</span> продуманную до мелочей на долгие года.</p>
+                            <p class="wow fadeInUp">Наши клиенты <span>меняют не рамки</span>, а приезжают к нам на переустановку когда покупают новое авто.</p>
                         </div>
                         <div class="logo">
-                            <img src="./images/sections/logot.svg" alt="">
+                            <img src="./images/sections/logot.svg" alt="" class="wow rotateIn">
                         </div>
                     </div>
                     <div class="cards">
-                        <div class="card speed-card">
+                        <div class="card speed-card wow fadeInDown">
                             <div class="icon">
                                 <img src="./images/sections/card/speed.svg" alt="icon">
                             </div>
                             <div class="title">Безупречная работа на любой скорости</div>
                             <div class="sub-title">Быстрое и безопасное открытие и закрытие рамки на скорости до 324 км/ч.</div>
                         </div>
-                        <div class="card tech-card">
+                        <div class="card tech-card wow fadeInDown">
                             <div class="icon">
                                 <img src="./images/sections/card/settings.svg" alt="icon">
                             </div>
                             <div class="title">Уникальная технология «Stealth Race»</div>
                             <div class="sub-title">Уникальная технология скрытых петель в паре с мощным редуктором исключает обнаружение механизма даже при самом тщательном осмотре.</div>
                         </div>
-                        <div class="card lock-card">
+                        <div class="card lock-card wow fadeInUp">
                             <div class="icon">
                                 <img src="./images/sections/card/lock.svg" alt="icon">
                             </div>
                             <div class="title">Универсальный механизм</div>
                             <div class="sub-title">Позволяет установить рамки на любой автомобиль, в том числе грузовики, автобусы, минивэны, и т.д.</div>
                         </div>
-                        <div class="card def-card">
+                        <div class="card def-card wow fadeInUp">
                             <div class="icon">
                                 <img src="./images/sections/card/shield.svg" alt="icon">
                             </div>
@@ -142,12 +144,12 @@
             <div class="advantages-block">
                 <div class="blue-content">
                     <div class="little-and-title">
-                        <div class="little">почему наши рамки?</div>
-                        <div class="title">Преимущества наших рамок</div>
+                        <div class="little wow fadeInDown">почему наши рамки?</div>
+                        <div class="title wow fadeInDown">Преимущества наших рамок</div>
                     </div>
                     <div class="desc-and-btn">
-                        <div class="desc">В системе нет ни одной не нужной детали, все продумано для максимально комфортного использования</div>
-                        <div class="btn transparent">Бесплатная консультация</div>
+                        <div class="desc wow fadeInUp">В системе нет ни одной не нужной детали, все продумано для максимально комфортного использования</div>
+                        <div class="btn transparent wow fadeInUp">Бесплатная консультация</div>
                     </div>
                 </div>
                 <div class="video-points-cont">
@@ -156,17 +158,17 @@
                             <source src="./advan.MOV">
                         </video>
                     </div>
-                    <div class="points-content">
+                    <div class="points-content bounce">
                         <div class="title">
                             Разрабатываем и производим откидные рамки с 2015 года!
                         </div>
                         <div class="points">
                             <nav>
                                 <ul>
-                                    <li>Время откидывания рамок всего 0,2 секунды!</li>
-                                    <li>Самый малоразмерный механизм</li>
-                                    <li>Высокий запас прочности конструкции</li>
-                                    <li>Минимальный уход за считанные минуты</li>
+                                    <li class="li-one wow fadeInDown">Время откидывания рамок всего 0,2 секунды!</li>
+                                    <li class="li-two wow fadeInDown">Самый малоразмерный механизм</li>
+                                    <li class="li-thr wow fadeInUp">Высокий запас прочности конструкции</li>
+                                    <li class="li-fou wow fadeInUp">Минимальный уход за считанные минуты</li>
                                 </ul>
                             </nav>
                         </div>
@@ -176,19 +178,19 @@
         </section>
         <section class="guarantee-section">
             <div class="guarantee-block container">
-                <div class="title">
+                <div class="title wow fadeInDown">
                     На все откидные рамки предоставляем гарантию <span>{365 дней}</span>, а также поддержку по любым вопросам.
                 </div>
                 <div class="logo">
-                    <img src="./images/sections/logot.svg" alt="icon">
+                    <img src="./images/sections/logot.svg" alt="icon" class="wow rotateIn">
                 </div>
             </div>
         </section>
         <section class="instruction-section">
             <div class="instruction-block container">
                 <div class="service-content">
-                    <div class="little-title">Рекомендации по использованию</div>
-                    <div class="service line-card">
+                    <div class="little-title wow fadeInDown">Рекомендации по использованию</div>
+                    <div class="service line-card wow fadeInUp">
                         <hr>
                         <div class="title">Обслуживание</div>
                         <div class="sub-title">
@@ -198,14 +200,14 @@
                 </div>
                 <div class="mechanizm-content">
                     <div class="mech-and-wash">
-                        <div class="mech line-card">
+                        <div class="mech line-card wow fadeIn">
                             <hr>
                             <div class="title">Механизм</div>
                             <div class="sub-title">
                                 Не зажимайте кнопку управления рамками больше 3-5 секунд
                             </div>
                         </div>
-                        <div class="wash line-card">
+                        <div class="wash line-card wow fadeIn">
                             <hr>
                             <div class="title">Мойка</div>
                             <div class="sub-title">
@@ -213,7 +215,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="guar">
+                    <div class="guar wow fadeInUp">
                         <hr>
                         <div class="title">
                             Во избежание потери гарантии, рекомендуем устанавливать рамки у проверенных партнеров
@@ -224,7 +226,7 @@
         </section>
         <section class="cards-section">
             <div class="cards-block">
-                <div class="card card-one">
+                <div class="card card-one wow slideInLeft">
                     <div class="sub-and-title">
                         <div class="title">
                             Механизм с откидывающейся рамкой
@@ -242,7 +244,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card-two">
+                <div class="card card-two wow slideInRight">
                     <div class="sub-and-title">
                         <div class="title">
                             Механизм с откидывающемся номером
@@ -358,18 +360,18 @@
         </section>
         <section class="feedback-section">
             <div class="feedback-block container">
-                <div class="little-title">будем на связи</div>
+                <div class="little-title wow fadeInDown">будем на связи</div>
                 <div class="authorization-block">
                     <div class="title-icon">
                         <div class="title-and-desc">
-                            <div class="title">
+                            <div class="title wow fadeInDown">
                                 Оставьте заявку на обратный звонок, и наш менеджер свяжется с Вами в ближайшее время
                             </div>
-                            <div class="desc">
+                            <div class="desc wow fadeInDown">
                                 Или напишите нам в соц.сетях
                             </div>
                         </div>
-                        <div class="icons">
+                        <div class="icons wow fadeInDown">
                             <div class="telegram icon">
                                 <img src="./images/sections/feedback/telegram.svg" alt="icon">
                             </div>
@@ -381,32 +383,32 @@
                             </div>
                         </div>
                     </div>
-                    <form action="#" class="form">
-                        <div class="inp inp-one">
-                            <label for="input-1">Имя и фамилия</label>
-                            <input type="text" id="input-1">
+                    <form action="" class="form" id="myForm">
+                        <div class="inp inp-one wow fadeInRight">
+                            <label for="username">Имя и фамилия</label>
+                            <input type="text" id="username" data-attr="required">
                         </div>
-                        <div class="inp inp-two">
-                            <label for="">Номер телефона</label>
-                            <input type="text">
+                        <div class="inp inp-two wow fadeInRight">
+                            <label for="phone">Номер телефона</label>
+                            <input type="text" id="phone" data-attr="required" name="phone">
                         </div>
-                        <div class="inp inp-three">
+                        <div class="inp inp-three wow fadeInRight">
                             <label for="">Вопрос (кратко)</label>
-                            <input type="text">
+                            <textarea name="question" id="question" cols="30" rows="5"></textarea>
                         </div>
-                        <button class="btn blue">Отправить</button>
+                        <button class="btn blue input-btn wow fadeInDown">Отправить</button>
                     </form>
                 </div>
             </div>
         </section>
         <section class="optional-section">
             <div class="optional-block">
-                <div class="video-content">
+                <div class="video-content wow slideInLeft">
                     <video controls>
                         <source src="https://dev.nomer-msk.ru/media/services/videos/%D0%BF%D1%83%D0%BB%D1%8C%D1%82_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F.MOV" type="video/mp4">
                     </video>
                 </div>
-                <div class="info-block">
+                <div class="info-block wow slideInRight">
                     <div class="title-block">
                         <div class="little-title">
                             Дополнительное оборудование
@@ -433,7 +435,7 @@
                 </div>
             </div>
             <div class="install-block">
-                <div class="card card-one">
+                <div class="card card-one wow slideInLeft">
                     <div class="sub-and-title">
                         <div class="title">Автомобили</div>
                         <div class="sub-title">Стандартный метод установки рамок и номеров.</div>
@@ -442,7 +444,7 @@
                         Заказать установку
                     </div>
                 </div>
-                <div class="card card-two">
+                <div class="card card-two wow slideInRight">
                     <div class="sub-and-title">
                         <div class="title">Мотоциклы</div>
                         <div class="sub-title">Тот же метод установки номеров что и на автомобили, но с небольшими изменениями.</div>
@@ -456,20 +458,20 @@
         <section class="process-section" id="process">
             <div class="process-block">
                 <div class="title-block container">
-                    <div class="big-title">
+                    <div class="big-title wow fadeInLeft">
                         На установку одной откидной рамки нужно <span>{от 3 до 8 часов}</span> в зависимости от конкретных особенностей автомобиля
                     </div>
-                    <div class="sub-title">
+                    <div class="sub-title wow fadeInLeft">
                         За дополнительную плату возможна установка день в день – без очередей.
                     </div>
                 </div>
                 <div class="info-block container">
                     <div class="row first-row">
-                        <div class="titles titles-block">
+                        <div class="titles titles-block wow fadeInDown">
                             <p>Вы получаете <span>надежную, безотказную систему</span> продуманную до мелочей на долгие года.</p>
                             <p>Наши клиенты <span>меняют не рамки</span>, а приезжают к нам на переустановку когда покупают новое авто.</p>
                         </div>
-                        <div class="block first-block">
+                        <div class="block first-block wow slideInDown">
                             <hr>
                             <div class="number-title">
                                 <div class="number">01</div>
@@ -486,7 +488,7 @@
                         </div>
                     </div>
                     <div class="row second-row">
-                        <div class="block second-block">
+                        <div class="block second-block wow slideInLeft">
                             <hr>
                             <div class="number-title">
                                 <div class="number">02</div>
@@ -501,7 +503,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="block third-block">
+                        <div class="block third-block wow slideInRight">
                             <hr>
                             <div class="number-title">
                                 <div class="number">03</div>
@@ -518,7 +520,7 @@
                         </div>
                     </div>
                     <div class="row third-row">
-                        <div class="block fourth-block">
+                        <div class="block fourth-block wow slideInLeft">
                             <hr>
                             <div class="number-title">
                                 <div class="number">04</div>
@@ -533,7 +535,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="block fifth-block">
+                        <div class="block fifth-block wow slideInRight">
                             <hr>
                             <div class="number-title">
                                 <div class="number">05</div>
@@ -550,25 +552,25 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="trace-block">
+                <!-- <div class="trace-block wow slideInLeft">
                     <img src="./images/sections/sled.png" alt="icon">
                 </div> -->
             </div>
         </section>
         <section class="feedback-section">
             <div class="feedback-block container">
-                <div class="little-title">будем на связи</div>
+                <div class="little-title wow fadeInDown">будем на связи</div>
                 <div class="authorization-block">
                     <div class="title-icon">
                         <div class="title-and-desc">
-                            <div class="title">
+                            <div class="title wow fadeInDown">
                                 Оставьте заявку на обратный звонок, и наш менеджер свяжется с Вами в ближайшее время
                             </div>
-                            <div class="desc">
+                            <div class="desc wow fadeInDown">
                                 Или напишите нам в соц.сетях
                             </div>
                         </div>
-                        <div class="icons">
+                        <div class="icons wow fadeInDown">
                             <div class="telegram icon">
                                 <img src="./images/sections/feedback/telegram.svg" alt="icon">
                             </div>
@@ -580,20 +582,20 @@
                             </div>
                         </div>
                     </div>
-                    <form action="#" class="form">
-                        <div class="inp inp-one">
-                            <label for="input-1">Имя и фамилия</label>
-                            <input type="text" id="input-1">
+                    <form action="" class="form" id="myForm">
+                        <div class="inp inp-one wow fadeInRight">
+                            <label for="username">Имя и фамилия</label>
+                            <input type="text" id="username" data-attr="required">
                         </div>
-                        <div class="inp inp-two">
-                            <label for="">Номер телефона</label>
-                            <input type="text">
+                        <div class="inp inp-two wow fadeInRight">
+                            <label for="phone">Номер телефона</label>
+                            <input type="text" id="phone" data-attr="required" name="phone">
                         </div>
-                        <div class="inp inp-three">
+                        <div class="inp inp-three wow fadeInRight">
                             <label for="">Вопрос (кратко)</label>
-                            <input type="text">
+                            <textarea name="question" id="question" cols="30" rows="5"></textarea>
                         </div>
-                        <button class="btn blue">Отправить</button>
+                        <button class="btn blue input-btn wow fadeInDown">Отправить</button>
                     </form>
                 </div>
             </div>
@@ -616,20 +618,20 @@
         </section>
         <section class="faq-section" id="faq">
             <div class="faq-block container">
-                <div class="little-title">
+                <div class="little-title wow fadeInLeft">
                     Вопрос-ответ
                 </div>
                 <div class="title-and-question">
                     <div class="title-logo">
-                        <div class="title">
+                        <div class="title wow fadeInLeft">
                             Отвечаем на частозадаваемые вопросы от клиентов
                         </div>
                         <div class="logo">
-                            <img src="./images/sections/logot.svg" alt="icon">
+                            <img src="./images/sections/logot.svg" alt="icon" class="wow rotateIn">
                         </div>
                     </div>
                     <div class="questionMenu">
-                        <div class="first-que que accordion-item">
+                        <div class="first-que que accordion-item wow fadeInRightBig">
                             <hr>
                             <div class="question accordion-header">
                                 <div class="title">Какие примерные сроки реализации работ?</div>
@@ -652,7 +654,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="second-que que accordion-item">
+                        <div class="second-que que accordion-item wow fadeInRightBig">
                             <hr>
                             <div class="question accordion-header">
                                 <div class="title">Сколько стоит полный пакет услуг?</div>
@@ -675,7 +677,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="third-que que accordion-item">
+                        <div class="third-que que accordion-item wow fadeInRightBig">
                             <hr>
                             <div class="question accordion-header">
                                 <div class="title">Какие типы автомобилей подходят?</div>
@@ -705,15 +707,15 @@
         <section class="delivery-section" id="delivery">
             <div class="delivery-block">
                 <div class="delivery-title-block">
-                    <div class="title">
+                    <div class="title wow fadeInLeft">
                         Доставка удобной транспортной компанией
                     </div>
-                    <div class="sub-title">
+                    <div class="sub-title wow fadeInLeft">
                         По РФ, СНГ и Европе от 2 дней
                     </div>
                 </div>
                 <div class="delivery-step-block">
-                    <div class="step first-step">
+                    <div class="step first-step wow fadeInDown">
                         <div class="title">
                             Оформление заказа
                         </div>
@@ -721,7 +723,7 @@
                             Чаще всего для отправки необходимы: ФИО, контактный телефон, адрес ближайшего к вам офиса транспортной компании.
                         </div>
                     </div>
-                    <div class="step second-step">
+                    <div class="step second-step wow fadeInDown">
                         <div class="title">
                             Оплата
                         </div>
@@ -729,7 +731,7 @@
                             После оплаты заказ упаковывается и передается на ПВЗ выбранной транспортной компании.
                         </div>
                     </div>
-                    <div class="step third-step">
+                    <div class="step third-step wow fadeInDown">
                         <div class="title">
                             Доставка
                         </div>
@@ -739,7 +741,7 @@
                     </div>
                 </div>
                 <div class="delivery-img-block">
-                    <img src="./images/sections/delivery/bmw.png" alt="icon">
+                    <img src="./images/sections/delivery/bmw.png" alt="icon" class="wow fadeInLeftBig">
                 </div>
             </div>
         </section>
@@ -763,20 +765,20 @@
                     </div>
                 </div>
                 <div class="footer-auth-block">
-                    <form action="#" class="form">
+                    <form action="" class="form" id="myForm">
                         <div class="inp inp-one">
-                            <label for="footer-input-1">Имя и фамилия</label>
-                            <input type="text" id="footer-input-1">
+                            <label for="username">Имя и фамилия</label>
+                            <input type="text" id="username" data-attr="required">
                         </div>
                         <div class="inp inp-two">
-                            <label for="footer-input-2">Номер телефона</label>
-                            <input type="text" id="footer-input-2">
+                            <label for="phone">Номер телефона</label>
+                            <input type="text" id="phone" data-attr="required" name="phone">
                         </div>
                         <div class="inp inp-three">
-                            <label for="footer-input-3">Вопрос (кратко)</label>
-                            <input type="text" id="footer-input-3">
+                            <label for="">Вопрос (кратко)</label>
+                            <input type="text">
                         </div>
-                        <button class="btn white">Отправить</button>
+                        <button class="btn blue input-btn">Отправить</button>
                     </form>
                 </div>
             </div>
@@ -797,7 +799,7 @@
                         </a>
                     </div>
                     <div class="logo">
-                        <img src="./images/sections/logot.svg" alt="icon">
+                        <img src="./images/sections/logot.svg" alt="icon" class="wow rotateIn">
                     </div>
                 </div>
             </div>
@@ -805,7 +807,10 @@
     </footer>
     
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./js/app.js"></script>
+    <script src="./js/wow/wow.min.js"></script>
+    <script> new WOW().init();</script>
 </body>
 </html>

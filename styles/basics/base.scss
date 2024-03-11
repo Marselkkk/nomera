@@ -225,4 +225,7 @@ input, textarea {
     &:hover {
         outline: none;
     }
+    &.error {
+        border-color: red!important;
+    }
 }

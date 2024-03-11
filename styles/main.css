@@ -104,6 +104,9 @@ input, textarea {
 input:hover, textarea:hover {
   outline: none;
 }
+input.error, textarea.error {
+  border-color: red !important;
+}
 
 .welcome-section {
   background-image: url(../images/header/welcome-gradient.png);
@@ -158,6 +161,7 @@ input:hover, textarea:hover {
   color: #ffffff;
   line-height: 100%;
   max-width: 65%;
+  animation-duration: 2s;
 }
 .hero-section .hero-block .btn-and-titles {
   display: flex;
@@ -221,6 +225,7 @@ input:hover, textarea:hover {
   letter-spacing: -2%;
   color: #ffffff;
   max-width: 65%;
+  animation-duration: 2s;
 }
 @media (max-width: 520px) {
   .hero-section .hero-block .btn-and-titles .title-block .title {
@@ -232,6 +237,7 @@ input:hover, textarea:hover {
   font-weight: 400;
   color: #ffffff;
   max-width: 55%;
+  animation-duration: 2s;
 }
 @media (max-width: 768px) {
   .hero-section .hero-block .btn-and-titles .title-block .sub-title {
@@ -332,8 +338,20 @@ input:hover, textarea:hover {
   flex-direction: column;
   gap: 2.5rem;
 }
+.production-section .production-block .content .cards .card.speed-card {
+  animation-duration: 0.25s;
+}
+.production-section .production-block .content .cards .card.tech-card {
+  animation-duration: 0.5s;
+}
 .production-section .production-block .content .cards .card.tech-card .title {
   max-width: 80%;
+}
+.production-section .production-block .content .cards .card.lock-card {
+  animation-duration: 0.75s;
+}
+.production-section .production-block .content .cards .card.def-card {
+  animation-duration: 1s;
 }
 .production-section .production-block .content .cards .card .icon {
   display: flex;
@@ -452,6 +470,7 @@ input:hover, textarea:hover {
   font-size: var(--fz24);
   font-weight: 400;
   color: #ffffff;
+  max-width: 60%;
 }
 @media (max-width: 520px) {
   .advantages-section .advantages-block .blue-content .desc-and-btn .desc {
@@ -542,7 +561,19 @@ input:hover, textarea:hover {
   }
 }
 .advantages-section .advantages-block .video-points-cont .points-content .points nav ul li:nth-last-of-type(2) {
-  max-width: 70%;
+  max-width: 75%;
+}
+.advantages-section .advantages-block .video-points-cont .points-content .points nav ul li.li-one {
+  animation-delay: 0.25s;
+}
+.advantages-section .advantages-block .video-points-cont .points-content .points nav ul li.li-two {
+  animation-delay: 0.5s;
+}
+.advantages-section .advantages-block .video-points-cont .points-content .points nav ul li.li-thr {
+  animation-delay: 0.75s;
+}
+.advantages-section .advantages-block .video-points-cont .points-content .points nav ul li.li-fou {
+  animation-delay: 1s;
 }
 
 .guarantee-section {
@@ -671,6 +702,12 @@ input:hover, textarea:hover {
   display: flex;
   gap: 4.688rem;
 }
+.instruction-section .instruction-block .mechanizm-content .mech-and-wash .mech {
+  animation-duration: 1s;
+}
+.instruction-section .instruction-block .mechanizm-content .mech-and-wash .wash {
+  animation-duration: 1.5s;
+}
 @media (max-width: 768px) {
   .instruction-section .instruction-block .mechanizm-content .mech-and-wash {
     flex-direction: column;
@@ -682,6 +719,7 @@ input:hover, textarea:hover {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  animation-duration: 2s;
 }
 .instruction-section .instruction-block .mechanizm-content .guar hr {
   background-color: #99A8BF;
@@ -799,16 +837,20 @@ input:hover, textarea:hover {
   }
 }
 .slider-section .swiper .swiper-wrapper .swiper-slide .img {
-  max-width: 690px;
+  max-width: 43.125rem;
+  max-height: 40rem;
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 768px) {
   .slider-section .swiper .swiper-wrapper .swiper-slide .img {
-    max-width: none;
-    max-height: none;
+    max-width: 690px;
+    max-height: 640px;
   }
 }
 .slider-section .swiper .swiper-wrapper .swiper-slide .img img {
-  height: auto;
+  width: 100%;
+  height: 100%;
 }
 .slider-section .swiper .swiper-wrapper .swiper-slide .other {
   display: flex;
@@ -958,6 +1000,7 @@ input:hover, textarea:hover {
   font-size: var(--fz48);
   font-weight: 600;
   max-width: 55.313rem;
+  animation-delay: 0.25s;
 }
 @media (max-width: 520px) {
   .feedback-section .feedback-block .authorization-block .title-icon .title-and-desc .title {
@@ -970,6 +1013,7 @@ input:hover, textarea:hover {
   font-weight: 400;
   color: #ffffff;
   color: #000000;
+  animation-delay: 0.5s;
 }
 @media (max-width: 768px) {
   .feedback-section .feedback-block .authorization-block .title-icon .title-and-desc .desc {
@@ -980,6 +1024,7 @@ input:hover, textarea:hover {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+  animation-delay: 0.75s;
 }
 .feedback-section .feedback-block .authorization-block .title-icon .icons .icon {
   max-width: 4rem;
@@ -1014,6 +1059,15 @@ input:hover, textarea:hover {
   display: flex;
   flex-direction: column;
 }
+.feedback-section .feedback-block .authorization-block .form .inp.inp-one {
+  animation-duration: 0.5s;
+}
+.feedback-section .feedback-block .authorization-block .form .inp.inp-two {
+  animation-duration: 1s;
+}
+.feedback-section .feedback-block .authorization-block .form .inp.inp-three {
+  animation-duration: 1.5s;
+}
 .feedback-section .feedback-block .authorization-block .form .inp label {
   font-size: var(--fz24);
   font-weight: 400;
@@ -1034,8 +1088,18 @@ input:hover, textarea:hover {
   border-bottom: 0.125rem solid #000000;
   transition: all 0.3s;
 }
-.feedback-section .feedback-block .authorization-block .form .inp:last-of-type {
-  gap: 6.25rem;
+.feedback-section .feedback-block .authorization-block .form .inp:last-of-type textarea {
+  font-size: var(--fz24);
+  font-weight: 400;
+  color: #ffffff;
+  color: #000000;
+  border: 0;
+  transition: all 0.3s;
+  border-bottom: 1px solid #BFBFBF;
+}
+.feedback-section .feedback-block .authorization-block .form .inp:last-of-type textarea:focus {
+  transition: all 0.3s;
+  border-bottom: 1px solid #000000;
 }
 @media (max-width: 768px) {
   .feedback-section .feedback-block .authorization-block .form .inp:last-of-type {
@@ -1263,6 +1327,7 @@ input:hover, textarea:hover {
   font-weight: 500;
   line-height: 100%;
   max-width: 86.5rem;
+  animation-duration: 1s;
 }
 @media (max-width: 520px) {
   .process-section .process-block .title-block .big-title {
@@ -1278,6 +1343,7 @@ input:hover, textarea:hover {
   font-weight: 600;
   color: #999999;
   max-width: 70rem;
+  animation-duration: 1.25s;
 }
 @media (max-width: 520px) {
   .process-section .process-block .title-block .sub-title {
@@ -1302,9 +1368,19 @@ input:hover, textarea:hover {
     max-width: none;
   }
 }
+.process-section .process-block .info-block .block.first-block {
+  animation-duration: 1s;
+}
+.process-section .process-block .info-block .block.second-block {
+  animation-duration: 2s;
+}
+.process-section .process-block .info-block .block.third-block {
+  animation-duration: 2s;
+}
 .process-section .process-block .info-block .block.fourth-block {
   max-width: 45rem;
   width: 100%;
+  animation-duration: 3s;
 }
 @media (max-width: 768px) {
   .process-section .process-block .info-block .block.fourth-block {
@@ -1345,6 +1421,9 @@ input:hover, textarea:hover {
   color: #ffffff;
   color: #99A8BF;
   max-width: 70%;
+}
+.process-section .process-block .info-block .block.fifth-block {
+  animation-duration: 3s;
 }
 @media (max-width: 520px) {
   .process-section .process-block .info-block .block.fifth-block .dash-sub {
@@ -1449,6 +1528,9 @@ input:hover, textarea:hover {
     gap: 5rem;
   }
 }
+.process-section .process-block .trace-block img {
+  object-fit: cover;
+}
 
 .portfolio-section {
   margin-top: 12.5rem;
@@ -1464,6 +1546,7 @@ input:hover, textarea:hover {
   flex-wrap: nowrap;
 }
 .portfolio-section .portfolio-block video {
+  width: 34.125rem;
   height: 58.333rem;
 }
 
@@ -1744,15 +1827,17 @@ input:hover, textarea:hover {
   transition: all 0.3s ease-in-out;
   transform: rotate(0);
 }
+.accordion-item .accordion-header.show .title {
+  color: #000000;
+}
 .accordion-item .accordion-header.show .plus-btn:hover {
   scale: 0.9;
   transition: all 0.3s;
 }
 .accordion-item .accordion-header.show .plus-btn svg {
   transform: rotate(135deg);
-}
-.accordion-item .accordion-header.show .plus-btn svg path {
-  fill: #000000;
+  stroke: black;
+  stroke-opacity: 1;
 }
 .accordion-item .accordion-body {
   max-height: 0;
@@ -1982,6 +2067,13 @@ header .header-block .nav-menu nav ul {
   justify-content: center;
   gap: 3.75rem;
 }
+header .header-block .nav-menu nav ul li {
+  transition: all 0.3s ease;
+}
+header .header-block .nav-menu nav ul li:hover {
+  scale: 0.9;
+  transition: all 0.3s ease;
+}
 header .header-block .nav-menu nav ul li a {
   font-size: var(--fz18);
   text-transform: uppercase;
@@ -1999,9 +2091,6 @@ header .header-block .btn-menu .icon {
 header .header-block .btn-menu .icon img {
   width: 100%;
   height: 100%;
-}
-header .header-block .btn-menu .icon.phone-icon {
-  display: none;
 }
 @media (max-width: 768px) {
   header .header-block .btn-menu .btn-header {
@@ -2144,6 +2233,10 @@ header .header-block .btn-menu .burger-icon {
 .rotate {
   transform: rotate(90deg);
   transition: all 0.3s ease-in-out;
+}
+
+input.error {
+  border: 1px solid red;
 }
 
 @font-face {

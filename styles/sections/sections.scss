@@ -32,7 +32,8 @@
         .big-title {
             @include h1;
             line-height: 100%;
-            max-width: 65%
+            max-width: 65%;
+            animation-duration: 2s;
         }
         .btn-and-titles {
             @include df_jcsb;
@@ -80,6 +81,7 @@
                 .title {
                     @include h3;
                     max-width: 65%;
+                    animation-duration: 2s;
                     @include mobile-lite {
                         max-width: 75%;
                     }
@@ -87,6 +89,7 @@
                 .sub-title {
                     @include r24;
                     max-width: 55%;
+                    animation-duration: 2s;
                     @include mobile {
                         max-width: 60%;
                         font-size: 1.167rem;
@@ -158,10 +161,20 @@
                 .card {
                     @include df_fdc;
                     gap: 2.5rem;
+                    &.speed-card {
+                        animation-duration: .25s;
+                    }
                     &.tech-card {
+                        animation-duration: .5s;
                         .title {
                             max-width: 80%;
                         }
+                    }
+                    &.lock-card {
+                        animation-duration: .75s;
+                    }
+                    &.def-card {
+                        animation-duration: 1s;
                     }
                     .icon {
                         @include df_ac_jcc;
@@ -244,6 +257,7 @@
                 }
                 .desc {
                     @include r24;
+                    max-width: 60%;
                     @include mobile-lite {
                         max-width: 90%;
                     }
@@ -314,7 +328,19 @@
                                     max-width: 70%;
                                 }
                                 &:nth-last-of-type(2) {
-                                    max-width: 70%;
+                                    max-width: 75%;
+                                }
+                                &.li-one {
+                                    animation-delay: 0.25s;
+                                }
+                                &.li-two {
+                                    animation-delay: 0.5s;
+                                }
+                                &.li-thr {
+                                    animation-delay: 0.75s;
+                                }
+                                &.li-fou {
+                                    animation-delay: 1s;
                                 }
                             }
                         }
@@ -405,6 +431,12 @@
             .mech-and-wash {
                 display: flex;
                 gap: 4.688rem;
+                .mech {
+                    animation-duration: 1s;
+                }
+                .wash {
+                    animation-duration: 1.5s;
+                }
                 @include mobile {
                     flex-direction: column;
                     gap: 2.5rem;
@@ -414,6 +446,7 @@
                 max-width: 65.5rem;
                 @include df_fdc;
                 gap: 2.5rem;
+                animation-duration: 2s;
                 hr {
                     background-color: $nepal;
                 }
@@ -501,13 +534,15 @@
                     gap: 3.333rem;
                 }
                 .img {
-                    max-width: 690px;
+                    max-width: 43.125rem;
+                    max-height: 40rem;
+                    @include wh;
                     @include mobile {
-                        max-width: none;
-                        max-height: none;
+                        max-width: 690px;
+                        max-height: 640px;
                     }
                     img {
-                        height: auto;
+                        @include wh;
                     }
                 }
                 .other {
@@ -609,6 +644,7 @@
                     .title {
                         @include sb48;
                         max-width: 55.313rem;
+                        animation-delay: 0.25s;
                         @include mobile-lite {
                             font-size: 2.333rem;
                             letter-spacing: -0.1rem;
@@ -617,6 +653,7 @@
                     .desc {
                         @include r24;
                         color: $black;
+                        animation-delay: 0.5s;
                         @include mobile {
                             font-size: 1.667rem;
                         }
@@ -625,6 +662,7 @@
                 .icons {
                     @include df_ac;
                     gap: 1.25rem;
+                    animation-delay: .75s;
                     .icon {
                         max-width: 4rem;
                         max-height: 4rem;
@@ -650,6 +688,15 @@
                     }
                 }
                 .inp {
+                    &.inp-one {
+                        animation-duration: .5s;
+                    }
+                    &.inp-two {
+                        animation-duration: 1s;
+                    }
+                    &.inp-three {
+                        animation-duration: 1.5s;
+                    }
                     @include df_fdc;
                     label {
                         @include r24;
@@ -668,7 +715,17 @@
                         }
                     }
                     &:last-of-type {
-                        gap: 6.25rem;
+                        textarea {
+                            @include r24;
+                            color: $black;
+                            border: 0;
+                            transition: all .3s;
+                            border-bottom: 1px solid $grey;
+                            &:focus {
+                                transition: all .3s;
+                                border-bottom: 1px solid $black;
+                            }
+                        }
                         @include mobile {
                             gap: 4.167rem;
                         }
@@ -827,6 +884,7 @@
             .big-title {
                 @include h2;
                 max-width: 86.5rem;
+                animation-duration: 1s;
                 @include mobile-lite {
                     font-size: 2.667rem;
                     letter-spacing: -0.1rem;
@@ -839,6 +897,7 @@
                 @include sb48;
                 color: $grey-txt;
                 max-width: 70rem;
+                animation-duration: 1.25s;
                 @include mobile-lite {
                     font-size: 2rem;
                     font-weight: 500;
@@ -856,9 +915,19 @@
                 @include mobile {
                     max-width: none;
                 }
+                &.first-block {
+                    animation-duration: 1s;
+                }
+                &.second-block {
+                    animation-duration: 2s;
+                }
+                &.third-block {
+                    animation-duration: 2s;
+                }
                 &.fourth-block {
                     max-width: 45rem;
                     width: 100%;
+                    animation-duration: 3s;
                     @include mobile {
                         max-width: none;
                     }
@@ -890,6 +959,7 @@
                     }
                 }
                 &.fifth-block {
+                    animation-duration: 3s;
                     .dash-sub {
                         @include mobile-lite {
                             justify-content: flex-start;
@@ -974,6 +1044,11 @@
                 }
             }
         }
+        .trace-block {
+            img {
+                object-fit: cover;
+            }
+        }
     }
 }
 .portfolio-section {
@@ -983,6 +1058,7 @@
         display: flex;
         flex-wrap: nowrap;
         video {
+            width: 34.125rem;
             height: 58.333rem;
         }
     }

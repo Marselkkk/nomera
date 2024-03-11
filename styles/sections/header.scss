@@ -28,6 +28,11 @@ header {
                     @include df_ac_jcc;
                     gap: 3.75rem;
                     li {
+                        transition: all .3s ease;
+                        &:hover {
+                            scale: (0.9);
+                            transition: all .3s ease;
+                        }
                         a {
                             font-size: var(--fz18);
                             text-transform: uppercase;
@@ -44,9 +49,6 @@ header {
                 max-width: 2rem;
                 img {
                     @include wh;
-                }
-                &.phone-icon {
-                    display: none;
                 }
             }
             .btn-header {
