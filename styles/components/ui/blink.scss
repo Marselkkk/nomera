@@ -1,0 +1,9 @@
+.blink-border {
+    animation: blink .5s step-end infinite alternate;
+    border-right: 3px solid;
+}
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}

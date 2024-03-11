@@ -5,7 +5,9 @@ import { yakor } from "./modules/yakor.js";
 import { faq } from "./modules/faq.js";
 import { sticky } from "./modules/sticky.js";
 import { validation } from "./modules/validation.js";
+import { scroll } from "./modules/scroll.js";
 
+scroll()
 validation()
 sticky()
 faq()

@@ -1084,7 +1084,7 @@ input.error, textarea.error {
   color: #000000;
   transition: all 0.3s;
 }
-.feedback-section .feedback-block .authorization-block .form .inp input:hover {
+.feedback-section .feedback-block .authorization-block .form .inp input:focus {
   border-bottom: 0.125rem solid #000000;
   transition: all 0.3s;
 }
@@ -1095,7 +1095,7 @@ input.error, textarea.error {
   color: #000000;
   border: 0;
   transition: all 0.3s;
-  border-bottom: 1px solid #BFBFBF;
+  border-bottom: 1px solid #999999;
 }
 .feedback-section .feedback-block .authorization-block .form .inp:last-of-type textarea:focus {
   transition: all 0.3s;
@@ -1528,8 +1528,18 @@ input.error, textarea.error {
     gap: 5rem;
   }
 }
-.process-section .process-block .trace-block img {
-  object-fit: cover;
+.process-section .process-block .trace-block {
+  height: 12rem;
+  background-image: url(../images/sections/sled.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: repeat;
+}
+@media (max-width: 768px) {
+  .process-section .process-block .trace-block {
+    height: 5.75rem;
+  }
 }
 
 .portfolio-section {
@@ -2239,6 +2249,16 @@ input.error {
   border: 1px solid red;
 }
 
+.blink-border {
+  animation: blink 0.5s step-end infinite alternate;
+  border-right: 3px solid;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 @font-face {
   font-family: "Hauora";
   src: local("Hauora"), url("../fonts/HauoraGX.ttf");

@@ -709,7 +709,7 @@
                         @include r24;
                         color: $black;
                         transition: all .3s;
-                        &:hover {
+                        &:focus {
                             border-bottom: 0.125rem solid $black;
                             transition: all .3s;
                         }
@@ -720,7 +720,7 @@
                             color: $black;
                             border: 0;
                             transition: all .3s;
-                            border-bottom: 1px solid $grey;
+                            border-bottom: 1px solid $grey-txt;
                             &:focus {
                                 transition: all .3s;
                                 border-bottom: 1px solid $black;
@@ -1045,8 +1045,12 @@
             }
         }
         .trace-block {
-            img {
-                object-fit: cover;
+            height: 12rem;
+            background-image: url(../images/sections/sled.png);
+            @include bg_s;
+            background-repeat: repeat;
+            @include mobile {
+                height: 5.75rem;
             }
         }
     }
