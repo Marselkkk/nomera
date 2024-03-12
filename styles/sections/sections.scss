@@ -604,10 +604,16 @@
                                 height: 4.75rem;
                                 background-color: $white;
                                 border-radius: 100rem;
+                                transition: all .3s;
+                                cursor: pointer;
                                 @include df_ac_jcc;
                                 @include mobile-lite {
                                     width: 4rem;
                                     height: 4rem;
+                                }
+                                &:hover {
+                                    transition: all .3s;
+                                    scale: (0.95);
                                 }
                             }
                         }
