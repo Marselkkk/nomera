@@ -597,6 +597,7 @@ textarea {
   font-weight: 500;
   line-height: 100%;
   max-width: 68rem;
+  cursor: default;
 }
 @media (max-width: 520px) {
   .guarantee-section .guarantee-block .title {
@@ -1341,6 +1342,7 @@ textarea {
   line-height: 100%;
   max-width: 86.5rem;
   animation-duration: 1s;
+  cursor: default;
 }
 @media (max-width: 520px) {
   .process-section .process-block .title-block .big-title {
