@@ -1981,8 +1981,14 @@ footer .footer-block .address-auth-block .footer-auth-block .form .inp input {
   font-weight: 400;
   color: #ffffff;
 }
-footer .footer-block .address-auth-block .footer-auth-block .form .inp:last-of-type {
-  gap: 6.25rem;
+footer .footer-block .address-auth-block .footer-auth-block .form .inp textarea {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: var(--fz24);
+  font-weight: 400;
+  color: #ffffff;
+  border-bottom: 0.125rem solid #999999;
 }
 footer .footer-block .address-auth-block .footer-auth-block .form .btn {
   max-width: 21.25rem;

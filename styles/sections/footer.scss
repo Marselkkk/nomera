@@ -70,8 +70,12 @@ footer {
                             border-bottom: 0.125rem solid $grey-txt;
                             @include r24;
                         }
-                        &:last-of-type {
-                            gap: 6.25rem;
+                        textarea {
+                            background-color: transparent;
+                            border: none;
+                            color: $white;
+                            @include r24;
+                            border-bottom: 0.125rem solid $grey-txt;
                         }
                     }
                     .btn {
