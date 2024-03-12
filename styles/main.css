@@ -2125,6 +2125,11 @@ header .header-block .btn-menu .icon img {
   height: 100%;
 }
 @media (max-width: 768px) {
+  header .header-block .btn-menu .icon.phone-icon {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
   header .header-block .btn-menu .btn-header {
     display: none;
   }

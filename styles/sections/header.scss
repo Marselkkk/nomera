@@ -50,6 +50,11 @@ header {
                 img {
                     @include wh;
                 }
+                &.phone-icon {
+                    @include mobile {
+                        display: none;
+                    }
+                }
             }
             .btn-header {
                 @include mobile {
