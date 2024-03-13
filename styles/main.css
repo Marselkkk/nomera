@@ -125,6 +125,8 @@ textarea {
   gap: 2.5rem;
   padding-top: 1.438rem;
   padding-bottom: 1.5rem;
+  max-height: 3.75rem;
+  height: 100%;
 }
 .welcome-section .welcome-block .title {
   color: #ffffff;
@@ -652,6 +654,7 @@ textarea {
 }
 .instruction-section .instruction-block .line-card hr {
   background-color: #000000;
+  border: 1px solid #000000;
 }
 .instruction-section .instruction-block .line-card .title {
   font-size: var(--fz32);
@@ -731,6 +734,7 @@ textarea {
 }
 .instruction-section .instruction-block .mechanizm-content .guar hr {
   background-color: #99A8BF;
+  border: 1px solid #99A8BF;
 }
 .instruction-section .instruction-block .mechanizm-content .guar .title {
   color: #99A8BF;
@@ -826,6 +830,43 @@ textarea {
     margin-top: 6.667rem;
   }
 }
+.slider-section .swiper {
+  position: relative;
+}
+.slider-section .swiper .arr {
+  position: absolute;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.slider-section .swiper .arr .arrow {
+  padding: 1.25rem;
+  width: 4.75rem;
+  height: 4.75rem;
+  background-color: #ffffff;
+  border-radius: 100rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-section .swiper .arr .arrow img {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+@media (max-width: 520px) {
+  .slider-section .swiper .arr .arrow {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+.slider-section .swiper .arr .arrow:hover {
+  transition: all 0.3s;
+  scale: 0.95;
+}
 .slider-section .swiper .swiper-wrapper .swiper-slide {
   display: flex;
   border-radius: 18px 18px 36px 18px;
@@ -865,6 +906,7 @@ textarea {
   justify-content: space-between;
   flex-direction: column;
   width: 100%;
+  padding: 1.25rem 0 1.25rem 0;
 }
 @media (max-width: 768px) {
   .slider-section .swiper .swiper-wrapper .swiper-slide .other {
@@ -930,34 +972,6 @@ textarea {
   .slider-section .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .cost {
     font-size: 2.333rem;
   }
-}
-.slider-section .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .arr {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-}
-.slider-section .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .arr .arrow {
-  padding: 1.25rem;
-  width: 4.75rem;
-  height: 4.75rem;
-  background-color: #ffffff;
-  border-radius: 100rem;
-  transition: all 0.3s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@media (max-width: 520px) {
-  .slider-section .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .arr .arrow {
-    width: 4rem;
-    height: 4rem;
-  }
-}
-.slider-section .swiper .swiper-wrapper .swiper-slide .other .cost-and-arr .arr .arrow:hover {
-  transition: all 0.3s;
-  scale: 0.95;
 }
 
 .feedback-section {
@@ -1784,6 +1798,7 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   font-size: var(--fz20);
+  font-weight: 600;
 }
 @media (max-width: 280px) {
   .btn.white,
@@ -1797,6 +1812,7 @@ textarea {
   border: 1px solid #ffffff;
   color: #ffffff;
   font-size: var(--fz20);
+  font-weight: 600;
 }
 @media (max-width: 280px) {
   .btn.transparent,
@@ -2071,6 +2087,7 @@ footer .footer-block .footer-privacy-block .icon-logo .logo img {
 header {
   position: sticky;
   top: 0;
+  left: 0;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* добавляем тень для эффекта плавности */
   transition: top 0.3s ease;
@@ -2085,6 +2102,11 @@ header .header-block {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+header .header-block .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 header .header-block .logo img {
   max-width: 14.893rem;
@@ -2117,7 +2139,7 @@ header .header-block .btn-menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
+  gap: 1.563rem;
 }
 header .header-block .btn-menu .icon {
   max-width: 2rem;
@@ -2130,6 +2152,11 @@ header .header-block .btn-menu .icon img {
   header .header-block .btn-menu .icon.phone-icon {
     display: none;
   }
+}
+header .header-block .btn-menu .btn-header {
+  max-height: 3.063rem;
+  height: 100%;
+  font-size: var(--fz18);
 }
 @media (max-width: 768px) {
   header .header-block .btn-menu .btn-header {

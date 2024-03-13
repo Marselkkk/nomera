@@ -6,6 +6,8 @@
         gap: 2.5rem;
         padding-top: 1.438rem;
         padding-bottom: 1.5rem;
+        max-height: 3.75rem;
+        height: 100%;
         .title {
             color: $white;
             @include fz-welc;
@@ -397,6 +399,7 @@
             }
             hr {
                 background-color: $black;
+                border: 1px solid $black;
             }
             .title {
                 @include h3;
@@ -453,6 +456,7 @@
                 animation-duration: 2s;
                 hr {
                     background-color: $nepal;
+                    border: 1px solid $nepal;
                 }
                 .title {
                     color: $nepal;
@@ -523,6 +527,35 @@
 .slider-section {
     @include mt-12;
     .swiper {
+        position: relative;
+        .arr {
+            position: absolute;
+            z-index: 30;
+            @include df_ac_jcc;
+            gap: 1.25rem;
+            .arrow {
+                padding: 1.25rem;
+                width: 4.75rem;
+                height: 4.75rem;
+                background-color: $white;
+                border-radius: 100rem;
+                transition: all .3s;
+                cursor: pointer;
+                img {
+                    width: 2.25rem;
+                    height: 2.25rem;
+                }
+                @include df_ac_jcc;
+                @include mobile-lite {
+                    width: 4rem;
+                    height: 4rem;
+                }
+                &:hover {
+                    transition: all .3s;
+                    scale: (0.95);
+                }
+            }
+        }
         .swiper-wrapper {
             .swiper-slide {
                 display: flex;
@@ -552,6 +585,7 @@
                 .other {
                     @include df_jcsb_fdc;
                     width: 100%;
+                    padding: 1.25rem 0 1.25rem 0;
                     @include mobile {
                         gap: 4.333rem;
                     }
@@ -594,28 +628,6 @@
                             color: $white;
                             @include mobile-lite {
                                 font-size: 2.333rem;
-                            }
-                        }
-                        .arr {
-                            @include df_ac_jcc;
-                            gap: 1.25rem;
-                            .arrow {
-                                padding: 1.25rem;
-                                width: 4.75rem;
-                                height: 4.75rem;
-                                background-color: $white;
-                                border-radius: 100rem;
-                                transition: all .3s;
-                                cursor: pointer;
-                                @include df_ac_jcc;
-                                @include mobile-lite {
-                                    width: 4rem;
-                                    height: 4rem;
-                                }
-                                &:hover {
-                                    transition: all .3s;
-                                    scale: (0.95);
-                                }
                             }
                         }
                     }
