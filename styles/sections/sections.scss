@@ -1250,9 +1250,6 @@
                 max-width: 53rem;
                 width: 100%;
                 @include mobile {
-                    width: 31.25rem;
-                }
-                @media (max-width: 355px) {
                     width: 23.25rem;
                 }
                 @include mobile-small {
