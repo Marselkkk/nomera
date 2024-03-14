@@ -1250,7 +1250,7 @@
                 max-width: 53rem;
                 width: 100%;
                 @include mobile-lite {
-                    width: 23.25rem;
+                    max-width: 23.25rem;
                 }
                 @include mobile-small {
                     width: 23.333rem;

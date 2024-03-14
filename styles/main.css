@@ -1810,14 +1810,9 @@ textarea {
   max-width: 53rem;
   width: 100%;
 }
-@media (max-width: 768px) {
+@media (max-width: 520px) {
   .delivery-section .delivery-block .delivery-img-block img {
-    width: 31.25rem;
-  }
-}
-@media (max-width: 355px) {
-  .delivery-section .delivery-block .delivery-img-block img {
-    width: 23.25rem;
+    max-width: 23.25rem;
   }
 }
 @media (max-width: 280px) {
