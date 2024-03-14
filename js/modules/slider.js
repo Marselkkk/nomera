@@ -9,4 +9,16 @@ export function slider() {
           prevEl: ".mainSlider .prev",
         },
     });
+    new Swiper(".video-slider", {
+      slidesPerView: 1.2,
+      spaceBetween: 0,
+      freeMode: true,
+      breakpoints: {
+        769: {
+          slidesPerView: 3.5,
+          spaceBetween: 0,
+          freeMode: true,
+        }
+      }
+    });
 }
