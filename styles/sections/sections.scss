@@ -1249,7 +1249,7 @@
             img {
                 max-width: 53rem;
                 width: 100%;
-                @include mobile {
+                @include mobile-lite {
                     width: 23.25rem;
                 }
                 @include mobile-small {
