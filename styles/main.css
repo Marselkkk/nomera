@@ -111,6 +111,7 @@ input.error, textarea.error {
 textarea {
   resize: none;
   font-family: "Hauora";
+  max-height: 6.25rem;
 }
 
 .welcome-section {
@@ -1149,11 +1150,6 @@ textarea {
 .feedback-section .feedback-block .authorization-block .form .inp:last-of-type textarea:focus {
   transition: all 0.3s;
   border-bottom: 1px solid #000000;
-}
-@media (max-width: 768px) {
-  .feedback-section .feedback-block .authorization-block .form .inp:last-of-type {
-    gap: 4.167rem;
-  }
 }
 
 .optional-section {

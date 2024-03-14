@@ -766,9 +766,6 @@
                                 border-bottom: 1px solid $black;
                             }
                         }
-                        @include mobile {
-                            gap: 4.167rem;
-                        }
                     }
                 }
             }
