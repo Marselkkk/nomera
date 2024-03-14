@@ -316,7 +316,7 @@
                             display: grid;
                             grid-template-columns: 1fr 1fr;
                             list-style: disc;
-                            gap: 3.75rem;
+                            gap: 0.938rem;
                             @include r24;
                             color: $black;
                             @include mobile {
@@ -533,6 +533,8 @@
             z-index: 30;
             @include df_ac_jcc;
             gap: 1.25rem;
+            right: 6.25rem;
+            bottom: 1.25rem;
             .arrow {
                 padding: 1.25rem;
                 width: 4.75rem;
@@ -727,7 +729,7 @@
                     input {
                         border: none;
                         border-bottom: 0.125rem solid $grey-txt;
-                        padding-top: 2.5rem;
+                        padding-top: 0.625rem;
                         @include r24;
                         color: $black;
                         transition: all .3s;
@@ -739,6 +741,7 @@
                     &:last-of-type {
                         textarea {
                             @include r24;
+                            font-weight: 600;
                             color: $black;
                             border: 0;
                             transition: all .3s;
@@ -792,7 +795,7 @@
             flex: 1;
             .title-block {
                 @include df_fdc;
-                gap: 5rem;
+                gap: 3.75rem;
                 @include mobile-lite {
                     gap: 3.333rem;
                 }
@@ -938,6 +941,10 @@
                 width: 100%;
                 @include df_fdc;
                 gap: 1.875rem;
+                hr {
+                    background-color: $black;
+                    border: 1px solid $black;
+                }
                 @include mobile {
                     max-width: none;
                 }
@@ -959,6 +966,7 @@
                     }
                     hr {
                         background-color: $nepal;
+                        border: 1px solid $nepal;
                     }
                     .number-title {
                         color: $nepal;
@@ -1106,6 +1114,7 @@
         .title-and-question {
             @include df_jcsb;
             @include mobile {
+                gap: 5rem;
                 flex-direction: column;
             }
             @include mobile-small {
@@ -1115,6 +1124,9 @@
                 @include df_jcsb_fdc;
                 .title {
                     @include sb48;
+                    @include mobile {
+                        font-size: 2.333rem;
+                    }
                     @include mobile-small {
                         font-size: 2rem;
                     }
@@ -1141,7 +1153,7 @@
         background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.6)),$blue;
         padding: 5rem;
         position: relative;
-        @include df_jcsb;
+        display: flex;
         @include mobile {
             flex-direction: column;
             gap: 5rem;
@@ -1189,6 +1201,11 @@
                 .sub-title {
                     @include r24;
                 }
+                &:nth-last-child(2) {
+                    .sub-title {
+                        max-width: 80%;
+                    }
+                }
             }
         }
         .delivery-img-block {
@@ -1202,6 +1219,9 @@
                 width: 100%;
                 @include mobile {
                     width: 31.25rem;
+                }
+                @media (max-width: 355px) {
+                    width: 23.25rem;
                 }
                 @include mobile-small {
                     width: 23.333rem;

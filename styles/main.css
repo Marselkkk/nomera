@@ -110,6 +110,7 @@ input.error, textarea.error {
 
 textarea {
   resize: none;
+  font-family: "Hauora";
 }
 
 .welcome-section {
@@ -545,7 +546,7 @@ textarea {
   display: grid;
   grid-template-columns: 1fr 1fr;
   list-style: disc;
-  gap: 3.75rem;
+  gap: 0.938rem;
   font-size: var(--fz24);
   font-weight: 400;
   color: #ffffff;
@@ -840,6 +841,8 @@ textarea {
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
+  right: 6.25rem;
+  bottom: 1.25rem;
 }
 .slider-section .swiper .arr .arrow {
   padding: 1.25rem;
@@ -1105,7 +1108,7 @@ textarea {
 .feedback-section .feedback-block .authorization-block .form .inp input {
   border: none;
   border-bottom: 0.125rem solid #999999;
-  padding-top: 2.5rem;
+  padding-top: 0.625rem;
   font-size: var(--fz24);
   font-weight: 400;
   color: #ffffff;
@@ -1120,6 +1123,7 @@ textarea {
   font-size: var(--fz24);
   font-weight: 400;
   color: #ffffff;
+  font-weight: 600;
   color: #000000;
   border: 0;
   transition: all 0.3s;
@@ -1191,7 +1195,7 @@ textarea {
 .optional-section .optional-block .info-block .title-block {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 3.75rem;
 }
 @media (max-width: 520px) {
   .optional-section .optional-block .info-block .title-block {
@@ -1395,6 +1399,10 @@ textarea {
   flex-direction: column;
   gap: 1.875rem;
 }
+.process-section .process-block .info-block .block hr {
+  background-color: #000000;
+  border: 1px solid #000000;
+}
 @media (max-width: 768px) {
   .process-section .process-block .info-block .block {
     max-width: none;
@@ -1421,6 +1429,7 @@ textarea {
 }
 .process-section .process-block .info-block .block.fourth-block hr {
   background-color: #99A8BF;
+  border: 1px solid #99A8BF;
 }
 .process-section .process-block .info-block .block.fourth-block .number-title {
   color: #99A8BF;
@@ -1618,6 +1627,7 @@ textarea {
 }
 @media (max-width: 768px) {
   .faq-section .faq-block .title-and-question {
+    gap: 5rem;
     flex-direction: column;
   }
 }
@@ -1634,6 +1644,11 @@ textarea {
 .faq-section .faq-block .title-and-question .title-logo .title {
   font-size: var(--fz48);
   font-weight: 600;
+}
+@media (max-width: 768px) {
+  .faq-section .faq-block .title-and-question .title-logo .title {
+    font-size: 2.333rem;
+  }
 }
 @media (max-width: 280px) {
   .faq-section .faq-block .title-and-question .title-logo .title {
@@ -1667,7 +1682,6 @@ textarea {
   padding: 5rem;
   position: relative;
   display: flex;
-  justify-content: space-between;
 }
 @media (max-width: 768px) {
   .delivery-section .delivery-block {
@@ -1741,6 +1755,9 @@ textarea {
   font-weight: 400;
   color: #ffffff;
 }
+.delivery-section .delivery-block .delivery-step-block .step:nth-last-child(2) .sub-title {
+  max-width: 80%;
+}
 .delivery-section .delivery-block .delivery-img-block {
   position: absolute;
   bottom: 0;
@@ -1755,6 +1772,11 @@ textarea {
 @media (max-width: 768px) {
   .delivery-section .delivery-block .delivery-img-block img {
     width: 31.25rem;
+  }
+}
+@media (max-width: 355px) {
+  .delivery-section .delivery-block .delivery-img-block img {
+    width: 23.25rem;
   }
 }
 @media (max-width: 280px) {
@@ -1849,13 +1871,20 @@ textarea {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.25rem;
+}
+.accordion-item hr {
+  background-color: #999999;
+  border: 1px solid #999999;
 }
 .accordion-item .accordion-header {
   pointer-events: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 2px solid #999999;
+  padding-top: 1.25rem;
+  transition: all 0.3s;
 }
 .accordion-item .accordion-header .title {
   font-size: var(--fz32);
@@ -1867,21 +1896,25 @@ textarea {
 .accordion-item .accordion-header .title:hover {
   scale: 0.9;
 }
-.accordion-item .accordion-header .plus-btn svg {
+.accordion-item .accordion-header .plus-btn {
+  font-size: var(--fz48);
+  font-weight: 600;
+  font-weight: 400;
+  color: #999999;
   transition: all 0.3s ease-in-out;
   transform: rotate(0);
+}
+.accordion-item .accordion-header.show {
+  padding-top: 2.5rem;
+  transition: all 0.3s;
+  border-top: 2px solid #000000;
 }
 .accordion-item .accordion-header.show .title {
   color: #000000;
 }
-.accordion-item .accordion-header.show .plus-btn:hover {
-  scale: 0.9;
-  transition: all 0.3s;
-}
-.accordion-item .accordion-header.show .plus-btn svg {
+.accordion-item .accordion-header.show .plus-btn {
   transform: rotate(135deg);
-  stroke: black;
-  stroke-opacity: 1;
+  color: #000000;
 }
 .accordion-item .accordion-body {
   max-height: 0;
@@ -2016,6 +2049,7 @@ footer .footer-block .address-auth-block .footer-auth-block .form .inp textarea 
   font-size: var(--fz24);
   font-weight: 400;
   color: #ffffff;
+  font-weight: 600;
   border-bottom: 0.125rem solid #999999;
 }
 footer .footer-block .address-auth-block .footer-auth-block .form .btn {

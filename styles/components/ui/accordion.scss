@@ -1,11 +1,18 @@
 .accordion-item {
     cursor: pointer;
     @include df_fdc;
-    gap: 2.5rem;
+    gap: 1.25rem;
+    hr {
+        background-color: $grey-txt;
+        border: 1px solid $grey-txt;
+    }
     .accordion-header {
         pointer-events: none;
         @include df_jcsb;
         align-items: center;
+        border-top: 2px solid $grey-txt;
+        padding-top: 1.25rem;
+        transition: all .3s;
         .title {
             @include h3;
             color: $grey;
@@ -14,25 +21,22 @@
             }
         }
         .plus-btn {
-            svg {
-                transition: all .3s ease-in-out;
-                transform: rotate(0);
-            }
+            @include sb48;
+            font-weight: 400;
+            color: $grey-txt;
+            transition: all .3s ease-in-out;
+            transform: rotate(0);
         }
         &.show {
+            padding-top: 2.5rem;
+            transition: all .3s;
+            border-top: 2px solid $black;
             .title {
                 color: $black;
             }
             .plus-btn {
-                &:hover {
-                    scale: (0.9);
-                    transition: all .3s;
-                }
-                svg {
-                    transform: rotate(135deg);
-                    stroke: black;
-                    stroke-opacity: 1;
-                }
+                transform: rotate(135deg);
+                color: $black;
             }
         }
     }
