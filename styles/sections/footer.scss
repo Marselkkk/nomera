@@ -119,6 +119,7 @@ footer {
                     .icon {
                         max-width: 4rem;
                         max-height: 4rem;
+                        @include wh;
                         img {
                             @include wh;
                         }

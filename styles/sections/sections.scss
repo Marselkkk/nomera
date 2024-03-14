@@ -525,15 +525,22 @@
     }
 }
 .slider-section {
-    @include mt-12;
+    margin: 12.5rem 5rem 0 5rem;
+    @include mobile-lite {
+        margin-left: 1.667rem;
+        margin-right: 1.667rem;
+    }
     .swiper {
         position: relative;
+        background-color: $nepal;
+        display: flex;
+        border-radius: 18px 18px 36px 18px;
         .arr {
             position: absolute;
             z-index: 30;
             @include df_ac_jcc;
             gap: 1.25rem;
-            right: 6.25rem;
+            right: 1.25rem;
             bottom: 1.25rem;
             @include mobile-lite {
                 right: 3.25rem;
@@ -572,7 +579,6 @@
                 border-radius: 18px 18px 36px 18px;
                 padding: 1.25rem;
                 gap: 5rem;
-                background-color: $nepal;
                 @include mobile {
                     flex-direction: column;
                 }
@@ -698,6 +704,7 @@
                     .icon {
                         max-width: 4rem;
                         max-height: 4rem;
+                        @include wh;
                         img {
                             @include wh;
                         }

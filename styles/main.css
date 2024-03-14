@@ -824,15 +824,19 @@ textarea {
 }
 
 .slider-section {
-  margin-top: 12.5rem;
+  margin: 12.5rem 5rem 0 5rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 520px) {
   .slider-section {
-    margin-top: 6.667rem;
+    margin-left: 1.667rem;
+    margin-right: 1.667rem;
   }
 }
 .slider-section .swiper {
   position: relative;
+  background-color: #99A8BF;
+  display: flex;
+  border-radius: 18px 18px 36px 18px;
 }
 .slider-section .swiper .arr {
   position: absolute;
@@ -841,7 +845,7 @@ textarea {
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
-  right: 6.25rem;
+  right: 1.25rem;
   bottom: 1.25rem;
 }
 @media (max-width: 520px) {
@@ -887,7 +891,6 @@ textarea {
   border-radius: 18px 18px 36px 18px;
   padding: 1.25rem;
   gap: 5rem;
-  background-color: #99A8BF;
 }
 @media (max-width: 768px) {
   .slider-section .swiper .swiper-wrapper .swiper-slide {
@@ -1072,6 +1075,8 @@ textarea {
 .feedback-section .feedback-block .authorization-block .title-icon .icons .icon {
   max-width: 4rem;
   max-height: 4rem;
+  width: 100%;
+  height: 100%;
 }
 .feedback-section .feedback-block .authorization-block .title-icon .icons .icon img {
   width: 100%;
@@ -2140,6 +2145,8 @@ footer .footer-block .footer-privacy-block .icon-logo .icons {
 footer .footer-block .footer-privacy-block .icon-logo .icons .icon {
   max-width: 4rem;
   max-height: 4rem;
+  width: 100%;
+  height: 100%;
 }
 footer .footer-block .footer-privacy-block .icon-logo .icons .icon img {
   width: 100%;
