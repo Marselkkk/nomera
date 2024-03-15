@@ -1813,7 +1813,7 @@ textarea {
 }
 @media (max-width: 520px) {
   .delivery-section .delivery-block .delivery-img-block img {
-    max-width: 23.25rem;
+    max-width: 28.25rem;
   }
 }
 @media (max-width: 280px) {
@@ -1969,6 +1969,11 @@ textarea {
 }
 .accordion-item .accordion-body .accordion-content {
   padding-bottom: 30px;
+}
+@media (max-width: 520px) {
+  .accordion-item .accordion-body .accordion-content {
+    max-width: 80%;
+  }
 }
 
 footer .footer-block {
